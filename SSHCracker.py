@@ -24,7 +24,6 @@ if connect() == True:
         pass
         time.sleep(1.00)
 
-
     os.system("cls")
     name = "SSH CRACKER"
     ascii_banner = pyfiglet.figlet_format(f"{name}")
@@ -83,5 +82,6 @@ if connect() == True:
                     t.start()
                     time.sleep(0.2)
     __main__()
+    
 else:   
-    print("Please connect to the internet")
+    print("Please connect to the internet..")
