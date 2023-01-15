@@ -4,12 +4,12 @@ from colorama import *
 from threading import *
 from queue import *
 
-#colors
+#! colors
 GREEN = Fore.GREEN
 RESET = Fore.RESET
 RED = Fore.RED
-BRIGHT = Style.BRIGHT
-NORMAL = Style.NORMAL
+BRIGHT = Style.BRIGHT 
+NORMAL = Style.NORMAL 
 DIM = Style.DIM
 
 #NUMBER OF THREADS
