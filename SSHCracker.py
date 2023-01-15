@@ -18,6 +18,7 @@ def connect(host="https://google.com/"):
 		return True
 	except:
 		return False
+
 if connect() == True:
     os.system("cls")
     for i in tqdm(range(10), colour="green", desc="loading software"):
@@ -28,7 +29,6 @@ if connect() == True:
     name = "SSH CRACKER"
     ascii_banner = pyfiglet.figlet_format(f"{name}")
     print(ascii_banner)
-
 
     def ssh(host, username, password):
         ssh_client = SSHClient()
