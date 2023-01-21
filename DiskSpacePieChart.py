@@ -1,15 +1,26 @@
 from colorama import *
 import shutil
 import matplotlib.pyplot as plt
-total,used,free = shutil.disk_usage("/")
+
+#! D Drive Usage
+total,used,free = shutil.disk_usage("D:/")
+
+# data for the pie chart
+labels = ['', 'Free',"used"]
+sizes = [total, free, used]
+
+# create the pie chart
+plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+plt.title("Disk Space Usage For D drive.")
+plt.show()
+#! C Drive Usage
+total,used,free = shutil.disk_usage("C:/")
 
 # data for the pie chart
 labels = ['Free',"used"]
 sizes = [free, used]
-print(Fore.GREEN + "Total: %d GB " % (total // (2 ** 30)))
-print(Fore.RED + "Used: %d GB " % (used // (2 ** 30)))
-print(Fore.YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+
 # create the pie chart
 plt.pie(sizes, labels=labels, autopct='%1.1f%%')
-plt.title("Disk Space Usage")
+plt.title("Disk Space Usage For C drive.")
 plt.show()
