@@ -1,4 +1,3 @@
-import json 
 import pycountry
 from tkinter import Tk, Label, Button, Entry
 from phone_iso3166.country import phone_country

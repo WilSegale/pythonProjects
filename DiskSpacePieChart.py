@@ -31,8 +31,8 @@ print(YELLOW +"Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
 total,used,free = shutil.disk_usage("D:/")
 
 # data for the pie chart
-labels = ['Free',"used"]
-sizes = [free, used]
+labels = ['', 'Free',"used"]
+sizes = [total, free, used]
 
 # create the pie chart
 plt.pie(sizes, labels=labels, autopct='%1.1f%%')
