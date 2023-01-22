@@ -7,7 +7,7 @@ if platform == "darwin":
     MAIN = "Main DRIVE-"
 
     os.system('cls' if os.name=='nt' else "clear")
-
+    print(MAIN)
     def is_drive_connected(drive_letter):
         return os.path.exists(drive_letter + "/")
 
@@ -19,6 +19,8 @@ if platform == "darwin":
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
     print(RED + "Used: %d GB " % (used // (2 ** 30)))
     print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+
+
 elif platform == "win32":
     # Windows...
     D = "D: DRVIE-"
