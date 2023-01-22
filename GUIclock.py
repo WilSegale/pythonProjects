@@ -5,7 +5,6 @@ root = tk.Tk()
 root.title("Clock")
 
 def update_time():
-
     current_time = time.strftime("%I:%M:%S %p")
     label.config(text = current_time)
     label.after(1000, update_time)
