@@ -3,7 +3,6 @@ import shutil
 total, used, free = shutil.disk_usage("/")
 
 
-no = False
 # Data for the CSV chart
 data = {'Total': [total // (2 ** 30)],
         'Free': [free // (2 ** 30)],
@@ -13,4 +12,4 @@ data = {'Total': [total // (2 ** 30)],
 df = pd.DataFrame(data)
 
 # Output the DataFrame to a CSV file
-df.to_csv('output.csv', index=no)
+df.to_csv('DiskSpace.csv', index=False)
