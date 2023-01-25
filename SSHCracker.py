@@ -1,6 +1,6 @@
-from colorama import Fore, init
+from colorama import Fore
 from logging import NullHandler
-from paramiko import SSHClient, AutoAddPolicy, AuthenticationException, ssh_exception
+from paramiko import SSHClient, AutoAddPolicy, AuthenticationException
 from tqdm import tqdm
 import time
 import csv
