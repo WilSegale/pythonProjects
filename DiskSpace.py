@@ -2,6 +2,7 @@ from sys import platform
 from colorama import *
 import shutil
 import os
+ITALIC = '\033[1;3m'
 if platform == "darwin":
     #mac os
     MAIN = "Main DRIVE-"
@@ -14,9 +15,8 @@ if platform == "darwin":
     GREEN = Fore.GREEN
     RED = Fore.RED
     YELLOW = Fore.YELLOW
-
     total,used,free = shutil.disk_usage("/")
-    print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+    print(ITALIC + GREEN +  "Total: %d GB " % (total // (2 ** 30)))
     print(RED + "Used: %d GB " % (used // (2 ** 30)))
     print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
 
@@ -42,7 +42,7 @@ elif platform == "win32":
             total,used,free = shutil.disk_usage("D:/")
             print("DiskSpace")
             print(f"\n{D}")
-            print(GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
+            print(ITALIC+GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
             print(RED + "Used: %d GB " % (used // (2**30)))
             print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024))+Fore.RESET)
             
@@ -60,7 +60,7 @@ elif platform == "win32":
             #! THIS IS THE MAIN DRIVE OF THE COMPUTER
             print(f"{C}")
             total,used,free = shutil.disk_usage("C:/")
-            print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+            print(ITALIC+GREEN + "Total: %d GB " % (total // (2 ** 30)))
             print(RED + "Used: %d GB " % (used // (2 ** 30)))
             print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
     drive()
