@@ -1,8 +1,10 @@
+from threading import *
+from colorama import *
+from queue import *
 import argparse
 import socket
-from colorama import *
-from threading import *
-from queue import *
+
+
 
 #! colors
 GREEN = Fore.GREEN

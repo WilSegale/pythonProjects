@@ -1,9 +1,17 @@
 from time import strftime
+from sys import platform
 import time
 import os
 
-while True:
-    tick = strftime('%H:%M:%S %p')
-    print(f"Time: {tick}")
-    time.sleep(1)
-    os.system('cls')
+if platform == "darwin":
+    while True:
+        tick = strftime('%H:%M:%S %p')
+        print(f"Time: {tick}")
+        time.sleep(1)
+        os.system('clear')
+else:
+    while True:
+        tick = strftime('%H:%M:%S %p')
+        print(f"Time: {tick}")
+        time.sleep(1)
+        os.system('cls')
