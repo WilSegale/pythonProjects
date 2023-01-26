@@ -1,8 +1,6 @@
-
 from threading import *
 from colorama import *
 from queue import *
-
 import argparse
 import socket
 
