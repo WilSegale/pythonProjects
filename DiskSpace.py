@@ -19,8 +19,9 @@ if platform == "darwin":
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
     print(RED + "Used: %d GB " % (used // (2 ** 30)))
     print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+
+# Windows...
 elif platform == "win32":
-    # Windows...
     D = "D: DRVIE-"
     C = "C: DRIVE-"
 
