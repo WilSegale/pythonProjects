@@ -2,7 +2,7 @@ from colorama import *
 from sys import platform
 import shutil
 import matplotlib.pyplot as plt
-
+#mac
 if platform == "darwin":
     MAIN = "Main: DRIVE-"
     GREEN = Fore.GREEN
@@ -29,6 +29,7 @@ if platform == "darwin":
     plt.title("Disk Space Usage For C drive.")
     plt.show()
 #_____________________________Terminal of disk space____________________________________#
+#windows
 elif platform == "win32":
     D = "D: DRVIE-"
     C = "C: DRIVE-"
