@@ -2,6 +2,7 @@ from sys import platform
 from colorama import *
 import shutil
 import os
+
 if platform == "darwin":
     #mac os
     MAIN = "Main DRIVE-"

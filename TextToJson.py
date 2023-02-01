@@ -1,7 +1,5 @@
 # Python program to convert text
 # file to JSON
-
-
 import json
 
 
