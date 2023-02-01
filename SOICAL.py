@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
-username = "JohnDoe"
-url = f"{username}"
-
+username = input(">>> ")
+site = input(">>> ")
+url = f"{site}{username}"
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
 
