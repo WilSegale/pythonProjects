@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 username = input(">>> ")
+print("input the site")
 site = input(">>> ")
 url = f"{site}{username}"
 response = requests.get(url)

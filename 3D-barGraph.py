@@ -19,5 +19,3 @@ ax.bar(labels, values)
 # Add shadow effect to bars
 for patch in ax.patches:
     patch.set_alpha(0.5)
-
-plt.show()
