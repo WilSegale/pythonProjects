@@ -1,5 +1,6 @@
 import plotly.graph_objects as go
 import shutil
+
 total,used,free = shutil.disk_usage("/")
 labels = ['Used', 'Free']
 values = [used,free]
