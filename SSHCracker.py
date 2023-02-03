@@ -11,7 +11,6 @@ import logging
 import pyfiglet
 import os
 import urllib.request
-
 def connect(host="https://google.com/"):
 	try:
 		urllib.request.urlopen(host)
@@ -20,7 +19,7 @@ def connect(host="https://google.com/"):
 		return False
 
 if connect() == True:
-    os.system("cls")
+    os.system("clear")
     for i in tqdm(range(10), colour="green", desc="loading software"):
         pass
         time.sleep(1.00)
