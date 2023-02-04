@@ -7,3 +7,4 @@ json_data = json.dumps(data)
 
 with open("data.json", "w") as outfile:
     outfile.write(json_data)
+print('Done it is located in the file called: data.json')
