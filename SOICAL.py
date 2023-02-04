@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+print("input the username")
 username = input(">>> ")
 print("input the site")
 site = input(">>> ")
