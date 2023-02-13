@@ -1,0 +1,10 @@
+{
+    "emp1": {
+        "name": "FirstName",
+        "designation": "Will"
+    },
+    "emp2": {
+        "name": "LastName",
+        "designation": "Segale"
+    }
+}

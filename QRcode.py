@@ -1,6 +1,12 @@
+# Importing library
 import qrcode
 
-data = "https://google.com"
-filename = "QR.jpg"
+# Data to be encoded
+data = 'https://www.youtube.com/watch?v=xm3YgoEiEDc'
+
+# Encoding data using make() function
 img = qrcode.make(data)
-img.save(filename)
+
+# Saving as an image file
+img.save('MyQRCode1.png')
+
