@@ -17,19 +17,19 @@ def get_drives():
 
 if __name__ == '__main__':
     print (get_drives())    # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
-     
-print("Input the name of the drive you want to the amount of space remaning on")
-drives = input(">>> ")
+while True:
+    print("Input the name of the drive you want to the amount of space remaning on")
+    drives = input(">>> ")
 
-total,used,free = shutil.disk_usage(drives+":/")
-total // (2 ** 30)
-free // (2 ** 30)
-used // (2 ** 30) 
-labels = ['total','Used', 'Free']
-values = [total,used,free]
-fig = go.Figure(data=[go.Bar(x=labels, y=values, marker=dict(opacity=0.5))])
-fig.show()
-fig, ax = plt.subplots()
+    total,used,free = shutil.disk_usage(drives+":/")
+    total // (2 ** 30)
+    free // (2 ** 30)
+    used // (2 ** 30) 
+    labels = ['total','Used', 'Free']
+    values = [total,used,free]
+    fig = go.Figure(data=[go.Bar(x=labels, y=values, marker=dict(opacity=0.5))])
+    fig.show()
+    fig, ax = plt.subplots()
 
 # Create bar graph
 ax.bar(labels, values)

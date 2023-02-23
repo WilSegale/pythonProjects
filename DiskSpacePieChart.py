@@ -38,7 +38,7 @@ elif platform == "win32":
     YELLOW = Fore.YELLOW
 
     print(f"\n{D}")
-    total,used,free = shutil.disk_usage("D:/")
+    total,used,free = shutil.disk_usage("A:/")
     print(GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
     print(RED + "Used: %d GB " % (used // (2**30)))
     print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024))+Fore.RESET)
@@ -56,7 +56,7 @@ elif platform == "win32":
     #_____________________________Pie chart of disk space____________________________________#
 
     #! D Drive Usage
-    total,used,free = shutil.disk_usage("D:/")
+    total,used,free = shutil.disk_usage("A:/")
 
     # data for the pie chart
     labels = ['Free',"used"]

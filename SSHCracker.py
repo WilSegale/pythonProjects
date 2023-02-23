@@ -19,7 +19,7 @@ def connect(host="https://google.com/"):
 		return False
 
 if connect() == True:
-    os.system("clear")
+    os.system("cls")
     for i in tqdm(range(10), colour="green", desc="loading software"):
         pass
         time.sleep(1.00)

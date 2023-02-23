@@ -23,7 +23,8 @@ if platform == "darwin":
 
 # Windows...
 elif platform == "win32":
-    D = "D: DRVIE-"
+    DRIVE = "A"
+    D = f"{DRIVE}: DRVIE-"
     C = "C: DRIVE-"
 
     os.system('cls' if os.name=='nt' else "clear")
@@ -37,9 +38,9 @@ elif platform == "win32":
 
     def drive():
 
-        if is_drive_connected("D") == True:
+        if is_drive_connected(DRIVE) == True:
             #? THIS IS THE EXTERNIAL DRIVE OF THE COMPUTER
-            total,used,free = shutil.disk_usage("D:/")
+            total,used,free = shutil.disk_usage(f"{DRIVE}:/")
             print("DiskSpace")
             print(f"\n{D}")
             print(GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
