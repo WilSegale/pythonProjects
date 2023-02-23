@@ -1,9 +1,9 @@
+# Bar graph data
+from ctypes import windll
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import shutil
-# Bar graph data
 import string
-from ctypes import windll
 
 def get_drives():
     drives = []
@@ -12,21 +12,20 @@ def get_drives():
         if bitmask & 1:
             drives.append(letter)
         bitmask >>= 1
-
     return drives
 
-if __name__ == '__main__':
-    print (get_drives())    # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+if __name__ == "__main__":
+    print(get_drives())  # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+
 while True:
     print("Input the name of the drive you want to the amount of space remaning on")
     drives = input(">>> ")
-
-    total,used,free = shutil.disk_usage(drives+":/")
-    total // (2 ** 30)
-    free // (2 ** 30)
-    used // (2 ** 30) 
-    labels = ['total','Used', 'Free']
-    values = [total,used,free]
+    total, used, free = shutil.disk_usage(drives + ":/")
+    total // (2**30)
+    free // (2**30)
+    used // (2**30)
+    labels = ["total", "Used", "Free"]
+    values = [total, used, free]
     fig = go.Figure(data=[go.Bar(x=labels, y=values, marker=dict(opacity=0.5))])
     fig.show()
     fig, ax = plt.subplots()
