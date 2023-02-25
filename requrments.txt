@@ -1,4 +1,4 @@
- 
+pandas
 opencv-python
 plotly
 packaging
