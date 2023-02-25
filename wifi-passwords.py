@@ -3,7 +3,6 @@ import subprocess
 from sys import platform
 
 if platform == "win32":
-
     # now we will store the profiles data in "data" variable by 
     # running the 1st cmd command using subprocess.check_output
     data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
