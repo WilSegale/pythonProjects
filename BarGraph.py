@@ -4,10 +4,10 @@ total,used,free = shutil.disk_usage("/")
 
 # Data for the bar chart
 labels = ['Used', 'Free']
-x = [used, free]
+DiskData = [used, free]
 
 # Plot the bar chart
-plt.bar(labels, x)
+plt.bar(labels, DiskData)
 plt.xlabel('Space')
 plt.ylabel('Size (in GB)')
 plt.title('Disk Space Usage')
