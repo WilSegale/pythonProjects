@@ -1,0 +1,13 @@
+colorama
+pandas
+opencv-python
+plotly
+pytube
+packaging
+psutil
+youtube_dl
+matplotlib
+dash
+paramiko
+pyfiglet
+pycountry
