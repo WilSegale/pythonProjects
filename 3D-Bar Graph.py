@@ -6,6 +6,7 @@ import shutil
 # Bar graph data
 import string
 from ctypes import windll
+plt.title('Survival Rate')
 
 def get_drives():
     drives = []

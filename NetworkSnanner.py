@@ -4,8 +4,6 @@ from queue import *
 import argparse
 import socket
 
-
-
 #! colors
 GREEN = Fore.GREEN
 RESET = Fore.RESET
