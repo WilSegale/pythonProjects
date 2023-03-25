@@ -1,3 +1,4 @@
+qrcode
 colorama
 pandas
 opencv-python
