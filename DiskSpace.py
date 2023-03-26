@@ -6,7 +6,6 @@ import os
 if platform == "darwin":
     #mac os
     MAIN = "Main DRIVE-"
-
     os.system('cls' if os.name=='nt' else "clear")
 
     def is_drive_connected(drive_letter):
@@ -15,7 +14,7 @@ if platform == "darwin":
     GREEN = Fore.GREEN
     RED = Fore.RED
     YELLOW = Fore.YELLOW
-
+    print(MAIN)
     total,used,free = shutil.disk_usage("/")
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
     print(RED + "Used: %d GB " % (used // (2 ** 30)))
