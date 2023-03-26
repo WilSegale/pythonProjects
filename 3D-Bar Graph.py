@@ -5,7 +5,6 @@ import plotly.graph_objects as go
 import shutil
 # Bar graph data
 import string
-from ctypes import windll
 
 def get_drives():
     drives = []
