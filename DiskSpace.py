@@ -6,7 +6,7 @@ import os
 if platform == "darwin":
     #mac os
     MAIN = "Main DRIVE-"
-    os.system('cls' if os.name=='nt' else "clear")
+    os.system('cls' if os.name == 'nt' else "clear")
 
     def is_drive_connected(drive_letter):
         return os.path.exists(drive_letter + "/")
