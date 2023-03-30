@@ -9,7 +9,7 @@
                "type": "python",
                "request": "attach",
                "processId": "${command:pickProcess}",
-               "justMyCode": true
+               "justMyCode": false
           },
           {
                "name": "Python: FastAPI",
