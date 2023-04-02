@@ -22,9 +22,8 @@ if platform == "darwin":
         except:
             return False
 
-if connect() == True:
     os.system("clear")
-    for i in tqdm(range(10), colour="green", desc="loading software"):
+    for i in tqdm(range(10), colour="blue", desc="loading software"):
         pass
         time.sleep(1.00)
 
@@ -96,7 +95,7 @@ elif platform == "win32":
 
     if connect() == True:
         os.system("cls")
-        for i in tqdm(range(10), colour="green", desc="loading software"):
+        for i in tqdm(range(10), colour="blue", desc="loading software"):
             pass
             time.sleep(1.00)
 

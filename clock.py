@@ -1,3 +1,4 @@
+# Clears all timers
 from time import strftime
 from sys import platform
 import time
