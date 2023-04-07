@@ -39,8 +39,8 @@ if platform == "linux":
 # Windows...
 elif platform == "win32":
     DRIVE = "A"
-    D = f"{DRIVE}: DRVIE-"
-    C = "C: DRIVE-"
+    ExternialDrive= f"{DRIVE}: DRVIE-"
+    MAINDrive = "C: DRIVE-"
 
     os.system('cls' if os.name=='nt' else "clear")
 
@@ -57,7 +57,7 @@ elif platform == "win32":
             #? THIS IS THE EXTERNIAL DRIVE OF THE COMPUTER
             total,used,free = shutil.disk_usage(f"{DRIVE}:/")
             print("DiskSpace")
-            print(f"\n{D}")
+            print(f"\n{ExternialDrive}")
             print(GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
             print(RED + "Used: %d GB " % (used // (2**30)))
             print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024))+Fore.RESET)
@@ -66,7 +66,7 @@ elif platform == "win32":
             print("-"*15)
 
             #! THIS IS THE MAIN DRIVE OF THE COMPUTER
-            print(f"{C}")
+            print(f"{MAINDrive}")
             total,used,free = shutil.disk_usage("C:/")
             print(GREEN +"Total: %d GB " % (total // (2 ** 30)))
             print(RED +"Used: %d GB " % (used // (2 ** 30)))
@@ -74,7 +74,7 @@ elif platform == "win32":
 
         else:
             #! THIS IS THE MAIN DRIVE OF THE COMPUTER
-            print(f"{C}")
+            print(f"{MAINDrive}")
             total,used,free = shutil.disk_usage("C:/")
             print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
             print(RED + "Used: %d GB " % (used // (2 ** 30)))
