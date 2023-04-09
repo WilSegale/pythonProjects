@@ -35,7 +35,14 @@ def hangman(word):
             break
     if not win:
         print("\n".join(stages[0: wrong]))
-        print("You lose! It was {}.".format(word))
+        print("You lose! It was '{}'.".format(word))
 
-word = random.choice(["python", "programming", "computer", "science", "artificial", "intelligence", "machine", "learning"])
+word = random.choice(["python", 
+                      "programming", 
+                      "computer", 
+                      "science", 
+                      "artificial", 
+                      "intelligence", 
+                      "machine", 
+                      "learning"])
 hangman(word)

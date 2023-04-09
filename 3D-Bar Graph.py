@@ -3,9 +3,12 @@ from ctypes import windll
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import shutil
+from colorama import *
 # Bar graph data
 import string
-
+GREEN = Fore.GREEN
+RED = Fore.RED
+YELLOW = Fore.YELLOW
 def get_drives():
     drives = []
     bitmask = windll.kernel32.GetLogicalDrives()
@@ -17,7 +20,7 @@ def get_drives():
     return drives
 
 if __name__ == '__main__':
-    print (get_drives())    # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+    print(f"drive: {get_drives()}")   # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
 
 while True:
     print("Input the name of the drive you want to the amount of space remaning on")
@@ -29,6 +32,11 @@ while True:
     used // (2 ** 30) 
     labels = ['total','Used', 'Free']
     values = [total,used,free]
+    
+    print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+    print(RED + "Used: %d GB " % (used // (2 ** 30)))
+    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+
     fig = go.Figure(data=[go.Bar(x=labels, y=values, marker=dict(opacity=0.5))])
     fig.show()
     fig, ax = plt.subplots()
