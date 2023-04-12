@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # set up the figure and axes
 fig = plt.figure(figsize=(8, 3))
 ax2 = fig.add_subplot(122, projection='3d')
