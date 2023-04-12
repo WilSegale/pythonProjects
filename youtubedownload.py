@@ -12,7 +12,7 @@ def Download(link):
     except:
         print("An error has occurred")
     
-    print(f"{GREEN}Download is completed successfully{RESET}")
+    print(GREEN + "Downloading video: " + RESET + youtubeObject.title)
 
 link = input("Enter the YouTube video URL: ")
 Download(link)
