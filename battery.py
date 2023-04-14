@@ -12,9 +12,5 @@ if battery:
    print("Power plugged in : ", battery.power_plugged)
    print("Battery left : ", convertTime(battery.secsleft))
 
-
 else:
     print("No battery found.")
-# returns a tuple
-
-# function returning time in hh:mm:ss
