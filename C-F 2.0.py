@@ -4,3 +4,6 @@ def c_to_f(c):
 while True:
     c = float(input("Enter the temperature in Celsius: "))
     print("Temperature in Fahrenheit: ", c_to_f(c))
+    
+    if c == "exit":
+        break
