@@ -26,7 +26,7 @@ if platform == "darwin":
 
     # create the pie chart
     plt.pie(sizes, labels=labels, autopct='%1.1f%%')
-    plt.title("Disk Space Usage For C drive.")
+    plt.title("Disk Space Usage For MAIN DRIVE.")
     plt.show()
 #_____________________________Terminal of disk space____________________________________#
 #windows

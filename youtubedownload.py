@@ -1,4 +1,8 @@
 from pytube import YouTube
+from colorama import *
+
+GREEN = Fore.GREEN #works correctly
+RESET = Fore.RESET #resets the color 
 
 def Download(link):
     youtubeObject = YouTube(link)
@@ -7,7 +11,8 @@ def Download(link):
         youtubeObject.download()
     except:
         print("An error has occurred")
-    print("Download is completed successfully")
+    
+    print(GREEN + "Downloading video: " + RESET + youtubeObject.title)
 
 link = input("Enter the YouTube video URL: ")
 Download(link)

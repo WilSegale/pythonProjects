@@ -5,5 +5,5 @@ total,used,free = shutil.disk_usage("/")
 labels = ['Used', 'Free']
 values = [used,free]
 # Use `hole` to create a donut-like pie chart
-fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
+fig = go.Figure(data = [go.Pie(labels=labels, values=values, hole=.5)])
 fig.show()
