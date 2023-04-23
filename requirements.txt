@@ -14,3 +14,5 @@ dash
 paramiko
 pyfiglet
 pycountry
+ffmpeg
+input
