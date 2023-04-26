@@ -38,7 +38,6 @@ if platform == "win32":
         print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
         print(RED + "Used: %d GB " % (used // (2 ** 30)))
         print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
-
         fig = go.Figure(data=[go.Bar(x=labels, y=values, marker=dict(opacity=0.5))])
         fig.show()
         fig, ax = plt.subplots()
