@@ -23,9 +23,9 @@ if platform == "darwin":
             return False
 
     os.system("clear")
-    for i in tqdm(range(10), colour="blue", desc="loading software"):
+    for i in tqdm(range(10), colour="GREEN", desc="loading software"):
         pass
-        time.sleep(1.00)
+        time.sleep(1.0)
 
         os.system("clear")
         name = "SSH CRACKER"
