@@ -17,10 +17,10 @@ def ssh_connect(host, username, password):
     try:
         ssh_client.connect(host,port=22,username=username, password=password, banner_timeout=300)
 
-        with open("credentials_found.txt", "a") as fh:
+        with open("credentials_found.csv", "a") as fh:
 
             print(f"{GREEN}Username - {username} and Password - ******* found.{RESET}")
-            fh.write(f"{GREEN}Username: {username}\nPassword: {password}\n{RESET}Worked on host {host}\n")
+            fh.write(f"{GREEN}Username: {username}, Password: {password}, {RESET}Worked on host {host}\n")
     except AuthenticationException:
         print(f"{RED}Username - {username} and Password - ******* is Incorrect.{RESET}")
     except ssh_exception.SSHException:
