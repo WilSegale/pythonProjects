@@ -1,8 +1,12 @@
-# python script showing battery details
+    # python script showing battery details
 from colorama import *
 import psutil
 
+GREEN = Fore.GREEN
+YELLOW = Fore.YELLOW
 RED = Fore.RED
+BRIGHT = Style.BRIGHT
+RESET = Style.RESET_ALL
 
 battery = psutil.sensors_battery()
 def convertTime(seconds):
@@ -10,10 +14,15 @@ def convertTime(seconds):
     hours, minutes = divmod(minutes, 60)
     return "%d:%02d:%02d" % (hours, minutes, seconds)
 if battery:
-   battery = psutil.sensors_battery()
-   print("Battery percentage:", battery.percent)
-   print("Power plugged in:", battery.power_plugged)
-   print("Battery left:", convertTime(battery.secsleft))
-
+    battery = psutil.sensors_battery()
+   
+    if battery.percent >= int(50):
+        print(f"{YELLOW}Battery percentage: {GREEN}{battery.percent}{RESET}")
+        print(f"{YELLOW}Power plugged in: {GREEN}{battery.power_plugged}{RESET}")
+        print(f"{YELLOW}Battery left: {GREEN}{convertTime(battery.secsleft)}{RESET}")
+    else:
+        print(f"{YELLOW}Battery percentage: {RED}{battery.percent}{RESET}")
+        print(f"{YELLOW}Power plugged in: {RED}{battery.power_plugged}{RESET}")
+        print(f"{YELLOW}Battery left: {RED}{convertTime(battery.secsleft)}{RESET}")
 else:
-    print(f"{RED}No battery found.")
+    print(f"{RED}{BRIGHT}No battery found.")
