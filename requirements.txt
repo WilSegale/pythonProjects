@@ -15,5 +15,3 @@ paramiko
 pyfiglet
 pycountry
 ffmpeg
-input
-mysql-connector-python
