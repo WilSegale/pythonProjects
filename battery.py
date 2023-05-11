@@ -1,5 +1,8 @@
 # python script showing battery details
+from colorama import *
 import psutil
+
+RED = Fore.RED
 
 battery = psutil.sensors_battery()
 def convertTime(seconds):
@@ -13,4 +16,4 @@ if battery:
    print("Battery left:", convertTime(battery.secsleft))
 
 else:
-    print("No battery found.")
+    print(f"{RED}No battery found.")
