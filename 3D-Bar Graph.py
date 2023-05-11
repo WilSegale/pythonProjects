@@ -9,6 +9,7 @@ import string
 GREEN = Fore.GREEN
 RED = Fore.RED
 YELLOW = Fore.YELLOW
+RESET = Fore.RESET
 if platform == "win32":
     from ctypes import windll
     def get_drives():
@@ -49,4 +50,4 @@ if platform == "win32":
         for patch in ax.patches:
             patch.set_alpha(0.5)
 else:
-    print("Not supported on this platform")
+    print(f"{RED}Not supported on this platform{RESET}")
