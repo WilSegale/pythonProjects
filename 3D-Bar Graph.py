@@ -23,6 +23,7 @@ YELLOW = Fore.YELLOW
 RESET = Fore.RESET
 
 def get_drives():
+    #sees if the user is on a Windows machine
     if platform == "win32":
         from ctypes import windll
         def get_drives():
@@ -77,6 +78,7 @@ def get_drives():
             for patch in ax.patches:
                 patch.set_alpha(0.5)
     else:
+        #if the user is not on a Windows machine it says "Not supported on this platform"
         print(f"{RED}Not supported on this platform{RESET}")
 
 get_drives()
