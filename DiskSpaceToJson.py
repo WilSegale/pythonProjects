@@ -1,5 +1,9 @@
 import json
 import shutil
+from colorama import *
+
+GREEN = Fore.GREEN
+RESET = Fore.RESET
 total, used, free = shutil.disk_usage("/")
 
 data = {
@@ -12,4 +16,4 @@ json_data = json.dumps(data,indent=4)
 
 with open("DiskSpace.json", "w") as outfile:
     outfile.write(json_data)
-print('Done it is located in the file called: DiskSpace.json')
+print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')

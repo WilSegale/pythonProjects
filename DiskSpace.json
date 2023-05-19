@@ -1,1 +1,13 @@
-{"Total-GB": 463, "Used-GB": 71, "Free-GB": 392}
+{
+    "DiskSpace for MAIN DRIVE": [
+        {
+            "Total-GB": 463
+        },
+        {
+            "Used-GB": 71
+        },
+        {
+            "Free-GB": 392
+        }
+    ]
+}
