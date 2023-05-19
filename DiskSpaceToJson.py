@@ -9,6 +9,7 @@ try:
     RED = Fore.RED
     YELLOW = Fore.YELLOW
     RESET = Fore.RESET
+    #for Windows computers
     if platform == "win32":
         from ctypes import windll
         def get_drives():
@@ -38,6 +39,9 @@ try:
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)
         print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
+    
+    
+    #for MAC computers
     else:
         total, used, free = shutil.disk_usage(f"/")
         JSON_OUTPUT = {
@@ -53,8 +57,6 @@ try:
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)
         print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
-        
-
 
 except:
     print(f"{RED}Something went wrong. Please try again.{RESET}")
