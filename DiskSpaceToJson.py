@@ -23,7 +23,12 @@ if platform == "win32":
     drive = input(f"Drive: ")
     total, used, free = shutil.disk_usage(f"{drive}:/")
     if total >= 1000:
-        print(f"{GREEN}Total: {total/1000}GB{RESET}")
+        data = {
+        f"DiskSpace for drive:{drive.upper()}":[
+            {"Total-GB": total // (2 ** 30)},
+            {"Used-GB": used // (2 ** 30)},
+            {"Free-GB":free // (2 ** 30)}
+        ]}
     data = {
         f"DiskSpace for drive:{drive.upper()}":[
             {"Total-GB": total // (2 ** 30)},
