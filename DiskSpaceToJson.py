@@ -3,7 +3,7 @@ import shutil
 import string
 from colorama import *
 from sys import platform
-
+import os
 GREEN = Fore.GREEN
 RESET = Fore.RESET
 if platform == "win32":
@@ -18,20 +18,21 @@ if platform == "win32":
 
         return drives
 
-    if __name__ == '__main__':
-        print(f"drive: {get_drives()}")   # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+    print(f"drive: {get_drives()}")   # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
 
-drive = input(f"Drive: ")
-total, used, free = shutil.disk_usage(f"{drive}:/")
+    drive = input(f"Drive: ")
+    total, used, free = shutil.disk_usage(f"{drive}:/")
+    if total >= 1000:
+        print(f"{GREEN}Total: {total/1000}GB{RESET}")
+    data = {
+        f"DiskSpace for drive:{drive.upper()}":[
+            {"Total-GB": total // (2 ** 30)},
+            {"Used-GB": used // (2 ** 30)},
+            {"Free-GB":free // (2 ** 30)}
+        ]}
+    
+    json_data = json.dumps(data,indent=4)
 
-data = {
-    f"DiskSpace for drive:{drive}":[
-        {"Total-GB": total // (2 ** 30)},
-        {"Used-GB": used // (2 ** 30)},
-        {"Free-GB":free // (2 ** 30)}
-    ]}
-json_data = json.dumps(data,indent=1)
-
-with open("DiskSpace.json", "w") as outfile:
-    outfile.write(json_data)
-print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
+    with open("DiskSpace.json", "w") as outfile:
+        outfile.write(json_data)
+    print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
