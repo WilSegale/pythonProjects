@@ -8,7 +8,7 @@ DiskData = [used, free]
 colors = ['red', 'yellow']
 
 # Plot the bar chart
-plt.bar(labels, DiskData,color=colors)
+plt.bar(labels, DiskData, color=colors)
 plt.xlabel('Space')
 plt.ylabel('Size (in GB)')
 plt.title('Disk Space Usage')
