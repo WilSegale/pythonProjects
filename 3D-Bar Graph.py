@@ -6,7 +6,9 @@ from colorama import *
 from sys import platform
 # Bar graph data
 import string
-colors = ['green', 'red', 'yellow']
+colors = ['green', 
+          'red', 
+          'yellow']
 
 exit = ["exit", 
         "quit", 
