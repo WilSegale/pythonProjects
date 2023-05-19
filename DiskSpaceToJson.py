@@ -38,5 +38,9 @@ try:
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)
         print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
+    else:
+        print(f"{RED}This script only works on Windows{RESET}")
+
+
 except:
     print(f"{RED}Something went wrong. Please try again.{RESET}")
