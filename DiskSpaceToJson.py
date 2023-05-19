@@ -3,7 +3,7 @@ import shutil
 import string
 from colorama import *
 from sys import platform
-import os
+
 GREEN = Fore.GREEN
 RESET = Fore.RESET
 if platform == "win32":
@@ -22,21 +22,15 @@ if platform == "win32":
 
     drive = input(f"Drive: ")
     total, used, free = shutil.disk_usage(f"{drive}:/")
-    if total >= 1000:
-        data = {
+    JSON_OUTPUT = {
         f"DiskSpace for drive:{drive.upper()}":[
             {"Total-GB": total // (2 ** 30)},
             {"Used-GB": used // (2 ** 30)},
             {"Free-GB":free // (2 ** 30)}
-        ]}
-    data = {
-        f"DiskSpace for drive:{drive.upper()}":[
-            {"Total-GB": total // (2 ** 30)},
-            {"Used-GB": used // (2 ** 30)},
-            {"Free-GB":free // (2 ** 30)}
-        ]}
+        ]
+    }
     
-    json_data = json.dumps(data,indent=4)
+    json_data = json.dumps(JSON_OUTPUT,indent=4)
 
     with open("DiskSpace.json", "w") as outfile:
         outfile.write(json_data)
