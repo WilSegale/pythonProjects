@@ -4,7 +4,7 @@ from sys import platform
 import time
 import os
 
-if platform == "darwin":
+if platform == "darwin" or platform == "linux":
     while True:
         os.system("clear")
         tick = strftime('%I:%M:%S %p')
