@@ -6,7 +6,7 @@ from colorama import *
 from sys import platform
 # Bar graph data
 import string
-colors = ['green','red', 'yellow']
+colors = ['green', 'red', 'yellow']
 
 exit = ["exit", 
         "quit", 
@@ -68,7 +68,7 @@ def get_drives():
             fig, ax = plt.subplots()
 
             # Create bar graph
-            ax.bar(labels, values,color=colors)
+            ax.bar(labels, values, color=colors)
 
             # Add shadow effect to bars
             for patch in ax.patches:
