@@ -19,6 +19,7 @@ GREEN = Fore.GREEN
 RED = Fore.RED
 YELLOW = Fore.YELLOW
 RESET = Fore.RESET
+
 def get_drives():
     if platform == "win32":
         from ctypes import windll
