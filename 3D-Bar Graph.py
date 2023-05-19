@@ -54,6 +54,7 @@ def get_drives():
             values = [total,
                     used,
                     free]
+            
             # shows the data for the total data that you have on your disk
             print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
 
@@ -66,13 +67,13 @@ def get_drives():
             plt.show()
             fig, ax = plt.subplots()
 
-
             # Create bar graph
             ax.bar(labels, values,color=colors)
 
             # Add shadow effect to bars
             for patch in ax.patches:
                 patch.set_alpha(0.5)
+
     else:
         print(f"{RED}Not supported on this platform{RESET}")
 
