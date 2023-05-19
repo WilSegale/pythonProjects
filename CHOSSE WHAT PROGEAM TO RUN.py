@@ -7,7 +7,7 @@ def start():
       CHOICE = input("Enter your choice: ");
       os.system(f"python3 {CHOICE}");
    else:
-      os.system("ls -l {CHOICE}");
+      os.system("ls -l");
       CHOICE = input("Enter your choice: ");
       os.system(f"python3 {CHOICE}");
 start()
