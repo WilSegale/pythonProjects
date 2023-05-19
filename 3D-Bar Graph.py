@@ -1,22 +1,24 @@
 # Bar graph data
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-import shutil
 from colorama import *
 from sys import platform
-# Bar graph data
+import shutil
 import string
+
+#the array that contains the name of colors so the graph has some color to it
 colors = ['green', 
           'red', 
           'yellow']
 
+# the array that contains the name of exiting words
 exit = ["exit", 
         "quit", 
         "exit()",
         "EXIT()",
         "QUIT()",
         ""]
-
+#the variables that contains the name of the colors and the RESET color
 GREEN = Fore.GREEN
 RED = Fore.RED
 YELLOW = Fore.YELLOW
