@@ -6,6 +6,14 @@ from colorama import *
 from sys import platform
 # Bar graph data
 import string
+
+exit = ["exit", 
+        "quit", 
+        "exit()",
+        "EXIT()",
+        "QUIT()",
+        ""]
+
 GREEN = Fore.GREEN
 RED = Fore.RED
 YELLOW = Fore.YELLOW
@@ -29,12 +37,21 @@ if platform == "win32":
         print("Input the name of the drive you want to the amount of space remaning on")
         drives = input(">>> ")
 
+        if drives in exit:
+            print("Exiting...")
+            break
+
         total,used,free = shutil.disk_usage(drives+":/")
         total // (2 ** 30)
         free // (2 ** 30)
         used // (2 ** 30) 
-        labels = ['total','Used', 'Free']
-        values = [total,used,free]
+        labels = ['total',
+                  'Used', 
+                  'Free']
+        
+        values = [total,
+                  used,
+                  free]
         
         print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
         print(RED + "Used: %d GB " % (used // (2 ** 30)))
