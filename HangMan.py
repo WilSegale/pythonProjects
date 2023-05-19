@@ -1,5 +1,8 @@
+from colorama import *
 import random
-
+RED = Fore.RED
+GREEN = Fore.GREEN
+RESET = Fore.RESET
 def hangman(word):
     wrong = 0
     stages = ["",
@@ -29,13 +32,13 @@ def hangman(word):
         e = wrong + 1
         print("\n".join(stages[0: e]))
         if "__" not in board:
-            print("You win!")
+            print(f"{GREEN}You win!{RESET}")
             print(" ".join(board))
             win = True
             break
     if not win:
         print("\n".join(stages[0: wrong]))
-        print("You lose! It was '{}'.".format(word))
+        print(RED+"You lose! It was '{}'.".format(word)+RESET)
 
 word = random.choice(["python", 
                       "programming", 
