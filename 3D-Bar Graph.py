@@ -6,6 +6,8 @@ from colorama import *
 from sys import platform
 # Bar graph data
 import string
+colors = ['green','red', 'yellow']
+
 
 exit = ["exit", 
         "quit", 
@@ -13,7 +15,6 @@ exit = ["exit",
         "EXIT()",
         "QUIT()",
         ""]
-
 GREEN = Fore.GREEN
 RED = Fore.RED
 YELLOW = Fore.YELLOW
@@ -52,16 +53,24 @@ if platform == "win32":
         values = [total,
                   used,
                   free]
-        
+        # shows the data for the total data that you have on your disk
         print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+
+        # shows the data for the used amount of data that you have on your disk
         print(RED + "Used: %d GB " % (used // (2 ** 30)))
+        
+        # shows the data for the free amount of data that you have on your disk
         print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
-        fig = go.Figure(data=[go.Bar(x=labels, y=values, marker=dict(opacity=0.5))])
-        fig.show()
+        
+        plt.show()
         fig, ax = plt.subplots()
+        fig.patch.set_facecolor('black')  # Change the background color to light gray
+        Y_labels = plt.gca().get_yticklabels()
+        X_lables = plt.gca().get_xticklabels()
+
 
         # Create bar graph
-        ax.bar(labels, values)
+        ax.bar(labels, values,color=colors)
 
         # Add shadow effect to bars
         for patch in ax.patches:
