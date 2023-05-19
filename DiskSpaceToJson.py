@@ -39,7 +39,21 @@ try:
             outfile.write(json_data)
         print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
     else:
-        print(f"{RED}This script only works on Windows{RESET}")
+        total, used, free = shutil.disk_usage(f"/")
+        JSON_OUTPUT = {
+            f"DiskSpace for drive:Main Drive":[
+                {"Total-GB": total // (2 ** 30)},
+                {"Used-GB": used // (2 ** 30)},
+                {"Free-GB":free // (2 ** 30)}
+            ]
+        }
+        
+        json_data = json.dumps(JSON_OUTPUT,indent=4)
+
+        with open("DiskSpace.json", "w") as outfile:
+            outfile.write(json_data)
+        print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
+        
 
 
 except:
