@@ -57,7 +57,4 @@ def __main__():
                 t.start()
 
                 time.sleep(0.2)
-
-            
-
 __main__()
