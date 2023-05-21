@@ -14,7 +14,7 @@ mydb = mysql.connector.connect(
   host="localhost",
   user="root",
   password="Cmonster2006!@#!@#!@#",
-  database="NAME_OFDISKSPACE"
+  database="NAME_OF_DISKSPACE"
 )
 
 mycursor = mydb.cursor()

@@ -11,6 +11,7 @@ psutil
 youtube_dl
 matplotlib
 dash
+mysql
 paramiko
 pyfiglet
 pycountry
