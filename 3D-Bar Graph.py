@@ -5,7 +5,7 @@ import shutil
 import string
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
-exit = ["exit", "quit", "exit", "quit"]
+exit = ["exit", "quit", "exit()", "quit()"]
 
 RED = Fore.RED;
 GREEN = Fore.GREEN;
@@ -31,8 +31,7 @@ def get_drives():
             print(f"drive: {get_drives()}")
 
         while True:
-            print(
-                "Input the name of the drive you want to the amount of space remaining on")
+            print("Input the name of the drive you want to the amount of space remaining on")
             drives = input(">>> ")
 
             if drives in exit:
