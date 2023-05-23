@@ -1,33 +1,24 @@
-# Bar graph data
 import matplotlib.pyplot as plt
-import plotly.graph_objects as go
 from colorama import *
 from sys import platform
 import shutil
 import string
+# The array that contains the name of colors so the graph has some color to it
+colors = ['green', 'red', 'yellow']
 
-#the array that contains the name of colors so the graph has some color to it
-colors = ['green', 
-          'red', 
-          'yellow']
+RED = Fore.RED;
+GREEN = Fore.GREEN;
+YELLOW = Fore.YELLOW;
+RESET = Style.RESET_ALL;
 
-# the array that contains the name of exiting words
-exit = ["exit", 
-        "quit", 
-        "exit()",
-        "EXIT()",
-        "QUIT()",
-        ""]
-#the variables that contains the name of the colors and the RESET color
-GREEN = Fore.GREEN
-RED = Fore.RED
-YELLOW = Fore.YELLOW
-RESET = Fore.RESET
+
+exit = ["exit", "quit", "exit", "quit"]
+
 
 def get_drives():
-    #sees if the user is on a Windows machine
     if platform == "win32":
         from ctypes import windll
+
         def get_drives():
             drives = []
             bitmask = windll.kernel32.GetLogicalDrives()
@@ -39,38 +30,35 @@ def get_drives():
             return drives
 
         if __name__ == '__main__':
-            print(f"drive: {get_drives()}")   # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+            # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+            print(f"drive: {get_drives()}")
 
         while True:
-            print("Input the name of the drive you want to the amount of space remaning on")
+            print(
+                "Input the name of the drive you want to the amount of space remaining on")
             drives = input(">>> ")
 
             if drives in exit:
                 print("Exiting...")
                 break
 
-            total,used,free = shutil.disk_usage(drives+":/")
-            total // (2 ** 30)
-            free // (2 ** 30)
-            used // (2 ** 30) 
-            labels = ['total',
-                    'Used', 
-                    'Free']
-            
-            values = [total,
-                    used,
-                    free]
-                    
+            total, used, free = shutil.disk_usage(drives+":/")
+            total_gb = total // (2 ** 30)
+            used_gb = used // (2 ** 30)
+            free_gb = free // (2 ** 30)
+
+            labels = ['Total', 'Used', 'Free']
+            values = [total_gb, used_gb, free_gb]
+
             # shows the data for the total data that you have on your disk
-            print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+            print("Total: %d GB" % total_gb)
 
             # shows the data for the used amount of data that you have on your disk
-            print(RED + "Used: %d GB " % (used // (2 ** 30)))
-            
+            print("Used: %d GB" % used_gb)
+
             # shows the data for the free amount of data that you have on your disk
-            print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
-            
-            plt.show()
+            print("Free: %d GB" % free_gb)
+
             fig, ax = plt.subplots()
 
             # Create bar graph
@@ -79,8 +67,16 @@ def get_drives():
             # Add shadow effect to bars
             for patch in ax.patches:
                 patch.set_alpha(0.5)
+
+            # Add numbers on top of each bar with respective colors
+            for i, value in enumerate(values):
+                color = colors[i]
+                ax.text(i, value + 1, str(value), ha='right', fontsize=10)
+
+            plt.show()
     else:
-        #if the user is not on a Windows machine it says "Not supported on this platform"
-        print(f"{RED}Not supported on this platform{RESET}")
+        # if the user is not on a Windows machine it says "Not supported on this platform"
+        print(f"{RED}[-]Not supported on this platform[-]{GREEN}")
+
 
 get_drives()
