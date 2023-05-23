@@ -1,18 +1,12 @@
-from colorama import *
 import psutil
 
-RED = Fore.RED
-GREEN = Fore.GREEN
-RESET = Fore.RESET
+def get_disk_name():
+    partitions = psutil.disk_partitions()
+    
+    for partition in partitions:
+        if partition.mountpoint == '/':
+            return partition.device
 
-partitions = psutil.disk_partitions()
-disk_name = None
-for partition in partitions:
-    if partition.device == '/':
-        disk_name = partition.mountpoint
-        break
+disk_name = get_disk_name()
+print("Disk Name:", disk_name)
 
-if disk_name is not None:
-    print(f"{GREEN}Disk name: {disk_name}{RESET}")
-else:
-    print(f"{RED}Unable to determine disk name.{RESET}")
