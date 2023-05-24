@@ -5,7 +5,7 @@ import shutil
 import string
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
-exit = ["exit", "quit", "exit()", "quit()"]
+exit = ["exit", "quit", "exit()", "quit()", "EXIT()", "QUIT()", "EXIT", "QUIT"]
 
 RED = Fore.RED;
 GREEN = Fore.GREEN;
@@ -35,7 +35,7 @@ def get_drives():
             drives = input(">>> ")
 
             if drives in exit:
-                print("Exiting...")
+                print(f"{RED}Exiting...{RESET}")
                 break
 
             total, used, free = shutil.disk_usage(drives+":/")
