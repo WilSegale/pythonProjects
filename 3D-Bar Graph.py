@@ -27,7 +27,7 @@ def get_drives():
 
         if __name__ == '__main__':
             # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
-            print(f"drive: {get_drives()}")
+            print(f"Drive: {get_drives()}")
 
         while True:
             print("Input the name of the drive you want to the amount of space remaining on")
