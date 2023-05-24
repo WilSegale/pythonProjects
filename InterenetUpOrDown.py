@@ -2,6 +2,10 @@ from colorama import *
 import socket
 import time
 
+GREEN = Fore.GREEN;
+RED = Fore.RED;
+RESET = Style.RESET_ALL;
+
 def is_connected():
     try:
         # connect to the host -- tells us if the host is actually reachable
@@ -13,11 +17,11 @@ def is_connected():
 while True:
     try: 
         if is_connected():
-            print(f"{Fore.GREEN}Internet is up and running! {Fore.RESET}")
+            print(f"{GREEN}Internet is up and running!{RESET}")
             break
         else:
-            print(f"{Fore.RED}Internet seems to be down.{Fore.RESET}")
+            print(f"{RED}Internet seems to be down.{RESET}")
             time.sleep(1)
     except KeyboardInterrupt:
-        print('\nYou have closed the program')
+        print(f'\n{RED}[-| You have closed the program')
         break

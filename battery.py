@@ -26,4 +26,4 @@ if battery:
         print(f"{YELLOW}Power plugged in: {GREEN}{battery.power_plugged}{RESET}")
         print(f"{YELLOW}Battery left: {RED}{convertTime(battery.secsleft)}{RESET}")
 else:
-    print(f"{RED}{BRIGHT}No battery found.{RESET}")
+    print(f"{RED}{BRIGHT}[-] No battery found.{RESET}")
