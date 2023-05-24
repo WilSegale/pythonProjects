@@ -3,6 +3,7 @@ from colorama import *
 from sys import platform
 import shutil
 import string
+
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
 exit = ["exit", "quit", "exit", "quit"]
@@ -10,6 +11,7 @@ exit = ["exit", "quit", "exit", "quit"]
 RED = Fore.RED;
 GREEN = Fore.GREEN;
 YELLOW = Fore.YELLOW;
+BRIGHT = Style.BRIGHT;
 RESET = Style.RESET_ALL;
 
 def get_drives():
@@ -71,6 +73,6 @@ def get_drives():
             plt.show()
     else:
         # if the user is not on a Windows machine it says "Not supported on this platform"
-        print(f"{RED}[-] Not supported on this platform{GREEN}")
+        print(f"{RED}{BRIGHT}[-] Not supported on this platform{RESET}")
 
 get_drives()
