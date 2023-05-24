@@ -72,6 +72,6 @@ def get_drives():
             plt.show()
     else:
         # if the user is not on a Windows machine it says "Not supported on this platform"
-        print(f"{RED}[-]Not supported on this platform[-]{GREEN}")
+        print(f"{RED}[-] Not supported on this platform{GREEN}")
 
 get_drives()
