@@ -46,7 +46,7 @@ try:
     else:
         total, used, free = shutil.disk_usage(f"/")
         JSON_OUTPUT = {
-            f"DiskSpace for drive:Main Drive":[
+            f"DiskSpace for drive: Main Drive":[
                 {"Total-GB": total // (2 ** 30)},
                 {"Used-GB": used // (2 ** 30)},
                 {"Free-GB":free // (2 ** 30)}
