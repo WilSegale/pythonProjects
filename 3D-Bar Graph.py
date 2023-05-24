@@ -15,7 +15,6 @@ RESET = Style.RESET_ALL;
 def get_drives():
     if platform == "win32":
         from ctypes import windll
-
         def get_drives():
             drives = []
             bitmask = windll.kernel32.GetLogicalDrives()

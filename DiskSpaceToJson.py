@@ -3,6 +3,7 @@ import shutil
 import string
 from colorama import *
 from sys import platform
+INDENTNUMBER = 4
 
 try:
     GREEN = Fore.GREEN
@@ -34,7 +35,7 @@ try:
             ]
         }
         
-        json_data = json.dumps(JSON_OUTPUT,indent=4)
+        json_data = json.dumps(JSON_OUTPUT,indent=INDENTNUMBER)
 
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)
@@ -52,7 +53,7 @@ try:
             ]
         }
         
-        json_data = json.dumps(JSON_OUTPUT,indent=4)
+        json_data = json.dumps(JSON_OUTPUT,indent=INDENTNUMBER)
 
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)
