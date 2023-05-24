@@ -3,6 +3,7 @@ import shutil
 import string
 from colorama import *
 from sys import platform
+
 INDENTNUMBER = 4
 
 try:
