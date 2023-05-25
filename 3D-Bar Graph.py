@@ -74,7 +74,7 @@ try:
                     ax.text(i, value + 1, str(value), ha='center', fontsize=10)
                 
                 #puts a label on the y-axis
-                ax.set_ylabel("Amount (G m ,8B)")  # Add y-axis label
+                ax.set_ylabel("Amount (GB)")  # Add y-axis label
                 
                 plt.show()
         else:
@@ -84,4 +84,6 @@ try:
     get_drives()
 
 except KeyboardInterrupt:
-    print(f"{RED}[-] Exiting program [-]{RESET}")
+      for i in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
+          time.sleep(0.1)
+          pass
