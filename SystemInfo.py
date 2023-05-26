@@ -10,6 +10,8 @@ release = system_info.release
 version = system_info.version
 machine = system_info.machine
 processor = system_info.processor
+bootTime = system_info.boot
+
 
 # Print the system information
 print("System Information:")
