@@ -22,6 +22,7 @@ while True:
         else:
             print(f"{RED}Internet seems to be down.{RESET}")
             time.sleep(1)
+
     except KeyboardInterrupt:
         print(f'\n{RED}[-| You have closed the program')
         break
