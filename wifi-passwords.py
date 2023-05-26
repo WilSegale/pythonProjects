@@ -1,6 +1,10 @@
 # first we will import the subprocess module
-import subprocess
 from sys import platform
+from colorama import *
+import subprocess
+
+RED = Fore.RED
+GREEN = Fore.GREEN
 
 if platform == "win32":
     # now we will store the profiles data in "data" variable by 
@@ -23,6 +27,6 @@ if platform == "win32":
         try:
             print ("{:<30}|  {:<}".format(i, results[0]))
         except IndexError:
-            print ("{:<30}|  {:<")
+            print ("error: profile not found")
 else:
-    print('wrong os')
+    print(f'{RED}wrong os')
