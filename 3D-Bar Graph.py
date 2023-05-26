@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 from colorama import *
+from tqdm import *
 from sys import platform
 import time
-from tqdm import *
 import shutil
 import string
 # The array that contains the name of colors so the graph has some color to it
@@ -17,7 +17,6 @@ try:
     def get_drives():
         if platform == "win32":
             from ctypes import windll
-
             def get_drives():
                 drives = []
                 bitmask = windll.kernel32.GetLogicalDrives()
