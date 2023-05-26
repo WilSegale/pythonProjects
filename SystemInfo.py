@@ -1,24 +1,21 @@
-import psutil
-import subprocess
+import platform
 
-# Get the system's CPU usage
-cpu_percent = psutil.cpu_percent()
-print("CPU usage: ", cpu_percent)
+# Get the system information
+system_info = platform.uname()
 
-# Get the system's memory usage
-memory = psutil.virtual_memory()
-print("Total memory: ", memory.total / (1024 ** 2), "MB")
-print("Used memory: ", memory.used / (1024 ** 2), "MB")
-print("Free memory: ", memory.free / (1024 ** 2), "MB")
+# Extract individual system details
+system_name = system_info.system
+node_name = system_info.node
+release = system_info.release
+version = system_info.version
+machine = system_info.machine
+processor = system_info.processor
 
-# Get the system's boot time
-boot_time = psutil.boot_time()
-print("Boot time: ", boot_time)
-
-# Get the system's uptime
-uptime = subprocess.check_output(['uptime']).decode()
-print("Uptime: ", uptime)
-
-# Get the system's users
-users = psutil.users()
-print("Users: ", users)
+# Print the system information
+print("System Information:")
+print("System Name:", system_name)
+print("Node Name:", node_name)
+print("Release:", release)
+print("Version:", version)
+print("Machine:", machine)
+print("Processor:", processor)
