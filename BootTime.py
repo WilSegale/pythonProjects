@@ -8,5 +8,5 @@ def get_boot_time():
 
 # Usage
 boot_time = get_boot_time()
-formatted_boot_time = boot_time.strftime("%Y-%m-%d %H:%M:%S")
+formatted_boot_time = boot_time.strftime("%Y-%m-%d %I:%M:%S %p")
 print("System Boot Time:", formatted_boot_time)
