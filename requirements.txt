@@ -18,3 +18,4 @@ pycountry
 ffmpeg
 mysql.connector
 phone_iso3166
+screeninfo
