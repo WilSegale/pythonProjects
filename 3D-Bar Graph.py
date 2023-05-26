@@ -1,22 +1,25 @@
-import matplotlib.pyplot as plt
-from colorama import *
-from tqdm import *
-from sys import platform
 import time
 import shutil
 import string
+import matplotlib.pyplot as plt
+from colorama import Fore, Style
+from tqdm import tqdm
+import sys
+
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
-exit = ["exit", "quit", "exit()", "quit()", "EXIT()", "QUIT()", "EXIT", "QUIT"]
+exit = ["exit", "quit", "exit()", "quit()", "EXIT()", "QUIT()", "EXIT", "QUIT","Exit","Quit"]
 
-RED = Fore.RED;
-GREEN = Fore.GREEN;
-YELLOW = Fore.YELLOW;
-RESET = Style.RESET_ALL;
+RED = Fore.RED
+GREEN = Fore.GREEN
+YELLOW = Fore.YELLOW
+RESET = Style.RESET_ALL
+
 try:
     def get_drives():
-        if platform == "win32":
+        if sys.platform == "win32":
             from ctypes import windll
+
             def get_drives():
                 drives = []
                 bitmask = windll.kernel32.GetLogicalDrives()
@@ -32,16 +35,15 @@ try:
                 print(f"drive: {get_drives()}")
 
             while True:
-                print("Input the name of the drive you want to the amount of space remaining on")
+                print("Input the name of the drive you want to check the amount of space remaining on")
                 drives = input(">>> ")
 
                 if drives in exit:
-                    for i in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
+                    for _ in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
                         time.sleep(0.1)
-                    pass
                     break
 
-                total, used, free = shutil.disk_usage(drives+":/")
+                total, used, free = shutil.disk_usage(drives + ":/")
                 total_gb = total // (2 ** 30)
                 used_gb = used // (2 ** 30)
                 free_gb = free // (2 ** 30)
@@ -71,10 +73,10 @@ try:
                 for i, value in enumerate(values):
                     color = colors[i]
                     ax.text(i, value + 1, str(value), ha='center', fontsize=10)
-                
-                #puts a label on the y-axis
+
+                # puts a label on the y-axis
                 ax.set_ylabel("Amount (GB)")  # Add y-axis label
-                
+
                 plt.show()
         else:
             # if the user is not on a Windows machine it says "Not supported on this platform"
@@ -83,6 +85,5 @@ try:
     get_drives()
 
 except KeyboardInterrupt:
-      for i in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
-          time.sleep(0.1)
-          pass
+    for _ in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
+        time.sleep(0.1)
