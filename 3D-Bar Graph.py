@@ -2,9 +2,9 @@ import matplotlib.pyplot as plt
 from colorama import *
 from tqdm import *
 from sys import platform
-import time
 import shutil
 import string
+
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
 exit = ["exit", "quit", "exit()", "quit()", "EXIT()", "QUIT()", "EXIT", "QUIT"]
@@ -36,9 +36,7 @@ try:
                 drives = input(">>> ")
 
                 if drives in exit:
-                    for i in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
-                        time.sleep(0.1)
-                    pass
+                    print(f"{RED}[-] Exiting program [-]{RESET}")
                     break
 
                 total, used, free = shutil.disk_usage(drives+":/")
@@ -83,6 +81,4 @@ try:
     get_drives()
 
 except KeyboardInterrupt:
-      for i in tqdm(range(0, 100), ascii=False, colour="green", desc="Exiting program"):
-          time.sleep(0.1)
-          pass
+    print(f"{RED}[-] Exiting program [-]{RESET}")
