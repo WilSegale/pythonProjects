@@ -41,7 +41,7 @@ try:
         print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
     
     
-    #for MAC computers
+    #for MAC or Linux computers
     else:
         total, used, free = shutil.disk_usage(f"/")
         JSON_OUTPUT = {
