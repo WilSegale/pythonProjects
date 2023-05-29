@@ -4,9 +4,6 @@ from tqdm import *
 from sys import platform
 import shutil
 import string
-import pyfiglet
-
-banner = pyfiglet.figlet_format("3D-Bar Graph")
 
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 
@@ -29,8 +26,6 @@ RESET = Style.RESET_ALL;
 try:
     def get_drives():
         if platform == "win32":
-            print(f"{banner}")
-
             from ctypes import windll
             def get_drives():
                 drives = []
