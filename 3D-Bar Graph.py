@@ -6,8 +6,18 @@ import shutil
 import string
 
 # The array that contains the name of colors so the graph has some color to it
-colors = ['green', 'red', 'yellow']
-exit = ["exit", "quit", "exit()", "quit()", "EXIT()", "QUIT()", "EXIT", "QUIT"]
+colors = ['green', 
+          'red', 
+          'yellow']
+
+exit = ["exit", 
+        "quit", 
+        "exit()", 
+        "quit()", 
+        "EXIT()", 
+        "QUIT()", 
+        "EXIT", 
+        "QUIT"]
 
 RED = Fore.RED;
 GREEN = Fore.GREEN;
