@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import shutil
+
 total,used,free = shutil.disk_usage("/")
 
 # Data for the bar chart
