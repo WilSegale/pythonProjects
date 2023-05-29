@@ -16,4 +16,3 @@ s.send(data)
 
 # Close the socket
 s.close()
-
