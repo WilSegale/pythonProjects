@@ -10,9 +10,9 @@ total, used, free = shutil.disk_usage("/")
 
 # Data for the CSV chart
 data = {
-    'Total': [total // (2 ** 30)],
-    'Free':  [free // (2 ** 30)],
-    'Used':  [used // (2 ** 30)]
+        'Total': [total // (2 ** 30)],
+        'Free':  [free // (2 ** 30)],
+        'Used':  [used // (2 ** 30)]
     }
 
 # Create a DataFrame from the data
