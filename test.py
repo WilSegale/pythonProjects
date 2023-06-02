@@ -1,10 +1,11 @@
 from moviepy.editor import VideoFileClip
 
 # Load the video file
-video = VideoFileClip("/Users/admin/Downloads/HEVEYGUN.mp4")
+video = VideoFileClip("")
 
 # Extract the audio
 audio = video.audio
 
 # Save the extracted audio to a file
-audio.write_audiofile("extracted_audio.mp3")
+audio.write_audiofile("path/to/your/extracted_audio.wav")
+
