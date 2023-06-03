@@ -4,9 +4,9 @@ import shutil
 total,used,free = shutil.disk_usage("/")
 
 # Data for the bar chart
-labels = ['Used', 'Free']
-DiskData = [used, free]
-colors = ['red', 'yellow']
+labels = ['Used', 'Free',"total"]
+DiskData = [used, free, total]
+colors = ['red', 'yellow', 'green']
 
 # Plot the bar chart
 plt.bar(labels, DiskData, color=colors)
