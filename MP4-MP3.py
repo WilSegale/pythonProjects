@@ -1,7 +1,7 @@
 from moviepy.editor import VideoFileClip
 
 # Load the video file
-video = VideoFileClip("/Users/admin/Downloads/HEVEYGUN.mp4")
+video = VideoFileClip("/Users/admin/Desktop/github/pythonProjects/apache.mp4")
 
 # Extract the audio
 audio = video.audio
