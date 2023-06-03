@@ -1,5 +1,6 @@
 from colorama import *
 import os
+import matplotlib.pyplot as plt
 
 GREEN = Fore.GREEN
 RESET = Fore.RESET
@@ -9,17 +10,7 @@ def get_drive_capacity(drive_path):
    free_bytes = os.statvfs(drive_path).f_bavail * os.statvfs(drive_path).f_frsize
    used_bytes = total_bytes - free_bytes
     
-   if total_bytes < 1024**2:
-      return f"Total: {total_bytes} bytes, Free: {free_bytes} bytes, Used: {used_bytes} bytes"
-   
-   elif total_bytes < 1024**3:
-      return f"Total: {total_bytes / 1024**2} MB, \nFree: {free_bytes / 1024**2} MB, \nUsed: {used_bytes / 1024**2} MB"
-   
-   elif total_bytes < 1024**4:
-      return f"Total: {total_bytes / 1024**3} GB, \nFree: {free_bytes / 1024**3} GB, \nUsed: {used_bytes / 1024**3} GB"
-   
-   else:
-      return f"Total: {total_bytes / 1024**4} TB, \nFree: {free_bytes / 1024**4} TB, \nUsed: {used_bytes / 1024**4} TB"
+   return used_bytes
 
 directory = "/Volumes"
 
@@ -31,7 +22,23 @@ input_path = input(">>> ")
 # List of drive paths
 drive_paths = ["/", f"/Volumes/{input_path}"]  # input the list of the drive path
 
+drive_names = []
+used_capacities = []
+
 # Iterate over drive paths
 for drive_path in drive_paths:
    drive_capacity = get_drive_capacity(drive_path)
-   print(f"Drive: {drive_path}\n{drive_capacity}\n")
+   drive_names.append(drive_path)
+   used_capacities.append(drive_capacity)
+
+# Plotting the bar graph
+fig, ax = plt.subplots()
+ax.bar(drive_names, used_capacities)
+
+ax.set_xlabel('Drive')
+ax.set_ylabel('Used Capacity')
+ax.set_title('Used Capacity of Drives')
+
+plt.xticks(rotation=45)
+
+plt.show()
