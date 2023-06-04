@@ -3,9 +3,13 @@ import shutil
 
 total,used,free = shutil.disk_usage("/")
 
+total_gb = total // (2 ** 30)
+used_gb = used // (2 ** 30)
+free_gb = free // (2 ** 30)
+
 # Data for the bar chart
 labels = ['Used', 'Free',"total"]
-DiskData = [used, free, total]
+DiskData = [used_gb, free_gb, total_gb]
 colors = ['red', 'yellow', 'green']
 
 # Plot the bar chart
