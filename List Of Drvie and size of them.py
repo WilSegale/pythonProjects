@@ -1,9 +1,8 @@
-from colorama import *
-import os
 import matplotlib.pyplot as plt
-import readline
-
 from numpy import arange
+from colorama import *
+import readline
+import os
 
 GREEN = Fore.GREEN
 RESET = Fore.RESET
@@ -16,7 +15,6 @@ def get_drive_capacity(drive_path):
     print(f"Free: {free // (2 ** 30)}")
     print(f"Used: {used // (2 ** 30)}")
     return used, free, total
-
 
 directory = "/Volumes"
 
@@ -37,11 +35,11 @@ readline.parse_and_bind('tab: complete')
 readline.set_completer(autocomplete)
 
 input_path = input(">>> ")
+
 # if the user inputs only "/" it only shows the main drive
 if input_path == "/":
     drive_paths = ["/"]
 
-    
     drive_names = []
 
     total_capacities = []
