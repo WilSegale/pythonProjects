@@ -10,4 +10,4 @@ width = get_screen_width()
 height = get_monitors()[0].height
 
 
-print(f"Screen width and height: {height} x {width}")
+print(f"Screen width and height: {width} x {height}".format(width=width, height=height))
