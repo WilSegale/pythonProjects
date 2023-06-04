@@ -76,9 +76,10 @@ if input_path == "/":
     ax.legend()
 
     plt.show()
+    
 elif input_path == "":
     print('ERROR: INPUT PATH MUST BE SPECIFIED.')
-    
+
 # List of drive paths
 else:
     drive_paths = [f"/Volumes/{input_path}"]
