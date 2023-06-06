@@ -23,6 +23,7 @@ RED = Fore.RED;
 GREEN = Fore.GREEN;
 YELLOW = Fore.YELLOW;
 RESET = Style.RESET_ALL;
+
 try:
     def get_drives():
         if platform == "win32":
