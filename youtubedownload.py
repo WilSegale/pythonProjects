@@ -3,14 +3,14 @@ from colorama import *
 
 GREEN = Fore.GREEN #works correctly
 RESET = Fore.RESET #resets the color 
-
+RED = Fore.RED
 def Download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
     try:
         youtubeObject.download()
     except:
-        print("An error has occurred")
+        print(F"{RED}[-] An error has occurred")
     
     print(GREEN + "Downloading video: " + RESET + youtubeObject.title)
 
