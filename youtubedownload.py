@@ -3,7 +3,8 @@ from colorama import *
 
 GREEN = Fore.GREEN #works correctly
 RESET = Fore.RESET #resets the color 
-RED = Fore.RED
+RED = Fore.RED # color for the error message
+
 def Download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
