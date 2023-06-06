@@ -1,10 +1,12 @@
+import shutil
 import matplotlib.pyplot as plt
+total,used,free = shutil.disk_usage("/")
 
 # Disk space data
 disk_space = {
-    'C:': 50,
-    'D:': 20,
-    'E:': 30,
+    total // (2 ** 30):total,
+    used // (2 ** 30):used,
+    free // (2 ** 30):free
 }
 
 # Pie chart
@@ -22,4 +24,5 @@ plt.title('Disk Space')
 
 # Display the chart
 plt.show()
+
 
