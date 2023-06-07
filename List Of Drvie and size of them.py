@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
-from numpy import arange
 from colorama import *
+from numpy import *
 import readline
 import os
 
 quit = ["exit", 
         "quit", 
         "EXIT()",
+        "exit()",
         "EXIT",
         "Exit",
         "QUIT",
