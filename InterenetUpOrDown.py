@@ -8,7 +8,7 @@ RESET = Style.RESET_ALL;
 
 def is_connected():
     try:
-        # connect to the host -- tells us if the host is actually reachable
+        # connect to the host website and tells us if the host is actually reachable
         socket.create_connection(("www.google.com", 80))
         return True
     except OSError:
