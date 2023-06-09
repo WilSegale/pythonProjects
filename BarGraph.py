@@ -11,7 +11,7 @@ free_gb = free // (2 ** 30)
 labels = ['Used', 'Free',"total"]
 DiskData = [used_gb, free_gb, total_gb]
 colors = ['red', 'yellow', 'green']
-
+print(used_gb,"Used,", free_gb,"Free,", total_gb,"Total")
 # Plot the bar chart
 plt.bar(labels, DiskData, color=colors)
 plt.xlabel('Space')
