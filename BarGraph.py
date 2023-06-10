@@ -1,6 +1,10 @@
+from colorama import *
 import matplotlib.pyplot as plt
 import shutil
-
+RED = Fore.RED
+YELLOW = Fore.YELLOW
+GREEN = Fore.GREEN
+RESET = Fore.RESET
 total,used,free = shutil.disk_usage("/")
 
 total_gb = total // (2 ** 30)
@@ -11,9 +15,10 @@ free_gb = free // (2 ** 30)
 labels = ['Used', 'Free',"total"]
 DiskData = [used_gb, free_gb, total_gb]
 colors = ['red', 'yellow', 'green']
-print(used_gb,"Used,", 
-      free_gb,"Free,", 
-      total_gb,"Total")
+print(f"{RED}Used: {used_gb}") 
+print(f"{YELLOW}Free: {free_gb}") 
+print(f"{GREEN}Total: {total_gb}{RESET}")
+
 # Plot the bar chart
 plt.bar(labels, DiskData, color=colors)
 plt.xlabel('Space')
