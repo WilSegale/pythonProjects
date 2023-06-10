@@ -1,6 +1,6 @@
+from colorama import *
 import pandas as pd
 import shutil
-from colorama import *
 
 GREEN = Fore.GREEN
 RED = Fore.RED
