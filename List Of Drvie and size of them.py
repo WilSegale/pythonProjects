@@ -34,7 +34,7 @@ try:
     while True:
         input_path = input(">>> ")
         if input_path in quit:
-            print("[-] Exiting...")
+            print("[-] Exting program")
             break
         # if the user inputs only "/" it only shows the main drive
         if input_path == "/":
