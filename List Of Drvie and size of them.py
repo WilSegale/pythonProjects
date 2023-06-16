@@ -95,7 +95,6 @@ try:
             drive_paths = [f"/Volumes/{input_path}"]
 
             drive_names = []
-
             total_capacities = []
             free_capacities = []
             used_capacities = []
