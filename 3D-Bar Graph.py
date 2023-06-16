@@ -1,28 +1,11 @@
+from DontEdit import *
 import matplotlib.pyplot as plt
-from colorama import *
 from tqdm import *
 from sys import platform
 import shutil
 import string
 
-# The array that contains the name of colors so the graph has some color to it
-colors = ['green', 
-          'red', 
-          'yellow']
 
-exit = ["exit", 
-        "quit", 
-        "exit()", 
-        "quit()", 
-        "EXIT()", 
-        "QUIT()", 
-        "EXIT", 
-        "QUIT"]
-
-RED = Fore.RED;
-GREEN = Fore.GREEN;
-YELLOW = Fore.YELLOW;
-RESET = Style.RESET_ALL;
 
 try:
     def get_drives():

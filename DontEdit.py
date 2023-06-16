@@ -1,4 +1,8 @@
 from colorama import *
+colors = ['green', 
+          'red', 
+          'yellow']
+
 quit = ["exit", 
         "quit", 
         "EXIT()",
@@ -8,9 +12,11 @@ quit = ["exit",
         "QUIT",
         "Quit",
         "QUIT()"]
+
 RED = Fore.RED;
 GREEN = Fore.GREEN
 BLUE = Fore.BLUE
+YELLOW = Fore.YELLOW;
 ORANGE_Start = "\033[38;2;255;165;0m"
 ORANGE_END = "\033[0m"
 RESET = Fore.RESET
