@@ -1,10 +1,7 @@
-from colorama import *
+from DontEdit import *
 import pandas as pd
 import shutil
 
-GREEN = Fore.GREEN
-RED = Fore.RED
-YELLOW = Fore.YELLOW
 
 total, used, free = shutil.disk_usage("/")
 

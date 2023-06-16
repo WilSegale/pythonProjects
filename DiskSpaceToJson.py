@@ -1,14 +1,11 @@
+from DontEdit import *
 import json
 import shutil
 import string
-from colorama import *
 from sys import platform
 
 try:
-    GREEN = Fore.GREEN
-    RED = Fore.RED
-    YELLOW = Fore.YELLOW
-    RESET = Fore.RESET
+
     #for Windows computers
     if platform == "win32":
         from ctypes import windll

@@ -1,13 +1,11 @@
-from colorama import *
+from DontEdit import *
 from sys import platform
 import shutil
 import matplotlib.pyplot as plt
 #mac
 if platform == "darwin":
     MAIN = "Main: DRIVE-"
-    GREEN = Fore.GREEN
-    RED = Fore.RED
-    YELLOW = Fore.YELLOW
+
 
     print(f"{MAIN}")
     #! THIS IS THE MAIN DRIVE OF THE COMPUTER
@@ -33,9 +31,6 @@ if platform == "darwin":
 elif platform == "win32":
     Externial = "A: DRVIE-"
     C = "C: DRIVE-"
-    GREEN = Fore.GREEN
-    RED = Fore.RED
-    YELLOW = Fore.YELLOW
 
     print(f"\n{Externial}")
     total,used,free = shutil.disk_usage("A:/")

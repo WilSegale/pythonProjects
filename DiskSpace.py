@@ -1,5 +1,5 @@
+from DontEdit import *
 from sys import platform
-from colorama import *
 import shutil
 import os
 
@@ -11,9 +11,6 @@ if platform == "darwin":
     def is_drive_connected(drive_letter):
         return os.path.exists(drive_letter + "/")
 
-    GREEN = Fore.GREEN
-    RED = Fore.RED
-    YELLOW = Fore.YELLOW
     print(MAIN)
     total,used,free = shutil.disk_usage("/")
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
@@ -28,9 +25,6 @@ if platform == "linux":
     def is_drive_connected(drive_letter):
         return os.path.exists(drive_letter + "/")
 
-    GREEN = Fore.GREEN
-    RED = Fore.RED
-    YELLOW = Fore.YELLOW
     print(MAIN)
     total,used,free = shutil.disk_usage("/")
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
@@ -48,9 +42,6 @@ elif platform == "win32":
     def is_drive_connected(drive_letter):
         return os.path.exists(drive_letter + ":")
 
-    GREEN = Fore.GREEN
-    RED = Fore.RED
-    YELLOW = Fore.YELLOW
 
     def drive():
 

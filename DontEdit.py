@@ -1,4 +1,5 @@
 from colorama import *
+
 colors = ['green', 
           'red', 
           'yellow']
@@ -19,4 +20,9 @@ BLUE = Fore.BLUE
 YELLOW = Fore.YELLOW;
 ORANGE_Start = "\033[38;2;255;165;0m"
 ORANGE_END = "\033[0m"
+BRIGHT = Style.BRIGHT
 RESET = Fore.RESET
+NORMAL = Style.NORMAL 
+DIM = Style.DIM
+Gray = Fore.LIGHTBLACK_EX
+CYAN = Fore.CYAN

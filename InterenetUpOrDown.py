@@ -1,5 +1,4 @@
 from DontEdit import *
-from colorama import *
 import time
 import socket
 

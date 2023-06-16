@@ -1,8 +1,5 @@
-from colorama import *
+from DontEdit import *
 import random
-RED = Fore.RED
-GREEN = Fore.GREEN
-RESET = Fore.RESET
 def hangman(word):
     wrong = 0
     stages = ["",

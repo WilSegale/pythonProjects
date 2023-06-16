@@ -1,10 +1,7 @@
 import matplotlib.pyplot as plt
-from colorama import *
+from DontEdit import *
 import shutil
 
-CYAN = Fore.CYAN
-Gray = Fore.LIGHTBLACK_EX
-RESET = Fore.RESET
 
 
 total,used,free = shutil.disk_usage("/")

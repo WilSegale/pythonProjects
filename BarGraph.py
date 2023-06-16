@@ -1,10 +1,7 @@
-from colorama import *
+from DontEdit import *
 import matplotlib.pyplot as plt
 import shutil
-RED = Fore.RED
-YELLOW = Fore.YELLOW
-GREEN = Fore.GREEN
-RESET = Fore.RESET
+
 total,used,free = shutil.disk_usage("/")
 
 total_gb = total // (2 ** 30)

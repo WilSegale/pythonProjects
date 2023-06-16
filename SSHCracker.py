@@ -1,4 +1,4 @@
-from colorama import *
+from DontEdit import *
 from logging import NullHandler
 from paramiko import SSHClient, AutoAddPolicy, AuthenticationException, ssh_exception
 import csv
@@ -7,9 +7,6 @@ import threading
 import time
 import logging
 
-GREEN = Fore.GREEN
-RED = Fore.RED
-RESET = Fore.RESET
 
 def ssh_connect(host, username, password):
     ssh_client = SSHClient()
