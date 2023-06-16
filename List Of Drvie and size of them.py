@@ -1,29 +1,17 @@
-import matplotlib.pyplot as plt
-from colorama import *
 from numpy import *
+from DontEdit import *
+import matplotlib.pyplot as plt
 import readline
 import os
 
-quit = ["exit", 
-        "quit", 
-        "EXIT()",
-        "exit()",
-        "EXIT",
-        "Exit",
-        "QUIT",
-        "Quit",
-        "QUIT()"]
-
-GREEN = Fore.GREEN
-RESET = Fore.RESET
 try:
     def get_drive_capacity(drive_path):
         total = os.statvfs(drive_path).f_blocks * os.statvfs(drive_path).f_frsize
         free = os.statvfs(drive_path).f_bavail * os.statvfs(drive_path).f_frsize
         used = total - free
-        print(f"Total: {total // (2 ** 30)}")
-        print(f"Free: {free // (2 ** 30)}")
-        print(f"Used: {used // (2 ** 30)}")
+        print(f"{BLUE}Total: {total // (2 ** 30)}")
+        print(f"{ORANGE_Start}Free: {free // (2 ** 30)}{ORANGE_END}")
+        print(f"{GREEN}Used: {used // (2 ** 30)}{RESET}")
         return used, free, total
 
     directory = "/Volumes"

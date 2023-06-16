@@ -1,10 +1,7 @@
+from DontEdit import *
 from colorama import *
-import socket
 import time
-
-GREEN = Fore.GREEN;
-RED = Fore.RED;
-RESET = Style.RESET_ALL;
+import socket
 
 def is_connected():
     try:
