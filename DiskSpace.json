@@ -1,13 +1,9 @@
 {
     "DiskSpace for drive Main Drive": [
-        {
-            "Total-GB": 460
-        },
-        {
-            "Used-GB": 98
-        },
-        {
-            "Free-GB": 362
-        }
+        {"Total-GB": 460},
+        
+        {"Used-GB": 98},
+        
+        {"Free-GB": 362}
     ]
 }
