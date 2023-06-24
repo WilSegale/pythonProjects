@@ -5,8 +5,6 @@ from sys import platform
 import shutil
 import string
 
-
-
 try:
     def get_drives():
         if platform == "win32":
@@ -70,7 +68,7 @@ try:
                 plt.show()
         else:
             # if the user is not on a Windows machine it says "Not supported on this platform"
-            print(f"{RED}[-] Not supported on this platform [-]{RESET}")
+            print(f"{BRIGHT}{RED}[-] Not supported on this platform [-]{RESET}")
 
     get_drives()
 

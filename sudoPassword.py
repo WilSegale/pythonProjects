@@ -1,13 +1,18 @@
+from colorama import *
 import getpass
 
+GREEN = Fore.GREEN;
+RED = Fore.RED;
+BRIGHT = Style.BRIGHT;
+RESET = Fore.RESET
 def authenticate():
     sudo_password = getpass.getpass("Enter your sudo password: ")
     
     # Check if the entered password is correct
     if sudo_password == "Password":
-        print("Authentication successful!")
-        # Perform actions requiring sudo privileges here
+        print(f"{BRIGHT}{GREEN}Authentication successful!{RESET}") 
+        #Perform actions requiring sudo privileges here
     else:
-        print("Authentication failed!")
+        print(f"{BRIGHT}{RED}Authentication failed!")
 
 authenticate()
