@@ -9,9 +9,9 @@ try:
         total = os.statvfs(drive_path).f_blocks * os.statvfs(drive_path).f_frsize
         free = os.statvfs(drive_path).f_bavail * os.statvfs(drive_path).f_frsize
         used = total - free
-        print(f"{BLUE}Total: {total // (2 ** 30)}")
-        print(f"{ORANGE_Start}Free: {free // (2 ** 30)}{ORANGE_END}")
-        print(f"{GREEN}Used: {used // (2 ** 30)}{RESET}")
+        print(f"{BLUE}Total: {total // (2 ** 30)} GB{RESET}")
+        print(f"{ORANGE_Start}Free: {free // (2 ** 30)} GB{ORANGE_END}")
+        print(f"{GREEN}Used: {used // (2 ** 30)} GB{RESET}")
         return used, free, total
 
     directory = "/Volumes"
