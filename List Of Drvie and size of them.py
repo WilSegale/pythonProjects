@@ -9,9 +9,9 @@ try:
         total = os.statvfs(drive_path).f_blocks * os.statvfs(drive_path).f_frsize
         free = os.statvfs(drive_path).f_bavail * os.statvfs(drive_path).f_frsize
         used = total - free
-        print(f"{BLUE}Total: {total // (2 ** 30)} GB{RESET}")
-        print(f"{ORANGE_Start}Free: {free // (2 ** 30)} GB{ORANGE_END}")
-        print(f"{GREEN}Used: {used // (2 ** 30)} GB{RESET}")
+        print(f"{BRIGHT}{BLUE}Total: {total // (2 ** 30)} GB{RESET}")
+        print(f"{BRIGHT}{ORANGE_Start}Free: {free // (2 ** 30)} GB{ORANGE_END}")
+        print(f"{BRIGHT}{GREEN}Used: {used // (2 ** 30)} GB{RESET}")
         return used, free, total
 
     directory = "/Volumes"
@@ -20,17 +20,6 @@ try:
 
     print(f"{GREEN}Enter the external hard drive ex(EXTERNAL_HARDWARE){RESET}")
 
-    # Define autocomplete function for external hard drive input
-    def autocomplete(text, state):
-        options = [name for name in os.listdir(directory) if name.startswith(text)]
-        if state < len(options):
-            return options[state[1]]
-        else:
-            return None
-
-    # Enable autocomplete for input_path
-    readline.parse_and_bind('tab: complete')
-    readline.set_completer(autocomplete)
     while True:
         input_path = input(">>> ")
         if input_path in quit:
@@ -107,13 +96,14 @@ try:
             ax.bar(index + bar_width, free_capacities, bar_width, label='Free')
             ax.bar(index + 2 * bar_width, total_capacities, bar_width, label='Total')
 
-            ax.set_xlabel('Drive')
-            ax.set_ylabel('Capacity')
+            ax.set_xlabel(f'Drive')
+            ax.set_ylabel(f'Capacity')
             ax.set_title(f'Capacity of Drives for {drive_paths}')
             ax.set_xticks(index + bar_width)
             ax.set_xticklabels(drive_names, rotation=45)
             ax.legend()
 
             plt.show()
+
 except KeyboardInterrupt:
     print("\n[-] Exting program")
