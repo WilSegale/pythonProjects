@@ -1,7 +1,10 @@
 # first we will import the subprocess module
-import subprocess
 from sys import platform
+from colorama import *
+import subprocess
 
+RED = Fore.RED
+RESET = Fore.RESET
 if platform == "win32":
     # now we will store the profiles data in "data" variable by 
     # running the 1st cmd command using subprocess.check_output
@@ -25,4 +28,4 @@ if platform == "win32":
         except IndexError:
             print ("{:<30}|  {:<")
 else:
-    print('wrong os')
+    print(f'{RED}WRONG OS{RESET}')

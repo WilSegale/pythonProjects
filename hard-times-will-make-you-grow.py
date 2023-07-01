@@ -9,6 +9,5 @@ def hardtimes():
     random.shuffle(lines)
     for line in lines:
         print(line)
-        wait(5)
-        os.system('clear')
+        wait(1)
 hardtimes();

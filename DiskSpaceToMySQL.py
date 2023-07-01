@@ -13,7 +13,7 @@ def get_disk_space():
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="Cmonster2006!@#!@#!@#",
+  password='''Cmonster2006!@#!@#!@#''',
   database="NAME_OF_DISKSPACE"
 )
 

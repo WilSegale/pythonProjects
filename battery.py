@@ -1,12 +1,9 @@
 # python script showing battery details
+
+from DontEdit import *
 from colorama import *
 import psutil
 
-GREEN = Fore.GREEN
-YELLOW = Fore.YELLOW
-RED = Fore.RED
-BRIGHT = Style.BRIGHT
-RESET = Style.RESET_ALL
 
 battery = psutil.sensors_battery()
 

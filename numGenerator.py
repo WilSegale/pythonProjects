@@ -8,4 +8,4 @@ def generate_code(length):
         code += str(random.randint(0, 9))
     return code
 
-print(generate_code(6))
+print(generate_code(100))

@@ -9,4 +9,3 @@ def get_disk_name():
 
 disk_name = get_disk_name()
 print("Disk Name:", disk_name)
-

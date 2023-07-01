@@ -11,10 +11,11 @@ psutil
 youtube_dl
 matplotlib
 dash
-mysql
 paramiko
 pyfiglet
 pycountry
 ffmpeg
-mysql.connector
 phone_iso3166
+screeninfo
+pyautogui
+moviepy

@@ -1,5 +1,5 @@
 import dash
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 from dash import dcc, html
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 

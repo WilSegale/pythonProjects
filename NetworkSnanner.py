@@ -1,18 +1,13 @@
 from threading import *
-from colorama import *
+from DontEdit import *
 from queue import *
 import argparse
 import socket
 
 
 
-#! colors
-GREEN = Fore.GREEN
-RESET = Fore.RESET
-RED = Fore.RED
-BRIGHT = Style.BRIGHT 
-NORMAL = Style.NORMAL 
-DIM = Style.DIM
+ 
+
 
 #NUMBER OF THREADS
 N_THREADS = 20000
