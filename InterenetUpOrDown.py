@@ -13,7 +13,7 @@ def is_connected():
 while True:
     try: 
         if is_connected():
-            print(f"{Fore.GREEN}Internet is up and running! {Fore.RESET}")
+            print(f"{Style.BRIGHT}{Fore.GREEN}Internet is up and running! {Style.RESET_ALL}")
             break
         else:
             print(f"{Fore.RED}Internet seems to be down.{Fore.RESET}")
