@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from DontEdit import*
 from colorama import *
 from sys import platform
 import shutil
@@ -7,12 +8,6 @@ import string
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
 exit = ["exit", "quit", "exit", "quit"]
-
-RED = Fore.RED;
-GREEN = Fore.GREEN;
-YELLOW = Fore.YELLOW;
-BRIGHT = Style.BRIGHT;
-RESET = Style.RESET_ALL;
 
 def get_drives():
     if platform == "win32":
