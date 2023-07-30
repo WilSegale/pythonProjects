@@ -1,6 +1,5 @@
 # Importing library
 import qrcode
-import os
 
 # Data to be encoded
 data = 'https://www.youtube.com/watch?v=xm3YgoEiEDc'
