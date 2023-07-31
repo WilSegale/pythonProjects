@@ -27,10 +27,6 @@ try:
                 print("Input the name of the drive you want to the amount of space remaining on")
                 drives = input(">>> ")
 
-                if drives in exit:
-                    print(f"{RED}[-] Exiting program [-]{RESET}")
-                    break
-
                 total, used, free = shutil.disk_usage(drives+":/")
                 total_gb = total // (2 ** 30)
                 used_gb = used // (2 ** 30)
