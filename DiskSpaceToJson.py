@@ -1,11 +1,16 @@
-from DontEdit import *
 import json
 import shutil
 import string
+from colorama import *
 from sys import platform
 
-try:
+INDENTNUMBER = 4
 
+try:
+    GREEN = Fore.GREEN
+    RED = Fore.RED
+    YELLOW = Fore.YELLOW
+    RESET = Fore.RESET
     #for Windows computers
     if platform == "win32":
         from ctypes import windll
@@ -24,14 +29,14 @@ try:
         drive = input(f"Drive: ")
         total, used, free = shutil.disk_usage(f"{drive}:/")
         JSON_OUTPUT = {
-            f"DiskSpace for drive {drive.upper()}":[
+            f"DiskSpace for drive:{drive.upper()}":[
                 {"Total-GB": total // (2 ** 30)},
                 {"Used-GB": used // (2 ** 30)},
                 {"Free-GB":free // (2 ** 30)}
             ]
         }
         
-        json_data = json.dumps(JSON_OUTPUT,indent=4)
+        json_data = json.dumps(JSON_OUTPUT,indent=INDENTNUMBER)
 
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)
@@ -42,14 +47,14 @@ try:
     else:
         total, used, free = shutil.disk_usage(f"/")
         JSON_OUTPUT = {
-            f"DiskSpace for drive Main Drive":[
+            f"DiskSpace for drive: Main Drive":[
                 {"Total-GB": total // (2 ** 30)},
                 {"Used-GB": used // (2 ** 30)},
                 {"Free-GB":free // (2 ** 30)}
             ]
         }
         
-        json_data = json.dumps(JSON_OUTPUT,indent=4)
+        json_data = json.dumps(JSON_OUTPUT,indent=INDENTNUMBER)
 
         with open("DiskSpace.json", "w") as outfile:
             outfile.write(json_data)

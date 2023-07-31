@@ -1,10 +1,10 @@
-from DontEdit import *
-import time
+from colorama import *
 import socket
+import time
 
 def is_connected():
     try:
-        # connect to the host website and tells us if the host is actually reachable
+        # connect to the host -- tells us if the host is actually reachable
         socket.create_connection(("www.google.com", 80))
         return True
     except OSError:
@@ -13,11 +13,11 @@ def is_connected():
 while True:
     try: 
         if is_connected():
-            print(f"{GREEN}Internet is up and running!{RESET}")
+            print(f"{Style.BRIGHT}{Fore.GREEN}Internet is up and running! {Style.RESET_ALL}")
             break
         else:
-            print(f"{RED}Internet seems to be down.{RESET}")
+            print(f"{Fore.RED}Internet seems to be down.{Fore.RESET}")
             time.sleep(1)
     except KeyboardInterrupt:
-        print(f'\n{RED}[-| You have closed the program')
+        print('\nYou have closed the program')
         break

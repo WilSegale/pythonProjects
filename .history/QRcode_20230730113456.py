@@ -1,6 +1,5 @@
 # Importing library
 import qrcode
-import os
 
 # Data to be encoded
 data = 'https://www.youtube.com/watch?v=xm3YgoEiEDc'
@@ -10,5 +9,5 @@ img = qrcode.make(data)
 
 # Saving as an image file
 img.save('MyQRCode1.png')
-os.system('open MyQRCode1.png')
+os.system('open )
 

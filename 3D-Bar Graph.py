@@ -1,57 +1,64 @@
-from DontEdit import *
 import matplotlib.pyplot as plt
-from tqdm import *
+from DontEdit import*
+from colorama import *
 from sys import platform
 import shutil
 import string
 
-try:
-    def get_drives():
-        if platform == "win32":
-            from ctypes import windll
-            def get_drives():
-                drives = []
-                bitmask = windll.kernel32.GetLogicalDrives()
-                for letter in string.ascii_uppercase:
-                    if bitmask & 1:
-                        drives.append(letter)
-                    bitmask >>= 1
+# The array that contains the name of colors so the graph has some color to it
+colors = ['green', 'red', 'yellow']
+exit = ["exit", "quit", "exit", "quit"]
 
-                return drives
+def get_drives():
+    if platform == "win32":
+        from ctypes import windll
+        def get_drives():
+            drives = []
+            bitmask = windll.kernel32.GetLogicalDrives()
+            for letter in string.ascii_uppercase:
+                if bitmask & 1:
+                    drives.append(letter)
+                bitmask >>= 1
 
-            if __name__ == '__main__':
-                # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
-                print(f"drive: {get_drives()}")
+            return drives
 
-            while True:
-                print("Input the name of the drive you want to the amount of space remaining on")
-                drives = input(">>> ")
+        if __name__ == '__main__':
+            # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+            print(f"Drive: {get_drives()}")
+
+        while True:
+            print("Input the name of the drive you want to the amount of space remaining on")
+            drives = input(">>> ")
+
+                if drives in exit:
+                    print(f"{RED}[-] Exiting program [-]{RESET}")
+                    break
 
                 total, used, free = shutil.disk_usage(drives+":/")
                 total_gb = total // (2 ** 30)
                 used_gb = used // (2 ** 30)
                 free_gb = free // (2 ** 30)
 
-                labels = ['Total', 'Used', 'Free']
-                values = [total_gb, used_gb, free_gb]
+            labels = ['Total', 'Used', 'Free']
+            values = [total_gb, used_gb, free_gb]
 
-                # shows the data for the total data that you have on your disk
-                print(GREEN + "Total: %d GB" % total_gb)
+            # shows the data for the total data that you have on your disk
+            print("Total: %d GB" % total_gb)
 
-                # shows the data for the used amount of data that you have on your disk
-                print(RED + "Used: %d GB" % used_gb)
+            # shows the data for the used amount of data that you have on your disk
+            print("Used: %d GB" % used_gb)
 
-                # shows the data for the free amount of data that you have on your disk
-                print(YELLOW + "Free: %d GB" % free_gb + RESET)
+            # shows the data for the free amount of data that you have on your disk
+            print("Free: %d GB" % free_gb)
 
-                fig, ax = plt.subplots()
+            fig, ax = plt.subplots()
 
-                # Create bar graph
-                ax.bar(labels, values, color=colors)
+            # Create bar graph
+            ax.bar(labels, values, color=colors)
 
-                # Add shadow effect to bars
-                for patch in ax.patches:
-                    patch.set_alpha(0.5)
+            # Add shadow effect to bars
+            for patch in ax.patches:
+                patch.set_alpha(0.5)
 
                 # Add numbers on top of each bar with respective colors
                 for i, value in enumerate(values):

@@ -16,6 +16,6 @@ data = {
 df = pd.DataFrame(data)
 # Output the DataFrame to a CSV file
 df.to_csv('DiskSpace.csv', index=False)
-print(GREEN +"Total: %d GB " % (total // (2 ** 30)))
+print(BRIGHT+GREEN +"Total: %d GB " % (total // (2 ** 30)))
 print(RED +"Used: %d GB " % (used // (2 ** 30)))
 print(YELLOW +"Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
