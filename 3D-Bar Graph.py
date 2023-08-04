@@ -30,14 +30,14 @@ def get_drives():
             print("Input the name of the drive you want to the amount of space remaining on")
             drives = input(">>> ")
 
-            if drives in exit:
-                print("Exiting...")
-                break
+                if drives in exit:
+                    print(f"{RED}[-] Exiting program [-]{RESET}")
+                    break
 
-            total, used, free = shutil.disk_usage(drives+":/")
-            total_gb = total // (2 ** 30)
-            used_gb = used // (2 ** 30)
-            free_gb = free // (2 ** 30)
+                total, used, free = shutil.disk_usage(drives+":/")
+                total_gb = total // (2 ** 30)
+                used_gb = used // (2 ** 30)
+                free_gb = free // (2 ** 30)
 
             labels = ['Total', 'Used', 'Free']
             values = [total_gb, used_gb, free_gb]
@@ -60,14 +60,20 @@ def get_drives():
             for patch in ax.patches:
                 patch.set_alpha(0.5)
 
-            # Add numbers on top of each bar with respective colors
-            for i, value in enumerate(values):
-                color = colors[i]
-                ax.text(i, value + 1, str(value), ha='right', fontsize=10)
+                # Add numbers on top of each bar with respective colors
+                for i, value in enumerate(values):
+                    color = colors[i]
+                    ax.text(i, value + 1, str(value), ha='center', fontsize=10)
+                
+                #puts a label on the y-axis
+                ax.set_ylabel("Amount (GB)")  # Add y-axis label
+                
+                plt.show()
+        else:
+            # if the user is not on a Windows machine it says "Not supported on this platform"
+            print(f"{BRIGHT}{RED}[-] Not supported on this platform [-]{RESET}")
 
-            plt.show()
-    else:
-        # if the user is not on a Windows machine it says "Not supported on this platform"
-        print(f"{RED}{BRIGHT}[-] Not supported on this platform{RESET}")
+    get_drives()
 
-get_drives()
+except KeyboardInterrupt:
+    print(f"{RED}[-] Exiting program [-]{RESET}")

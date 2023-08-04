@@ -4,13 +4,7 @@ colors = ['green',
           'red', 
           'yellow']
 
-quit = ["exit", 
-        "quit", 
-        "EXIT()",
-        "exit()",
-        "EXIT",
-        "Exit",
-        "QUIT",
+quit = ["QUIT",
         "Quit",
         "QUIT()"]
 
