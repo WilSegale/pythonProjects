@@ -1,7 +1,7 @@
 import random
 import string
-
-file_path = "test.txt"  # Replace with your file's path
+print("Input a file name.")
+file_path = input(">>> ")  # Replace with your file's path
 
 def generate_random_string(length):
     characters = string.ascii_letters + string.digits
