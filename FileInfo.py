@@ -1,6 +1,7 @@
 import os
 
-file_path = '/Users/admin/Desktop'
+file_path = os.path.expanduser("~/Desktop/")
+
 file_info = os.stat(file_path)
 
 print('Size:', file_info.st_size)
