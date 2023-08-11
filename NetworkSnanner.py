@@ -4,11 +4,6 @@ from queue import *
 import argparse
 import socket
 
-
-
- 
-
-
 #NUMBER OF THREADS
 N_THREADS = 20000
 

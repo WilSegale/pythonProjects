@@ -30,14 +30,14 @@ def get_drives():
             print("Input the name of the drive you want to the amount of space remaining on")
             drives = input(">>> ")
 
-                if drives in exit:
-                    print(f"{RED}[-] Exiting program [-]{RESET}")
-                    break
+            if drives in exit:
+                print(f"{RED}[-] Exiting program [-]{RESET}")
+                break
 
-                total, used, free = shutil.disk_usage(drives+":/")
-                total_gb = total // (2 ** 30)
-                used_gb = used // (2 ** 30)
-                free_gb = free // (2 ** 30)
+            total, used, free = shutil.disk_usage(drives+":/")
+            total_gb = total // (2 ** 30)
+            used_gb = used // (2 ** 30)
+            free_gb = free // (2 ** 30)
 
             labels = ['Total', 'Used', 'Free']
             values = [total_gb, used_gb, free_gb]
@@ -74,6 +74,3 @@ def get_drives():
             print(f"{BRIGHT}{RED}[-] Not supported on this platform [-]{RESET}")
 
     get_drives()
-
-except KeyboardInterrupt:
-    print(f"{RED}[-] Exiting program [-]{RESET}")
