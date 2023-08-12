@@ -1,5 +1,15 @@
 import subprocess
 import os
+
+import pyfiglet
+
+# Generate ASCII art text
+ascii_text = pyfiglet.figlet_format("| Runner |")
+
+# Print the colored ASCII art text
+print(ascii_text)
+
+
 # Replace 'program_to_run.py' with the name of the Python program you want to run
 os.system('ls')
 
