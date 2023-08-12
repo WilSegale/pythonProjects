@@ -28,6 +28,6 @@ def is_disk_encrypted(disk_path):
 disk_path = input(">>> ")  # Replace with the path to your disk or partition
 encrypted = is_disk_encrypted(disk_path)
 if encrypted:
-    print(f"The disk {disk_path} is encrypted.")
+    print(f'''The disk "{disk_path}" is encrypted.''')
 else:
-    print(f"The disk {disk_path} is not encrypted.") 
+    print(f'''The disk "{disk_path}" is not encrypted.''') 
