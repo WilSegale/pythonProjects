@@ -25,6 +25,7 @@ def is_disk_encrypted(disk_path):
     return False
 
 # Example usage
+print("Input disk path like this: /dev/sda1: ")
 disk_path = input(">>> ")  # Replace with the path to your disk or partition
 encrypted = is_disk_encrypted(disk_path)
 if encrypted:
