@@ -1,4 +1,4 @@
-import os
+from DontEdit import *
 
 file_path = os.path.expanduser("~/Desktop/")
 

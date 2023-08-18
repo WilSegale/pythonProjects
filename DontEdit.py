@@ -1,5 +1,6 @@
 from colorama import *
 import os
+
 colors = ['green', 
           'red', 
           'yellow']
