@@ -4,7 +4,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Set up the connection details
-host = '192.168.1.38'  # IP address of the receiving computer
+host = '192.168.1.13'  # IP address of the receiving computer
 port = 12345  # Choose a suitable port number
 
 # Connect to the receiver
