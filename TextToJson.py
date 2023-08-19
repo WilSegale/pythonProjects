@@ -26,7 +26,7 @@ with open(filename) as fh:
 		print(description)
 		
 		# for automatic creation of id for each employee
-		sno ='emp'+str(l)
+		sno ='emp'+str(Loopvar)
 	
 		# loop variable
 		Loopvar = 0
