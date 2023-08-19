@@ -60,5 +60,5 @@ try:
             outfile.write(json_data)
         print(f'{GREEN}Done. It is located in the file called: DiskSpace.json{RESET}')
 
-except:
+except Exception as e:
     print(f"{RED}Something went wrong. Please try again.{RESET}")
