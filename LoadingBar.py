@@ -18,4 +18,4 @@ for i in range(total_items):
     loading_bar(i + 1, total_items, prefix='Progress:', suffix='Complete')
 
 # Print a new line after the loading is complete
-print("\ndone loading")
+print("\nDone loading")
