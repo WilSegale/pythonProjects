@@ -41,7 +41,7 @@ with open(filename) as fh:
 		# appending the record of each employee to
 		# the main dictionary
 		dict1[sno]= dict2
-		l = l + 1
+		Loopvar = Loopvar + 1
 
 
 # creating json file	
