@@ -1,61 +1,73 @@
 from DontEdit import *
-import os
-import shutil
 from sys import platform
+import shutil
+import os
 
-def is_drive_connected(drive_letter):
-    return os.path.exists(drive_letter + "/")
+if platform == "darwin":
+    #mac os
+    MAIN = "Main DRIVE-"
+    os.system("clear")
 
-def get_disk_usage(path):
-    total, used, free = shutil.disk_usage(path)
-    return total, used, free
+    def is_drive_connected(drive_letter):
+        return os.path.exists(drive_letter + "/")
 
-def main():
-    if platform == "darwin":
-        # macOS
-        MAIN_DRIVE = "Main DRIVE-"
-        os.system("clear")
-        root_path = "/"
-        
-    elif platform == "linux":
-        # Linux
-        MAIN_DRIVE = "/"
-        os.system("clear")
-        root_path = "/"
-        
-    elif platform == "win32":
-        # Windows
-        EXTERNAL_DRIVE = "A"
-        MAIN_DRIVE = "C: DRIVE-"
-        os.system('cls' if os.name == 'nt' else "clear")
-        root_path = f"{EXTERNAL_DRIVE}:/"
-        
-    else:
-        print("Unsupported platform")
-        return
-    
-    if is_drive_connected(root_path):
-        print("DiskSpace")
-        
-        if platform == "win32":
-            print(f"\n{EXTERNAL_DRIVE}")
-            total, used, free = get_disk_usage(root_path)
+    print(MAIN)
+    total,used,free = shutil.disk_usage("/")
+    print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+    print(RED + "Used: %d GB " % (used // (2 ** 30)))
+    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+#linux
+if platform == "linux":
+    #linux os
+    MAIN = "/"
+
+    def is_drive_connected(drive_letter):
+        return os.path.exists(drive_letter + "/")
+
+    print(MAIN)
+    total,used,free = shutil.disk_usage("/")
+    print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+    print(RED + "Used: %d GB " % (used // (2 ** 30)))
+    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+
+# Windows...
+elif platform == "win32":
+    DRIVE = "A"
+    ExternialDrive= f"{DRIVE}: DRVIE-"
+    MAINDrive = "C: DRIVE-"
+
+    os.system('cls' if os.name=='nt' else "clear")
+
+    def is_drive_connected(drive_letter):
+        return os.path.exists(drive_letter + ":")
+
+
+    def drive():
+
+        if is_drive_connected(DRIVE) == True:
+            #? THIS IS THE EXTERNIAL DRIVE OF THE COMPUTER
+            total,used,free = shutil.disk_usage(f"{DRIVE}:/")
+            print("DiskSpace")
+            print(f"\n{ExternialDrive}")
             print(GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
-            print(RED + "Used: %d GB " % (used // (2 ** 30)))
-            print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024)) + RESET)
-            print("-" * 15)
+            print(RED + "Used: %d GB " % (used // (2**30)))
+            print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024))+Fore.RESET)
             
-        print(f"{MAIN_DRIVE}")
-        total, used, free = get_disk_usage(root_path)
-        print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
-        print(RED + "Used: %d GB " % (used // (2 ** 30)))
-        print(YELLOW + "Free: %d GB " % (free // (2 ** 30)) + RESET)
-    else:
-        print(f"{MAIN_DRIVE}")
-        total, used, free = get_disk_usage(root_path)
-        print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
-        print(RED + "Used: %d GB " % (used // (2 ** 30)))
-        print(YELLOW + "Free: %d GB " % (free // (2 ** 30)) + RESET)
+            # this is something that say that the top is the D drive and the bottom is the C drive
+            print("-"*15)
 
-if __name__ == "__main__":
-    main()
+            #! THIS IS THE MAIN DRIVE OF THE COMPUTER
+            print(f"{MAINDrive}")
+            total,used,free = shutil.disk_usage("C:/")
+            print(GREEN +"Total: %d GB " % (total // (2 ** 30)))
+            print(RED +"Used: %d GB " % (used // (2 ** 30)))
+            print(YELLOW +"Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+
+        else:
+            #! THIS IS THE MAIN DRIVE OF THE COMPUTER
+            print(f"{MAINDrive}")
+            total,used,free = shutil.disk_usage("C:/")
+            print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
+            print(RED + "Used: %d GB " % (used // (2 ** 30)))
+            print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+    drive()
