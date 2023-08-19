@@ -15,7 +15,7 @@ fields =['name', 'designation']
 with open(filename) as fh:
 	
 	# count variable for employee id creation
-	l = 1
+	countLine = 1
 	
 	for line in fh:
 		
@@ -29,14 +29,14 @@ with open(filename) as fh:
 		sno ='emp'+str(l)
 	
 		# loop variable
-		i = 0
+		Loopvar = 0
 		# intermediate dictionary
 		dict2 = {}
-		while i<len(fields):
+		while Loopvar<len(fields):
 			
 				# creating dictionary for each employee
-				dict2[fields[i]]= description[i]
-				i = i + 1
+				dict2[fields[Loopvar]]= description[Loopvar]
+				Loopvar = Loopvar + 1
 				
 		# appending the record of each employee to
 		# the main dictionary
