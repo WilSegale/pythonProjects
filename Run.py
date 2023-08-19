@@ -29,6 +29,7 @@ else:
             # Run the program and capture its output and errors
             try:
                 output = subprocess.check_output(['python3', program_name], stderr=subprocess.STDOUT, universal_newlines=True)
+                print("_________________")
                 print("Program output:")
                 print(output)
             except subprocess.CalledProcessError as e:
