@@ -7,7 +7,7 @@ import string
 
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
-exit = ["exit", "quit", "exit", "quit"]
+exit = ["exit", "quit", "exit()", "quit()"]
 
 def get_drives():
     if platform == "win32":
@@ -26,13 +26,8 @@ def get_drives():
             # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
             print(f"Drive: {get_drives()}")
 
-        while True:
             print("Input the name of the drive you want to the amount of space remaining on")
             drives = input(">>> ")
-
-            if drives in exit:
-                print(f"{RED}[-] Exiting program [-]{RESET}")
-                break
 
             total, used, free = shutil.disk_usage(drives+":/")
             total_gb = total // (2 ** 30)
