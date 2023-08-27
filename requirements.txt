@@ -19,3 +19,4 @@ phone_iso3166
 screeninfo
 pyautogui
 moviepy
+numpy
