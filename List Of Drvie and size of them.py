@@ -41,8 +41,8 @@ while True:
         used_capacity, free_capacity, total_capacity = get_drive_capacity(drive_path)
         drive_names.append(drive_path)
         used_capacities.append(used_capacity // (2 ** 30))
-        free_capacities.append(free_capacity  // (2 ** 30))
-        total_capacities.append(total_capacity  // (2 ** 30)) 
+        free_capacities.append(free_capacity // (2 ** 30))
+        total_capacities.append(total_capacity // (2 ** 30)) 
 
     fig, ax = plt.subplots()
     bar_width = 0.3
