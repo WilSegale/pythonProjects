@@ -1,6 +1,6 @@
 from colorama import *
 import os
-
+import time
 colors = ['green', 
           'red', 
           'yellow']
