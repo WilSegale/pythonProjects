@@ -31,7 +31,8 @@ colors = ['red', 'yellow', 'green']
 
 print(f"\n{RED}Used: {used_gb}") 
 print(f"{YELLOW}Free: {free_gb}") 
-print(f"{GREEN}Total: {total_gb}{RESET}")
+print(f"{GREEN}Total: {total_gb}\
+        {RESET}")
 
 # Plot the bar chart
 plt.bar(labels, DiskData, color=colors)
