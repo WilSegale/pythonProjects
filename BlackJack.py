@@ -113,5 +113,6 @@ try:
     # Starting the game
     game = Game()
     game.start_game()
+    
 except KeyboardInterrupt:
     print("\n\nThanks for playing!")
