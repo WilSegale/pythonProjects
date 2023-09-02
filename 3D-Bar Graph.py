@@ -1,5 +1,5 @@
+from DontEdit import *
 import matplotlib.pyplot as plt
-from DontEdit import*
 from colorama import *
 from sys import platform
 import shutil
@@ -7,65 +7,62 @@ import string
 
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
-exit = ["exit", "quit", "exit()", "quit()"]
 
 def get_drives():
     if platform == "win32":
         from ctypes import windll
-        def get_drives():
-            drives = []
-            bitmask = windll.kernel32.GetLogicalDrives()
-            for letter in string.ascii_uppercase:
-                if bitmask & 1:
-                    drives.append(letter)
-                bitmask >>= 1
 
-            return drives
+        drives = []
+        bitmask = windll.kernel32.GetLogicalDrives()
+        for letter in string.ascii_uppercase:
+            if bitmask & 1:
+                drives.append(letter)
+            bitmask >>= 1
 
-        if __name__ == '__main__':
-            # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
-            print(f"Drive: {get_drives()}")
+        return drives
 
-            print("Input the name of the drive you want to the amount of space remaining on")
-            drives = input(">>> ")
+if __name__ == '__main__':
+    # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
+    print(f"Drive: {get_drives()}")
 
-            total, used, free = shutil.disk_usage(drives+":/")
-            total_gb = total // (2 ** 30)
-            used_gb = used // (2 ** 30)
-            free_gb = free // (2 ** 30)
+    print("Input the name of the drive you want to the amount of space remaining on")
+    drives = input(">>> ")
 
-            labels = ['Total', 'Used', 'Free']
-            values = [total_gb, used_gb, free_gb]
+    total, used, free = shutil.disk_usage(drives+":/")
+    total_gb = total // (2 ** 30)
+    used_gb = used // (2 ** 30)
+    free_gb = free // (2 ** 30)
 
-            # shows the data for the total data that you have on your disk
-            print("Total: %d GB" % total_gb)
+    labels = ['Total', 'Used', 'Free']
+    values = [total_gb, used_gb, free_gb]
 
-            # shows the data for the used amount of data that you have on your disk
-            print("Used: %d GB" % used_gb)
+    # shows the data for the total data that you have on your disk
+    print("Total: %d GB" % total_gb)
 
-            # shows the data for the free amount of data that you have on your disk
-            print("Free: %d GB" % free_gb)
+    # shows the data for the used amount of data that you have on your disk
+    print("Used: %d GB" % used_gb)
 
-            fig, ax = plt.subplots()
+    # shows the data for the free amount of data that you have on your disk
+    print("Free: %d GB" % free_gb)
 
-            # Create bar graph
-            ax.bar(labels, values, color=colors)
+    fig, ax = plt.subplots()
 
-            # Add shadow effect to bars
-            for patch in ax.patches:
-                patch.set_alpha(0.5)
+    # Create bar graph
+    ax.bar(labels, values, color=colors)
 
-                # Add numbers on top of each bar with respective colors
-                for i, value in enumerate(values):
-                    color = colors[i]
-                    ax.text(i, value + 1, str(value), ha='center', fontsize=10)
-                
-                #puts a label on the y-axis
-                ax.set_ylabel("Amount (GB)")  # Add y-axis label
-                
-                plt.show()
-        else:
-            # if the user is not on a Windows machine it says "Not supported on this platform"
-            print(f"{BRIGHT}{RED}[-] Not supported on this platform [-]{RESET}")
+    # Add shadow effect to bars
+    for patch in ax.patches:
+        patch.set_alpha(0.5)
 
-    get_drives()
+    # Add numbers on top of each bar with respective colors
+    for i, value in enumerate(values):
+        color = colors[i]
+        ax.text(i, value + 1, str(value), ha='center', fontsize=10)
+
+    # puts a label on the y-axis
+    ax.set_ylabel("Amount (GB)")  # Add y-axis label
+
+    plt.show()
+else:
+    # if the user is not on a Windows machine it says "Not supported on this platform"
+    print(f"{BRIGHT}{RED}[-] Not supported on this platform [-]{RESET}")
