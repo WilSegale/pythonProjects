@@ -1,7 +1,5 @@
 # python script showing battery details
-
 from DontEdit import *
-from colorama import *
 import psutil
 
 if os.geteuid() == 0:
