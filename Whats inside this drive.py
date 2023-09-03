@@ -23,7 +23,7 @@ def main():
     
     contents = list_drive_contents(external_drive_path)
     print("Contents of the drive:")
-    print("+++++++++++++")
+    print("+"*22)
     
     for item in contents:
         print(f"{item}")
