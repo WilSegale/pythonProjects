@@ -17,7 +17,7 @@ else:
 
     if battery:
         battery = psutil.sensors_battery()
-        if battery.power_plugged == False:
+        if battery.power_plugged == 0:
             print(f"{BRIGHT}{YELLOW}Battery percentage: {GREEN}{battery.percent}%")
             print(f"{YELLOW}Power plugged in: {RED}{battery.power_plugged}")
             print(f"{YELLOW}Battery left: {GREEN}{convertTime(battery.secsleft)}{RESET}")
