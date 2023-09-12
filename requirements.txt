@@ -20,3 +20,4 @@ screeninfo
 pyautogui
 moviepy
 numpy
+scapy
