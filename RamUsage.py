@@ -1,3 +1,4 @@
+from DontEdit import *
 import psutil
 
 def get_ram_usage():
@@ -14,6 +15,13 @@ if __name__ == "__main__":
     used_ram, total_ram = get_ram_usage()
     ram_percentage = get_ram_usage_percentage()
 
-    print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
-    print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
-    print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
+    
+    if ram_percentage >= 50:
+        print(f"{BRIGHT}{RED}Warning: RAM usage is high!{RESET}")
+        print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
+        print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
+        print(f"RAM Usage Percentage: {BRIGHT}{RED}{ram_percentage:.2f}%{RESET}")
+    else:
+        print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
+        print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
+        print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
