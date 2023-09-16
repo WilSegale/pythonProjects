@@ -20,8 +20,10 @@ if __name__ == "__main__":
         print(f"{BRIGHT}{RED}Warning: RAM usage is high!{RESET}")
         print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
         print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
+        print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
         print(f"RAM Usage Percentage: {BRIGHT}{RED}{ram_percentage:.2f}%{RESET}")
     else:
         print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
         print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
+        print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
         print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
