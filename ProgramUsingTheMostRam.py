@@ -37,11 +37,12 @@ if __name__ == "__main__":
     max_memory_process = find_process_with_most_memory()
 
     if max_memory_process:
-        pid, name, memory_usage = max_memory_process
-        print(f"Process with the most memory usage:\n"
-              f"PID: {pid}\n"
-              f"Name: {name}\n"
-              f"Memory Usage: {memory_usage / (1024 * 1024):.2f} MB")
-        os.system(f"kill -9 {pid}")
+        for process in psutil.process_iter(['pid', 'name', 'memory_info']):
+            pid, name, memory_usage = max_memory_process
+            print(f"Process with the most memory usage:\n"
+                f"PID: {pid}\n"
+                f"Name: {name}\n"
+                f"Memory Usage: {memory_usage / (1024 * 1024):.2f} MB")
+            os.system(f"kill -9 {pid}")
     else:
         print("No processes found.")
