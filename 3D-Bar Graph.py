@@ -20,7 +20,6 @@ def get_drives():
             bitmask >>= 1
 
         return drives
-
 if __name__ == '__main__':
     # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
     print(f"Drive: {get_drives()}")
@@ -63,6 +62,3 @@ if __name__ == '__main__':
     ax.set_ylabel("Amount (GB)")  # Add y-axis label
 
     plt.show()
-else:
-    # if the user is not on a Windows machine it says "Not supported on this platform"
-    print(f"{BRIGHT}{RED}[-] Not supported on this platform [-]{RESET}")

@@ -1,60 +1,42 @@
+# Import necessary modules
 from DontEdit import *
 import psutil
+MACOS = "darwin"
+LINUX = "linux"
+# Define a function to retrieve RAM usage information
+def get_ram_usage():
+    virtual_memory = psutil.virtual_memory()
+    used_ram = virtual_memory.used
+    total_ram = virtual_memory.total
+    return used_ram, total_ram
 
-MACOS = 'darwin'
-LINUX = 'linux'
+# Define a function to retrieve RAM usage percentage
+def get_ram_usage_percentage():
+    ram_percentage = psutil.virtual_memory().percent
+    return ram_percentage
 
-if platform == MACOS or platform == LINUX:
-    def get_ram_usage():
-        virtual_memory = psutil.virtual_memory()
-        used_ram = virtual_memory.used
-        total_ram = virtual_memory.total
-        return used_ram, total_ram
+# Define a function to print RAM-related information
+def print_ram_info(used_ram, total_ram, ram_percentage):
+    print(f"\nUsed RAM: {used_ram / (1024 ** 3):.2f} GB")
+    print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
+    print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
+    print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
+    print()
 
-    def get_ram_usage_percentage():
-        ram_percentage = psutil.virtual_memory().percent
-        return ram_percentage
+# Entry point of the program
+if __name__ == "__main__":
+    # Get RAM usage information
+    used_ram, total_ram = get_ram_usage()
+    ram_percentage = get_ram_usage_percentage()
 
-    if __name__ == "__main__":
-        used_ram, total_ram = get_ram_usage()
-        ram_percentage = get_ram_usage_percentage()
-
-        
+    # Check the platform (OS) to determine the warning message color
+    if platform in (MACOS, LINUX):
         if ram_percentage >= 50:
-            print(f"{BRIGHT}{RED}Warning: RAM usage is high!{RESET}")
-            print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
-            print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
-            print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
-            print(f"RAM Usage Percentage: {BRIGHT}{RED}{ram_percentage:.2f}%{RESET}")
+            # Print a warning message with red color if RAM usage is high
+            print(f"{BRIGHT}{ORANGE_Start}Warning:{ORANGE_END}{RESET} RAM usage is high!")
         else:
-            print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
-            print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
-            print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
-            print(f"RAM Usage Percentage: {GREEN}{ram_percentage:.2f}%{RESET}")
-else:
-    def get_ram_usage():
-        virtual_memory = psutil.virtual_memory()
-        used_ram = virtual_memory.used
-        total_ram = virtual_memory.total
-        return used_ram, total_ram
+            # Print a normal message with green color if RAM usage is normal
+            print(f"{GREEN}RAM usage is normal.{RESET}")
 
-    def get_ram_usage_percentage():
-        ram_percentage = psutil.virtual_memory().percent
-        return ram_percentage
-
-    if __name__ == "__main__":
-        used_ram, total_ram = get_ram_usage()
-        ram_percentage = get_ram_usage_percentage()
-
-        
-        if ram_percentage >= 50:
-            print(f"Warning: RAM usage is high!")
-            print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
-            print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
-            print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
-            print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
-        else:
-            print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
-            print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
-            print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
-            print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
+    # Print RAM-related information
+    print_ram_info(used_ram, total_ram, ram_percentage)
