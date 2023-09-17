@@ -3,6 +3,7 @@ import psutil
 
 MACOS = 'darwin'
 LINUX = 'linux'
+
 if platform == MACOS or platform == LINUX:
     def get_ram_usage():
         virtual_memory = psutil.virtual_memory()
