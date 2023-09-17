@@ -30,7 +30,7 @@ if platform == MACOS or platform == LINUX:
             print(f"Used RAM: {used_ram / (1024 ** 3):.2f} GB")
             print(f"Total RAM: {total_ram / (1024 ** 3):.2f} GB")
             print("Amount of RAM left to use: {:.2f} GB".format((total_ram - used_ram) / (1024 ** 3)))
-            print(f"RAM Usage Percentage: {ram_percentage:.2f}%")
+            print(f"RAM Usage Percentage: {GREEN}{ram_percentage:.2f}%{RESET}")
 else:
     def get_ram_usage():
         virtual_memory = psutil.virtual_memory()
