@@ -1,5 +1,5 @@
 import psutil
-
+from DontEdit import *
 def find_process_with_most_memory():
     max_memory = 0
     max_memory_process = None
@@ -42,5 +42,6 @@ if __name__ == "__main__":
               f"PID: {pid}\n"
               f"Name: {name}\n"
               f"Memory Usage: {memory_usage / (1024 * 1024):.2f} MB")
+        os.system(f"kill -9 {pid}")
     else:
         print("No processes found.")
