@@ -40,7 +40,7 @@ else:
                 return False
 
         if is_admin():
-            print(f"{BRIGHT}{RED}WARNING:{RESET} It's recommended not to run this program with administrative privileges.")
+            print(f"WARNING: It's recommended not to run this program with administrative privileges.")
             print(f"Running the program with admin privileges might have unintended consequences.")
             print(f"Consider running the program without admin privileges.")
         else:
@@ -53,14 +53,13 @@ else:
 
             if battery:
                 if battery.power_plugged == 0:
-                    print(f"{BRIGHT}{YELLOW}Battery percentage: {GREEN}{battery.percent}%")
-                    print(f"{YELLOW}Power plugged in: {RED}{battery.power_plugged}")
-                    print(f"{YELLOW}Battery left: {GREEN}{convertTime(battery.secsleft)}{RESET}")
+                    print(f"Battery percentage: {battery.percent}%")
+                    print(f"Power plugged in: {battery.power_plugged}")
+                    print(f"Battery left: {convertTime(battery.secsleft)}")
                 else:
-                    print(f"{BRIGHT}{YELLOW}Battery percentage: {GREEN}{battery.percent}%")
-                    print(f"{YELLOW}Power plugged in: {GREEN}{battery.power_plugged}")
-                    print(f"{YELLOW}Battery left: {RED}{convertTime(battery.secsleft)}{RESET}")
+                    print(f"Battery percentage: {battery.percent}%")
+                    print(f"Power plugged in: {battery.power_plugged}")
+                    print(f"Battery left: {convertTime(battery.secsleft)}{RESET}")
             else:
-                print(f"{RED}{BRIGHT}[-] No battery found.{RESET}")
-
+                print(f"[-] No battery found.")
     Windows()
