@@ -1,4 +1,5 @@
 from colorama import *
+from sys import *
 import os
 import time
 # color for the bar graph
