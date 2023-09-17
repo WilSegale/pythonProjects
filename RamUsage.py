@@ -30,7 +30,7 @@ if __name__ == "__main__":
     ram_percentage = get_ram_usage_percentage()
 
     # Check the platform (OS) to determine the warning message color
-    if platform in (MACOS, LINUX):
+    if platform in (MACOS or LINUX):
         if ram_percentage >= 50:
             # Print a warning message with red color if RAM usage is high
             print(f"{BRIGHT}{ORANGE_Start}Warning:{ORANGE_END}{RESET} RAM usage is high!")
