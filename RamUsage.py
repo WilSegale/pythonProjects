@@ -1,8 +1,9 @@
 from DontEdit import *
 import psutil
+
 MACOS = 'Darwin'
 LINUX = 'Linux'
-if platform == MACOS or platform == LINUX:
+if platform == MACOS:
     def get_ram_usage():
         virtual_memory = psutil.virtual_memory()
         used_ram = virtual_memory.used
