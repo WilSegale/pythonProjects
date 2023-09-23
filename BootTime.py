@@ -1,5 +1,4 @@
-import psutil
-import datetime
+from DontEdit import *
 
 def get_boot_time():
     boot_time = psutil.boot_time()

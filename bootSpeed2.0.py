@@ -1,5 +1,4 @@
-import time
-
+from DontEdit import *
 def boot_speed_decorator(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()

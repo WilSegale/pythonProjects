@@ -1,4 +1,4 @@
-import random
+from DontEdit import *
 try:
     # Global variables
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']

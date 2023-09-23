@@ -1,4 +1,3 @@
-exit = ["exit","quit","EXIT","QUIT"]
 try:
     def c_to_f(c):
         f = (9/5) * c + 32

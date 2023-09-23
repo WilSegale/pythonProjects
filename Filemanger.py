@@ -1,6 +1,4 @@
-import os
-from tkinter import *
-from tkinter import filedialog
+from DontEdit import *
 
 root = Tk()
 root.title("File Manager")

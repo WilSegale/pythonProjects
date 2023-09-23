@@ -1,8 +1,5 @@
 # Clears all timers
-from time import strftime
-from sys import platform
-import time
-import os
+from DontEdit import *
 
 if platform == "darwin" or platform == "linux":
     while True:
