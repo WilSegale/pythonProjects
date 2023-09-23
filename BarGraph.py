@@ -1,6 +1,5 @@
 from DontEdit import *
-import matplotlib.pyplot as plt
-import shutil
+
 
 def loadingBar(iterations, delay=0.1, width=40):
     for load in range(iterations + 1):

@@ -1,9 +1,5 @@
 from DontEdit import *
-import matplotlib.pyplot as plt
-from colorama import *
-from sys import platform
-import shutil
-import string
+
 
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']

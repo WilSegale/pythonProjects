@@ -1,6 +1,5 @@
 from DontEdit import *
-import psutil
-import ctypes
+
 
 if platform != "win32":
     def MacOrLinux():
