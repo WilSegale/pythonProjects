@@ -61,5 +61,5 @@ else:
                     print(f"Power plugged in: {battery.power_plugged}")
                     print(f"Battery left: {convertTime(battery.secsleft)}{RESET}")
             else:
-                print(f"[-] No battery found.")
+                print(f"{BRIGHT}{RED}[-]{RESET} No battery found.")
     Windows()
