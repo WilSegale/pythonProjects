@@ -1,7 +1,15 @@
 from colorama import *
 from sys import *
+import matplotlib.pyplot as plt
+from colorama import *
+from sys import platform
+import shutil
+import string
 import os
 import time
+import psutil
+import ctypes
+
 # color for the bar graph
 colors = ['green', 
           'red', 

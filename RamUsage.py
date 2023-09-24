@@ -1,8 +1,10 @@
 # Import necessary modules
 from DontEdit import *
 import psutil
+
 MACOS = "darwin"
 LINUX = "linux"
+
 # Define a function to retrieve RAM usage information
 def get_ram_usage():
     virtual_memory = psutil.virtual_memory()
