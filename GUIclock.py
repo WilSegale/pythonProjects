@@ -1,4 +1,5 @@
-from DontEdit import *
+import tkinter as tk
+import time
 
 root = tk.Tk()
 root.title("Clock")

@@ -1,28 +1,14 @@
 from colorama import *
-from tkinter import *
-from tkinter import filedialog
-import random
-
 from sys import *
-from time import srftime
-from sys import platform
-from dash.dependencies import Input, Output
-from dash import dcc, html
-#-------------------------------------------#
 import matplotlib.pyplot as plt
-import pandas as pd
+from colorama import *
+from sys import platform
 import shutil
 import string
 import os
 import time
 import psutil
 import ctypes
-import datetime
-import cv2
-import dash
-import tkinter as tk
-
-
 
 # color for the bar graph
 colors = ['green', 

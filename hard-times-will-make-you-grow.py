@@ -1,5 +1,7 @@
+import random
+import time
+import os
 
-from DontEdit import os,time,random
 wait = time.sleep
 def hardtimes():
     file = open("DepressionQuotes.txt",'r')

@@ -1,4 +1,5 @@
 from DontEdit import *
+import cv2
 def loadingBar(iterations, delay=0.1, width=40):
     for load in range(iterations + 1):
         progress = load / iterations

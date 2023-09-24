@@ -1,4 +1,5 @@
-from DontEdit import *
+import cv2
+
 # Start the webcam
 cap = cv2.VideoCapture(0)
 
