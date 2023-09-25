@@ -1,13 +1,7 @@
-from colorama import Fore, Style, init
-import socket
-import time
+from DontEdit import *
+
 
 init()  # Initialize colorama
-
-GREEN = Fore.GREEN
-RED = Fore.RED
-RESET = Style.RESET_ALL
-
 
 def loadingBar(iterations, delay=0.1, width=40):
     for load in range(iterations + 1):

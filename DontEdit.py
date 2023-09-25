@@ -10,6 +10,7 @@ import os
 import time
 import psutil
 import ctypes
+import socket
 
 # color for the bar graph
 colors = ['green', 
