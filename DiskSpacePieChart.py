@@ -2,10 +2,10 @@ from DontEdit import *
 from sys import platform
 import shutil
 import matplotlib.pyplot as plt
-#mac
-if platform == "darwin":
-    MAIN = "Main: DRIVE-"
 
+#mac
+if platform == "darwin" or platform == "linux":
+    MAIN = "Main: DRIVE-"
 
     print(f"{MAIN}")
     #! THIS IS THE MAIN DRIVE OF THE COMPUTER
