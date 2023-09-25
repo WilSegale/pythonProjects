@@ -7,7 +7,7 @@ def loadingBar(iterations, delay=0.1, width=40):
         bar = GREEN + '•' * bar_length + RESET + ' ' * (width - bar_length)
         percentage = int(progress * 100)
         
-        print(f'\r[{bar}] {percentage}% ', end='', flush=True)
+        print(f'\rLOADING [{bar}] {percentage}% ', end='', flush=True)
         time.sleep(delay)
 
 loadingBar(50)

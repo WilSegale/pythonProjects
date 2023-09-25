@@ -17,7 +17,6 @@ try:
               'K': 10, 
               'A': 11}
 
-
     class Card:
         def __init__(self, suit, rank):
             self.suit = suit
