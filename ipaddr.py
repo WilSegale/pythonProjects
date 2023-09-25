@@ -1,5 +1,5 @@
 # Prints the IP of the host
-import socket
+from DontEdit import *
 hostname = socket.gethostname()
 IP = socket.gethostbyname(hostname)
 print(IP)

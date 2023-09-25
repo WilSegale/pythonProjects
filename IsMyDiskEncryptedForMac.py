@@ -2,7 +2,7 @@ import subprocess
 from DontEdit import *
 
 if os.geteuid() == 0:
-    print(f"{BRIGHT}{RED}WARNING:{RESET} It's recommended not to run this program with sudo.")
+    print(f"{BRIGHT}{ORANGE_Start}WARNING:{ORANGE_END} It's recommended not to run this program with sudo.")
     print(f"Running the program with sudo privileges might have unintended consequences.")
     print(f"Consider running the program without sudo.")
     exit(1)
@@ -22,7 +22,7 @@ else:
             return False
 
     # Example usage
-    disk_path = input("Enter the disk identifier (e.g., /dev/disk1): ")
+    disk_path = input("Enter the disk identifier (ex: /): ")
     encrypted = is_disk_encrypted(disk_path)
 
     if encrypted:
