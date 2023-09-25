@@ -1,21 +1,13 @@
 # Security Policy
 
-## Supported Versions
+## Reporting Security Issues
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+If you discover a security issue in this project, please follow these guidelines:
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+1. **Do not create a public issue:** Security issues should not be reported publicly via GitHub issues or any other public communication channel.
 
-## Reporting a Vulnerability
+2. **Report privately:** Instead, please report security issues directly to our security team by sending an email to [willsegale@gmail.com](mailto:willsegale@gmail.com).
 
-Use this section to tell people how to report a vulnerability.
+3. **Include details:** When reporting the issue, please include a detailed description of the problem, including steps to reproduce the issue if possible.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+4. **Be patient:** Our security team will acknowledge your email and work to address the issue promptly. We will keep you informed of our progress throughout the process.
