@@ -7,7 +7,7 @@ try:
     def get_drives():
         if platform == "win32":
             from ctypes import windll
-
+            
             drives = []
             bitmask = windll.kernel32.GetLogicalDrives()
             for letter in string.ascii_uppercase:

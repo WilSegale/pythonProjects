@@ -6,7 +6,7 @@ def is_admin():
     except:
         return False
 
-if is_admin():
+if is_admin() == True:
     print("The script is running with administrative privileges.")
 else:
     print("The script is NOT running with administrative privileges.")
