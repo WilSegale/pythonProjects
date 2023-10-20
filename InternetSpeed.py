@@ -1,7 +1,7 @@
 import requests
 import time
 
-url = "https://pornhub.com"
+url = "https://google.com"
 file_size = 1024 * 1024  # Size of the file to download in bytes (1 MB in this case)
 
 start_time = time.time()
