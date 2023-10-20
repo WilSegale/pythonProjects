@@ -1,14 +1,14 @@
 import requests
 import time
 
-url = "https://google.com"
+url = "https://pornhub.com"
 file_size = 1024 * 1024  # Size of the file to download in bytes (1 MB in this case)
 
 start_time = time.time()
 response = requests.get(url, stream=True)
 
 if response.status_code == 200:
-    with open("downloaded_file", "wb") as f:
+    with open("downloaded_file.html", "wb") as f:
         for chunk in response.iter_content(chunk_size=8192):  # Adjust chunk size as needed
             f.write(chunk)
 else:
