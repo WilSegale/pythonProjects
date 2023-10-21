@@ -15,6 +15,7 @@ def calculate_xray_count(exposure_roentgen, exposure_per_xray_mR):
         xray_count = exposure_mR / exposure_per_xray_mR
         
         return xray_count
+    
     except ValueError:
         return "Invalid input. Please enter valid numeric values."
 
