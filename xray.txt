@@ -1,3 +1,0 @@
-Number of chest X-rays needed for [23.0(R) + 22222(mr)]: 1.035010350103501
-Number of chest X-rays needed for [23.0(R) / 2.0(mr)]: 11,500.0
-Number of chest X-rays needed for [15,000.0(R) / 0.1(mr)]: 150,000,000.0
