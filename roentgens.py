@@ -25,5 +25,5 @@ if __name__ == "__main__":
     formatted_exposure_roentgen = '{:,}'.format(float(exposure_roentgen))
     formatted_exposure_per_xray_mR = '{:,}'.format(float(exposure_per_xray_mR))
 
-    print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) + {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}")
-    print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) + {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}",file=xray)
+    print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}")
+    print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}",file=xray)
