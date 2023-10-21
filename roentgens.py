@@ -1,5 +1,4 @@
-xray = open('xray.txt', 'a')
-
+from DontEdit import *
 def calculate_xray_count(exposure_roentgen, exposure_per_xray_mR):
     try:
         exposure_roentgen = float(exposure_roentgen)
@@ -24,6 +23,24 @@ if __name__ == "__main__":
     formatted_result = '{:,}'.format(result)
     formatted_exposure_roentgen = '{:,}'.format(float(exposure_roentgen))
     formatted_exposure_per_xray_mR = '{:,}'.format(float(exposure_per_xray_mR))
+    print(f"Number of chest X-rays needed for {formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mR): {formatted_result}")
 
-    print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}")
-    print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}",file=xray)
+    # Create an HTML string
+    html_output = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>X-ray Calculation Result</title>
+    </head>
+    <body>
+        <h1>X-ray Calculation Result</h1>
+        <p>Number of chest X-rays needed for {formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mR): {formatted_result}</p>
+    </body>
+    </html>
+    """
+
+    # Write the HTML string to an HTML file
+    with open('xray_result.html', 'a') as html_file:
+        html_file.write(html_output)
+
+    print(f"\n{GREEN}[+]{RESET} Result has been saved to 'xray_result.html'")
