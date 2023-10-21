@@ -1,0 +1,1 @@
+Number of chest X-rays needed for [100000.34(R) + 12(mr)]: 8333361.666666667
