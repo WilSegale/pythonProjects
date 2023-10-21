@@ -8,4 +8,4 @@ def get_disk_name():
             return partition.device
 
 disk_name = get_disk_name()
-print("Disk Name:", disk_name)
+print(f"Disk Name: {disk_name}")
