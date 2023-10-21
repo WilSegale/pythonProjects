@@ -54,12 +54,12 @@ if __name__ == "__main__":
             }}
         </style>
     </head>
-    <body>
-        <h1>X-ray Calculation Result</h1>
-        <p>Number of chest X-rays needed for 
-            <p id="xray">{escape(formatted_exposure_roentgen)}(R) / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</p>
-        </p>
-    </body>
+        <body>
+            <h1>X-ray Calculation Result</h1>
+            <p>Number of chest X-rays needed for 
+                <p id="xray">{escape(formatted_exposure_roentgen)}(R) / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</p>
+            </p>
+        </body>
     </html>
     """
 
