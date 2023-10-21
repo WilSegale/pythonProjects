@@ -4,7 +4,7 @@ import mysql.connector
 block_size = os.statvfs("/").f_frsize
 
 def get_disk_space():
-    total, used, free = os.statvfs("/")
+    total, free = os.statvfs("/")
     total_space = total * block_size
     used_space = (total - free) * block_size
     free_space = free * block_size
