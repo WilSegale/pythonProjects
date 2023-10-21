@@ -1,4 +1,5 @@
-from DontEdit import *
+from html import escape
+
 def calculate_xray_count(exposure_roentgen, exposure_per_xray_mR):
     try:
         exposure_roentgen = float(exposure_roentgen)
@@ -20,10 +21,9 @@ if __name__ == "__main__":
 
     result = calculate_xray_count(exposure_roentgen, exposure_per_xray_mR)
     
-    formatted_result = '{:,}'.format(result)
-    formatted_exposure_roentgen = '{:,}'.format(float(exposure_roentgen))
-    formatted_exposure_per_xray_mR = '{:,}'.format(float(exposure_per_xray_mR))
-    print(f"Number of chest X-rays needed for {formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mR): {formatted_result}")
+    formatted_result = '{:,.2f}'.format(result)  # Format result as a float with 2 decimal places
+    formatted_exposure_roentgen = '{:,.2f}'.format(float(exposure_roentgen))
+    formatted_exposure_per_xray_mR = '{:,.2f}'.format(float(exposure_per_xray_mR))
 
     # Create an HTML string
     html_output = f"""
@@ -31,10 +31,13 @@ if __name__ == "__main__":
     <html>
     <head>
         <title>X-ray Calculation Result</title>
+        <style>
+            #xray {{ color: green; }}
+        </style>
     </head>
     <body>
         <h1>X-ray Calculation Result</h1>
-        <p>Number of chest X-rays needed for {formatted_exposure_roentgen}(R) / {formatted_exposure_per_xray_mR}(mR): {formatted_result}</p>
+        <p id="xray">Number of chest X-rays needed for {escape(formatted_exposure_roentgen)}(R) / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</p>
     </body>
     </html>
     """
@@ -43,4 +46,4 @@ if __name__ == "__main__":
     with open('xray_result.html', 'a') as html_file:
         html_file.write(html_output)
 
-    print(f"\n{GREEN}[+]{RESET} Result has been saved to 'xray_result.html'")
+    print(f"\nResult has been saved to 'xray_result.html'")
