@@ -49,7 +49,7 @@ if __name__ == "__main__":
         <style>
             #xray 
             {{
-                color: green;
+                color: red;
                 font-weight: bold;
             }}
         </style>
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         <body>
             <h1>X-ray Calculation Result</h1>
             <p>Number of chest X-rays needed for 
-                <p id="xray">{escape(formatted_exposure_roentgen)}(R) / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</p>
+                <p id="xray">{escape(formatted_exposure_roentgen)}(R) * 1000 / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</p>
             </p>
         </body>
     </html>
