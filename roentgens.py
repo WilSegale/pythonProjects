@@ -1,4 +1,4 @@
-exray = open('exray.txt', 'a')
+xray = open('xray.txt', 'a')
 
 def calculate_xray_count(exposure_roentgen, exposure_per_xray_mR):
     try:
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     exposure_per_xray_mR = input("Enter the exposure per chest X-ray in milliroentgens (mR): ")
 
     result = calculate_xray_count(exposure_roentgen, exposure_per_xray_mR)
-    
+
     print(f"Number of chest X-rays needed for [{exposure_roentgen}(R) + {exposure_per_xray_mR}(mr)]: {result}")
-    print(f"Number of chest X-rays needed for [{exposure_roentgen}(R) + {exposure_per_xray_mR}(mr)]: {result}",file=exray)
+    print(f"Number of chest X-rays needed for [{exposure_roentgen}(R) + {exposure_per_xray_mR}(mr)]: {result}",file=xray)
 
