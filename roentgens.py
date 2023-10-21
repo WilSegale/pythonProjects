@@ -47,7 +47,11 @@ if __name__ == "__main__":
     <head>
         <title>X-ray Calculation Result</title>
         <style>
-            #xray {{ color: green; }}
+            #xray 
+            {{
+                color: green;
+                font-weight: bold;
+            }}
         </style>
     </head>
     <body>
