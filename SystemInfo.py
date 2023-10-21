@@ -14,10 +14,10 @@ processor = system_info.processor
 
 # Print the system information
 print("System Information:")
-print("System Name:", system_name)
-print("Node Name:", node_name)
-print("Release:", release)
-print("Version:", version)
-print("Machine:", machine)
-print("Processor:", processor)
+print(f"System Name: {system_name}")
+print(f"Node Name: {node_name}")
+print(f"Release: {release}")
+print(f"Version: {version}")
+print(f"Machine: {machine}")
+print(f"Processor: {processor}")
 

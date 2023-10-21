@@ -2,11 +2,15 @@ from DontEdit import *
 import subprocess
 import psutil
 
-if os.geteuid() == 0:
-    print(f"{BRIGHT}{ORANGE_Start}WARNING:{ORANGE_END} It's recommended not to run this program with sudo.")
-    print(f"Running the program with sudo privileges might have unintended consequences.")
-    print(f"Consider running the program without sudo.")
-    exit(1)
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+
+if is_admin() == True:
+    print("The script is running with administrative privileges.")
+
 else:
 
     def is_disk_encrypted(disk_path):
@@ -33,7 +37,7 @@ else:
         return False
 
     # Example usage
-    print("Input disk path like this: /dev/sda1: ")
+    print("Input disk path like this: (C:/): ")
     disk_path = input(">>> ")  # Replace with the path to your disk or partition
     encrypted = is_disk_encrypted(disk_path)
     if encrypted:

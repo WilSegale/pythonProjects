@@ -1,6 +1,6 @@
 # Define the initial amount and final amount
-initial_amount = int(input(">>> "))
-final_amount = int(input(">>> "))
+initial_amount = int(input("input the initial_amount: "))
+final_amount = int(input("input the final_amount: "))
 
 # Calculate the interest rate
 interest_rate = ((final_amount - initial_amount) / initial_amount) * 100
