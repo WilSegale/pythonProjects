@@ -1,4 +1,1 @@
-Number of chest X-rays needed for [100000.34(R) + 12(mr)]: 8333361.666666667
-Number of chest X-rays needed for [2834(R) + 23.53(mr)]: 120441.98895027624
-Number of chest X-rays needed for [23333(R) + 23333(mr)]: 1000.0
-Number of chest X-rays needed for [2343(R) + 234.5(mr)]: 9,991.471215351812
+Number of chest X-rays needed for [23.0(R) + 22222(mr)]: 1.035010350103501
