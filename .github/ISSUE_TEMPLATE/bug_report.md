@@ -47,4 +47,4 @@
 ## Additional Information
 [Include any additional information that may be relevant to understanding and resolving the issue.]
 
-## report it this email address [wsegale@gmail.com](mailto:wsegale@gmail.com)
+## report it this email address [Email me](mailto:willsegale@gmail.com)
