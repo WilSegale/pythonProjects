@@ -25,7 +25,7 @@ def main():
         print("\nProgram terminated...")
         exit(1)
 
-# megaton calculation
+# megaton calculation to Ton
 def megatons():
     try:
         # Example usage:
@@ -65,7 +65,7 @@ def megatons():
         print("\nProgram terminated...")
         exit(1)
 
-# LBS calculation
+# LBS calculation to Ton
 def pounds():
     try:
         # Example usage:
