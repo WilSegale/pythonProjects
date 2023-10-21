@@ -20,8 +20,10 @@ if __name__ == "__main__":
     exposure_per_xray_mR = input("Enter the exposure per chest X-ray in milliroentgens (mR): ")
 
     result = calculate_xray_count(exposure_roentgen, exposure_per_xray_mR)
+    
     formatted_result = '{:,}'.format(result)
     formatted_exposure_roentgen = '{:,}'.format(float(exposure_roentgen))
     formatted_exposure_per_xray_mR = '{:,}'.format(float(exposure_per_xray_mR))
+
     print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) + {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}")
     print(f"Number of chest X-rays needed for [{formatted_exposure_roentgen}(R) + {formatted_exposure_per_xray_mR}(mr)]: {formatted_result}",file=xray)
