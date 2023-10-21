@@ -14,13 +14,17 @@ def pounds_to_tons(pounds):
 def main():
     try:
         choice = int(input("Enter 1 to calculate the number of megatons in a ton or 2 for the amout of pounds in a ton: "))
+        
         if choice == 1:
             megatons()
+        
         elif choice == 2:
             pounds()
+        
         else:
             print("Invalid input. Please enter 1 or 2.")
             return main()
+    
     except KeyboardInterrupt:
         print("\nProgram terminated...")
         exit(1)
