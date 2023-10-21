@@ -24,7 +24,7 @@ if __name__ == "__main__":
     formatted_result = '{:,.2f}'.format(result)  # Format result as a float with 2 decimal places
     formatted_exposure_roentgen = '{:,.2f}'.format(float(exposure_roentgen))
     formatted_exposure_per_xray_mR = '{:,.2f}'.format(float(exposure_per_xray_mR))
-
+    print(f"Number of chest X-rays needed for {escape(formatted_exposure_roentgen)}(R) / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}")
     # Create an HTML string
     html_output = f"""
     <!DOCTYPE html>
