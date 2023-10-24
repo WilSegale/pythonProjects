@@ -1,9 +1,6 @@
-# Import necessary modules
 from DontEdit import *
-import psutil
 
 MACOS = "darwin"
-LINUX = "linux"
 
 # Define a function to retrieve RAM usage information
 def get_ram_usage():
@@ -31,14 +28,16 @@ if __name__ == "__main__":
     used_ram, total_ram = get_ram_usage()
     ram_percentage = get_ram_usage_percentage()
 
+    platform = sys.platform
+
     # Check the platform (OS) to determine the warning message color
-    if platform in (MACOS or LINUX):
+    if platform == MACOS:  # Note the change from 'in' to '=='
         if ram_percentage >= 50:
-            # Print a warning message with red color if RAM usage is high
-            print(f"{BRIGHT}{ORANGE_Start}Warning:{ORANGE_END}{RESET} RAM usage is high!")
+            # Print a warning message if RAM usage is high
+            print("Warning: RAM usage is high!")
         else:
-            # Print a normal message with green color if RAM usage is normal
-            print(f"{GREEN}RAM usage is normal.{RESET}")
+            # Print a normal message if RAM usage is normal
+            print("RAM usage is normal.")
 
     # Print RAM-related information
     print_ram_info(used_ram, total_ram, ram_percentage)

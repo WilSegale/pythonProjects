@@ -1,3 +1,5 @@
+import psutil
+import sys
 from sys import *
 from sys import platform
 import matplotlib.pyplot as plt
