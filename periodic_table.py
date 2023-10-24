@@ -34,7 +34,7 @@ try:
                     <title>Element Details</title>
                 </head>
                 <body>
-                    <h1>{element['name']} ({element['symbol']})</h1>
+                    <h1>Name: {element['name']} ({element['symbol']})</h1>
                     <p>Atomic Number: {element['atomic_number']}</p>
                     <p>Atomic Weight: {element['atomic_weight']}</p>
                 </body>
