@@ -28,7 +28,7 @@ if platform == "linux":
     total,used,free = shutil.disk_usage("/")
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
     print(RED + "Used: %d GB " % (used // (2 ** 30)))
-    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ RESET)
 
 # Windows...
 elif platform == "win32":
@@ -51,7 +51,7 @@ elif platform == "win32":
             print(f"\n{ExternialDrive}")
             print(GREEN + "Total: %d TB " % (total // (1024 * 1024 * 1024 * 1024)))
             print(RED + "Used: %d GB " % (used // (2**30)))
-            print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024))+Fore.RESET)
+            print(YELLOW + "Free: %d TB" % (free // (1024 * 1024 * 1024 * 1024))+RESET)
             
             # this is something that say that the top is the D drive and the bottom is the C drive
             print("-"*15)
@@ -61,7 +61,7 @@ elif platform == "win32":
             total,used,free = shutil.disk_usage("C:/")
             print(GREEN +"Total: %d GB " % (total // (2 ** 30)))
             print(RED +"Used: %d GB " % (used // (2 ** 30)))
-            print(YELLOW +"Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+            print(YELLOW +"Free: %d GB " % (free // (2 ** 30))+ RESET)
 
         else:
             #! THIS IS THE MAIN DRIVE OF THE COMPUTER
@@ -69,5 +69,5 @@ elif platform == "win32":
             total,used,free = shutil.disk_usage("C:/")
             print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
             print(RED + "Used: %d GB " % (used // (2 ** 30)))
-            print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+            print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ RESET)
     drive()
