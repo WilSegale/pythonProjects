@@ -1,5 +1,10 @@
 
 {
+     "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8",
+          "editor.formatOnSave": true
+     },
+      
      "version": "0.2.0",
      "configurations": [
           {
