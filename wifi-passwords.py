@@ -1,10 +1,7 @@
 # first we will import the subprocess module
 from sys import platform
-from colorama import *
 import subprocess
-
-RED = Fore.RED
-RESET = Fore.RESET
+from DontEdit import *
 if platform == "win32":
     # now we will store the profiles data in "data" variable by 
     # running the 1st cmd command using subprocess.check_output

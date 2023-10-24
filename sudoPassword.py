@@ -1,10 +1,7 @@
-from colorama import *
+from DontEdit import *
 import getpass
 
-GREEN = Fore.GREEN;
-RED = Fore.RED;
-BRIGHT = Style.BRIGHT;
-RESET = Fore.RESET
+
 def authenticate():
     sudo_password = getpass.getpass("Enter your sudo password: ")
     

@@ -1,9 +1,5 @@
+from DontEdit import *
 from pytube import YouTube
-from colorama import *
-
-GREEN = Fore.GREEN #works correctly
-RESET = Fore.RESET #resets the color 
-RED = Fore.RED # color for the error message
 
 def Download(link):
     youtubeObject = YouTube(link)
