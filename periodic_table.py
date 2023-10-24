@@ -113,6 +113,12 @@ elements = [
     {"symbol": "Ds", "name": "Darmstadtium", "atomic_number":110, "atomic_weight":281},
     {"symbol": "Rg", "name": "Rutherfordium", "atomic_number":111, "atomic_weight":282},
     {"symbol": "Cn", "name": "Copernicium", "atomic_number":112, "atomic_weight":285},
+    {"symbol": "Nh", "name": "Nihonium", "atomic_number":113, "atomic_weight":286},
+    {"symbol": "Fl", "name": "Flerovium", "atomic_number":114, "atomic_weight":289},
+    {"symbol": "Mc", "name": "Mendelevium", "atomic_number":115, "atomic_weight":290},
+    {"symbol": "Lv", "name": "Livermorium", "atomic_number":116, "atomic_weight":293},
+    {"symbol": "Ts", "name": "Tennessine", "atomic_number":117, "atomic_weight":294},
+    {"symbol": "Og", "name": "Oganesson", "atomic_number":118, "atomic_weight":294},
     
 ]
 
