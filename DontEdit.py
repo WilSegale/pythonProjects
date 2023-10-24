@@ -1,8 +1,7 @@
-from colorama import *
 from sys import *
-import matplotlib.pyplot as plt
-from colorama import *
 from sys import platform
+import matplotlib.pyplot as plt
+import platform
 import json
 import shutil
 import string
@@ -23,16 +22,15 @@ quit = ["QUIT",
         "Quit",
         "QUIT()"]
 
-#colors for the program to see
-RED = Fore.RED
-GREEN = Fore.GREEN
-BLUE = Fore.BLUE
-YELLOW = Fore.YELLOW
+
+RED = "\033[31m"
+GREEN = "\033[32m"
+BLUE = "\033[34m"
+YELLOW = "\033[33m"
 ORANGE_Start = "\033[38;2;255;165;0m"
 ORANGE_END = "\033[0m"
-BRIGHT = Style.BRIGHT
-RESET = Style.RESET_ALL
-NORMAL = Style.NORMAL 
-DIM = Style.DIM
-Gray = Fore.LIGHTBLACK_EX
-CYAN = Fore.CYAN
+BRIGHT = "\033[1m"
+RESET = "\033[0m"
+
+GRAY_TEXT = "\033[90m"
+CYAN_TEXT = "\033[36m"

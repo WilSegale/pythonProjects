@@ -1,11 +1,11 @@
-from DontEdit import *
 
+from DontEdit import *
 
 # The array that contains the name of colors so the graph has some color to it
 colors = ['green', 'red', 'yellow']
 try:
     def get_drives():
-        if platform == "win32":
+        if platform.system() == "Windows":
             from ctypes import windll
             
             drives = []
@@ -21,13 +21,13 @@ try:
 
     if __name__ == '__main__':
         # Check if the platform is not "win32" (Windows)
-        if platform != "win32":
+        if platform.system() != "Windows":
             print(f"{BRIGHT}{RED}[-]{RESET} Not supported for your OS")
         else:
             # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
             print(f"Drive: {get_drives()}")
 
-            print("Input the name of the drive you want to the amount of space remaining on")
+            print("Input the name of the drive you want to see the amount of space remaining on")
             drives = input(">>> ")
 
             total, used, free = shutil.disk_usage(drives + ":/")
@@ -49,10 +49,10 @@ try:
 
             fig, ax = plt.subplots()
 
-            # Create bar graph
+            # Create a bar graph
             ax.bar(labels, values, color=colors)
 
-            # Add shadow effect to bars
+            # Add a shadow effect to bars
             for patch in ax.patches:
                 patch.set_alpha(0.5)
 
@@ -61,7 +61,7 @@ try:
                 color = colors[i]
                 ax.text(i, value + 1, str(value), ha='center', fontsize=10)
 
-            # puts a label on the y-axis
+            # Put a label on the y-axis
             ax.set_ylabel("Amount (GB)")  # Add y-axis label
 
             plt.show()

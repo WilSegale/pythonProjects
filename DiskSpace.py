@@ -15,7 +15,7 @@ if platform == "darwin":
     total,used,free = shutil.disk_usage("/")
     print(GREEN + "Total: %d GB " % (total // (2 ** 30)))
     print(RED + "Used: %d GB " % (used // (2 ** 30)))
-    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ Fore.RESET)
+    print(YELLOW + "Free: %d GB " % (free // (2 ** 30))+ RESET)
 #linux
 if platform == "linux":
     #linux os
