@@ -54,6 +54,40 @@ elements = [
     {"symbol": "Sb", "name": "Antimony", "atomic_number":51, "atomic_weight":121.765},
     {"symbol": "Te", "name": "Tellurium", "atomic_number":52, "atomic_weight":127.60},
     {"symbol": "I",  "name": "Iodine", "atomic_number":53, "atomic_weight":126.90},
+    {"symbol": "Xe", "name": "Xenon", "atomic_number":54, "atomic_weight":131.29},
+    {"symbol": "Cs", "name": "Caesium", "atomic_number":55, "atomic_weight":132.91},
+    {"symbol": "Ba", "name": "Barium", "atomic_number":56, "atomic_weight":137.32},
+    {"symbol": "La", "name": "Lanthanum", "atomic_number":57,"atomic_weight":138.905},
+    {"symbol": "Ce", "name": "Cerium", "atomic_number":58, "atomic_weight":140.12},
+    {"symbol": "Pr", "name": "Praseodymium","atomic_number":59, "atomic_weight":140.905},
+    {"symbol": "Nd", "name": "Neodymium", "atomic_number":60, "atomic_weight":144.24},
+    {"symbol": "Pm", "name": "Promethium", "atomic_number":61, "atomic_weight":145.96},
+    {"symbol": "Sm", "name": "Samarium", "atomic_number":62, "atomic_weight":150.39},
+    {"symbol": "Eu", "name": "Europium", "atomic_number":63, "atomic_weight":151.96},
+    {"symbol": "Gd", "name": "Gadolinium", "atomic_number":64, "atomic_weight":157.25},
+    {"symbol": "Tb", "name": "Terbium", "atomic_number":65, "atomic_weight":158.921},
+    {"symbol": "Dy", "name": "Dysprosium", "atomic_number":66, "atomic_weight":162.50},
+    {"symbol": "Ho", "name": "Holmium", "atomic_number":67, "atomic_weight":164.938},
+    {"symbol": "Er", "name": "Erbium", "atomic_number":68, "atomic_weight":167.26},
+    {"symbol": "Tm", "name": "Thulium", "atomic_number":69, "atomic_weight":168.934},
+    {"symbol": "Yb", "name": "Ytterbium", "atomic_number":70, "atomic_weight":173.05},
+    {"symbol": "Lu", "name": "Lutetium", "atomic_number":71, "atomic_weight":174.966},
+    {"symbol": "Hf", "name": "Hafnium", "atomic_number":72, "atomic_weight":178.49},
+    {"symbol": "Ta", "name": "Tantalum", "atomic_number":73, "atomic_weight":180.94},
+    {"symbol": "W",  "name": "Tungsten", "atomic_number":74, "atomic_weight":183.84},
+    {"symbol": "Re", "name": "Rhenium", "atomic_number":75, "atomic_weight":186.204},
+    {"symbol": "Os", "name": "Osmium", "atomic_number":76, "atomic_weight":190.23},
+    {"symbol": "Ir", "name": "Iridium", "atomic_number":77, "atomic_weight":192.21},
+    {"symbol": "Pt", "name": "Protactinium", "atomic_number":78, "atomic_weight":195.084},
+    {"symbol": "Au", "name": "Neptunium", "atomic_number":79, "atomic_weight":196.966},
+    {"symbol": "Hg", "name": "Hydrogen", "atomic_number":80, "atomic_weight":200.59},
+    {"symbol": "Tl", "name": "Thallium", "atomic_number":81, "atomic_weight":204.384},
+    {"symbol": "Pb", "name": "Lead", "atomic_number":82, "atomic_weight":207.2},
+    {"symbol": "Bi", "name": "Bismuth", "atomic_number":83, "atomic_weight":208.98},
+    {"symbol": "Po", "name": "Polonium", "atomic_number":84, "atomic_weight":212.42},
+    {"symbol": "At", "name": "Astatine", "atomic_number":85, "atomic_weight":210.96},
+    {"symbol": "Rn", "name": "Radon", "atomic_number":86, "atomic_weight":222},
+    {"symbol": "Fr", "name": "Francium", "atomic_number":87, "atomic_weight":226.2},
 ]
 
 # Remove the unused index 0
@@ -62,6 +96,6 @@ file_name = "elements.json"
 
 # Write the data to the JSON file
 with open(file_name, "w") as json_file:
-    json.dump(elements, json_file, indent=1)
+    json.dump(elements, json_file, indent=0)
 
 print(f"Data has been written to {file_name}.")
