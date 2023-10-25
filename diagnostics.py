@@ -1,4 +1,5 @@
 import subprocess
+
 diagnostic = open("diagnostics.txt", "a")
 
 try:
@@ -12,20 +13,21 @@ try:
 
     # List of diagnostic commands
     diagnostic_commands = [
-        "networksetup -diag Wi-Fi",
+        "ping google.com -t 3",
         "traceroute google.com",
         "csrutil status",
+        "sudo pfctl -s info"
     ]
 
     # Execute each diagnostic command and print the output
     for command in diagnostic_commands:
         print(f"Running command: {command}\n")
-        print(f"Running command: {command}\n",file=diagnostic)
+        print(f"Running command: {command}\n", file=diagnostic)
         result = run_command(command)
-        print(result,file=diagnostic)
-        print(result,file=diagnostic)
-        print("="* 40)
-        print("=" * 40,file=diagnostic)  # Separation line
+        print(result)
+        print(result, file=diagnostic)
+        print("=" * 40)
+        print("=" * 40, file=diagnostic)  # Separation line
 
     # You can add more commands or remove any you don't need.
 
