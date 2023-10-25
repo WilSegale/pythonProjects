@@ -8,7 +8,7 @@ try:
         if platform.system() == "Windows":
             from ctypes import windll
             
-            drive= []
+            drives = []
             bitmask = windll.kernel32.GetLogicalDrives()
             for letter in string.ascii_uppercase:
                 if bitmask & 1:
