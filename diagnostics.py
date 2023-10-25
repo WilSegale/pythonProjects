@@ -40,7 +40,7 @@ try:
                 <!DOCTYPE html>
                 <html>
                 <head>
-                    <title>diagnostics</title>
+                    <title>Diagnostics</title>
                 </head>
                 <body>
                     <h1>Diagnostics Commands</h1>
