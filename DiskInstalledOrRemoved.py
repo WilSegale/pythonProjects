@@ -25,4 +25,4 @@ try:
     check_disk_changes()
     
 except KeyboardInterrupt:
-    print("Exiting...")
+    print("[-] Exiting...")
