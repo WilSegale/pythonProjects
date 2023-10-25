@@ -1,5 +1,3 @@
-import psutil
-import sys
 from sys import *
 from sys import platform
 import matplotlib.pyplot as plt
@@ -12,6 +10,7 @@ import time
 import psutil
 import ctypes
 import socket
+import sys
 
 # color for the bar graph
 colors = ['green', 
@@ -33,6 +32,5 @@ ORANGE_Start = "\033[38;2;255;165;0m"
 ORANGE_END = "\033[0m"
 BRIGHT = "\033[1m"
 RESET = "\033[0m"
-
 GRAY_TEXT = "\033[90m"
 CYAN_TEXT = "\033[36m"

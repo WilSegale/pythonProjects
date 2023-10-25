@@ -15,9 +15,7 @@ print(f"Data has been written to {file_name}.")
 try:
     while True:
         ChosenElement = input("Input an atomic number (1-118) to select an element (or type 'exit' to quit): ")
-        if ChosenElement == "exit":
-            print("\nInterrupted by the user.")
-            break
+
         ChosenElement = int(ChosenElement)
         if 1 <= ChosenElement <= 118:
             # Try to find the selected element by atomic number
