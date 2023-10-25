@@ -1,41 +1,75 @@
-Running command: ping google.com -t 3
 
-PING google.com (142.251.40.206): 56 data bytes
-64 bytes from 142.251.40.206: icmp_seq=0 ttl=60 time=18.127 ms
-64 bytes from 142.251.40.206: icmp_seq=1 ttl=60 time=32.329 ms
-64 bytes from 142.251.40.206: icmp_seq=2 ttl=60 time=16.330 ms
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:ping google.com -t 3</p>
+                    <p>output:PING google.com (142.251.40.206): 56 data bytes
+64 bytes from 142.251.40.206: icmp_seq=0 ttl=60 time=20.023 ms
+64 bytes from 142.251.40.206: icmp_seq=1 ttl=60 time=16.254 ms
+64 bytes from 142.251.40.206: icmp_seq=2 ttl=60 time=26.726 ms
 
 --- google.com ping statistics ---
 3 packets transmitted, 3 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 16.330/22.262/32.329/7.156 ms
-
-========================================
-Running command: traceroute google.com
-
-traceroute to google.com (142.251.40.206), 64 hops max, 52 byte packets
- 1  fios_quantum_gateway (192.168.1.1)  8.904 ms  8.036 ms  7.390 ms
- 2  lo0-100.bstnma-vfttp-310.verizon-gni.net (100.0.192.1)  12.420 ms  11.706 ms  14.071 ms
- 3  g2-2-3-2.nycmny-lcr-22.verizon-gni.net (100.41.195.204)  13.007 ms  15.896 ms  15.595 ms
- 4  0.et-9-1-5.gw15.nyc1.alter.net (140.222.230.215)  22.895 ms  21.062 ms
-    0.et-9-1-2.gw15.nyc1.alter.net (140.222.227.25)  22.545 ms
- 5  72.14.208.130 (72.14.208.130)  19.547 ms
-    &#10.20.148.204.in-addr.arpa (204.148.20.6)  18.324 ms  17.026 ms
- 6  108.170.248.97 (108.170.248.97)  23.430 ms
-    108.170.248.33 (108.170.248.33)  24.429 ms *
- 7  216.239.40.167 (216.239.40.167)  26.704 ms  21.111 ms  16.486 ms
- 8  216.239.40.187 (216.239.40.187)  20.184 ms
-    lga34s38-in-f14.1e100.net (142.251.40.206)  18.500 ms
-    216.239.40.187 (216.239.40.187)  22.186 ms
-
-========================================
-Running command: csrutil status
-
-System Integrity Protection status: enabled.
-
-========================================
-Running command: sudo pfctl -s info
-
-No ALTQ support in kernel
+round-trip min/avg/max/stddev = 16.254/21.001/26.726/4.331 ms
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:traceroute google.com</p>
+                    <p>output:traceroute to google.com (142.251.40.206), 64 hops max, 52 byte packets
+ 1  fios_quantum_gateway (192.168.1.1)  8.670 ms  7.788 ms  7.590 ms
+ 2  lo0-100.bstnma-vfttp-310.verizon-gni.net (100.0.192.1)  14.054 ms  11.327 ms  12.282 ms
+ 3  g2-2-3-2.nycmny-lcr-22.verizon-gni.net (100.41.195.204)  15.480 ms
+    g2-2-3-2.nycmny-lcr-21.verizon-gni.net (100.41.195.206)  11.569 ms
+    g2-2-3-2.nycmny-lcr-22.verizon-gni.net (100.41.195.204)  15.124 ms
+ 4  0.et-9-1-2.gw15.nyc1.alter.net (140.222.227.25)  21.030 ms
+    0.et-10-1-2.gw15.nyc1.alter.net (140.222.227.145)  19.966 ms
+    0.et-9-1-2.gw15.nyc1.alter.net (140.222.227.25)  23.026 ms
+ 5  72.14.208.130 (72.14.208.130)  19.218 ms  18.149 ms
+    &#10.20.148.204.in-addr.arpa (204.148.20.6)  19.647 ms
+ 6  * * 108.170.248.97 (108.170.248.97)  18.965 ms
+ 7  216.239.40.167 (216.239.40.167)  18.866 ms  22.957 ms
+    216.239.40.187 (216.239.40.187)  18.233 ms
+ 8  216.239.40.187 (216.239.40.187)  20.649 ms
+    lga34s38-in-f14.1e100.net (142.251.40.206)  19.514 ms
+    108.170.248.66 (108.170.248.66)  17.724 ms
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:csrutil status</p>
+                    <p>output:System Integrity Protection status: enabled.
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:sudo pfctl -s info</p>
+                    <p>output:No ALTQ support in kernel
 ALTQ related functions disabled
 Status: Enabled for 0 days 00:17:26           Debug: Urgent
 
@@ -62,11 +96,19 @@ Counters
   synproxy                               0            0.0/s
   dummynet                               0            0.0/s
   invalid-port                           0            0.0/s
-
-========================================
-Running command: system_profiler SPSoftwareDataType
-
-Software:
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:system_profiler SPSoftwareDataType</p>
+                    <p>output:Software:
 
     System Software Overview:
 
@@ -80,18 +122,34 @@ Software:
       System Integrity Protection: Enabled
       Time since boot: 1 hour, 11 minutes
 
-
-========================================
-Running command: networksetup -listallnetworkservices
-
-An asterisk (*) denotes that a network service is disabled.
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:networksetup -listallnetworkservices</p>
+                    <p>output:An asterisk (*) denotes that a network service is disabled.
 Thunderbolt Bridge
 Wi-Fi
-
-========================================
-Running command: networksetup -listallhardwareports
-
-
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:networksetup -listallhardwareports</p>
+                    <p>output:
 Hardware Port: Ethernet Adapter (en3)
 Device: en3
 Ethernet Address: f2:4d:aa:26:49:d6
@@ -118,11 +176,19 @@ Ethernet Address: 36:29:f2:ed:26:84
 
 VLAN Configurations
 ===================
-
-========================================
-Running command: df -h
-
-Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:df -h</p>
+                    <p>output:Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
 /dev/disk3s3s1   460Gi   9.1Gi   356Gi     3%    387k  3.7G    0%   /
 devfs            207Ki   207Ki     0Bi   100%     720     0  100%   /dev
 /dev/disk3s6     460Gi   1.0Gi   356Gi     1%       1  3.7G    0%   /System/Volumes/VM
@@ -133,11 +199,19 @@ devfs            207Ki   207Ki     0Bi   100%     720     0  100%   /dev
 /dev/disk1s3     500Mi   1.3Mi   482Mi     1%      49  4.9M    0%   /System/Volumes/Hardware
 /dev/disk3s1     460Gi    88Gi   356Gi    20%    561k  3.7G    0%   /System/Volumes/Data
 map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
-
-========================================
-Running command: mount
-
-/dev/disk3s3s1 on / (apfs, sealed, local, read-only, journaled)
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:mount</p>
+                    <p>output:/dev/disk3s3s1 on / (apfs, sealed, local, read-only, journaled)
 devfs on /dev (devfs, local, nobrowse)
 /dev/disk3s6 on /System/Volumes/VM (apfs, local, noexec, journaled, noatime, nobrowse)
 /dev/disk3s4 on /System/Volumes/Preboot (apfs, local, journaled, nobrowse)
@@ -147,31 +221,39 @@ devfs on /dev (devfs, local, nobrowse)
 /dev/disk1s3 on /System/Volumes/Hardware (apfs, local, journaled, nobrowse)
 /dev/disk3s1 on /System/Volumes/Data (apfs, local, journaled, nobrowse, protect)
 map auto_home on /System/Volumes/Data/home (autofs, automounted, nobrowse)
-
-========================================
-Running command: ps aux
-
-USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:ps aux</p>
+                    <p>output:USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
 zero              5856  13.4  0.8 1585127648  64608   ??  S    12:08PM   0:09.39 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --user-data-dir=/Users/zero/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --shared-files --field-trial-handle=1718379636,r,7720872812926232240,3411260169662627524,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
 zero              5914  12.5  1.9 1587252672 156880   ??  S    12:08PM   0:58.44 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --ms-enable-electron-run-as-node /Users/zero/.vscode/extensions/ms-python.vscode-pylance-2023.10.40/dist/server.bundle.js --cancellationReceive=file:865528a087b234e1309d46e7a511e2a1a233661285 --node-ipc --clientProcessId=5855
 zero              5826  11.1  3.0 1595962512 252320   ??  S    12:08PM   2:09.28 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer) --type=renderer --user-data-dir=/Users/zero/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/Applications/Visual Studio Code.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --first-renderer-process --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1698247549086062 --launch-time-ticks=2573508202 --shared-files --field-trial-handle=1718379636,r,7720872812926232240,3411260169662627524,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --vscode-window-config=vscode:c6a0be90-6a23-4ac2-81b7-90f45eb4f8d4 --seatbelt-client=61
-_windowserver      362   8.9  0.9 410423024  72960   ??  Ss   11:20AM   9:15.65 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
-zero              5809   4.4  1.6 1585637680 134160   ??  S    12:08PM   0:51.22 /Applications/Visual Studio Code.app/Contents/MacOS/Electron
+_windowserver      362   8.9  0.9 410427536  72960   ??  Ss   11:20AM   9:15.64 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
+zero              5809   4.4  1.6 1585637680 133488   ??  S    12:08PM   0:51.22 /Applications/Visual Studio Code.app/Contents/MacOS/Electron
 root                 1   3.9  0.2 408826272  18304   ??  Ss   11:20AM   0:29.47 /sbin/launchd
-zero              5817   3.6  0.8 442277808  64000   ??  S    12:08PM   0:37.42 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU) --type=gpu-process --user-data-dir=/Users/zero/Library/Application Support/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaAcAAAAAAABoBwAAAAAAAHgCAABOAAAAcAIAAAAAAAB4AgAAAAAAAIACAAAAAAAAiAIAAAAAAACQAgAAAAAAAJgCAAAAAAAAoAIAAAAAAACoAgAAAAAAALACAAAAAAAAuAIAAAAAAADAAgAAAAAAAMgCAAAAAAAA0AIAAAAAAADYAgAAAAAAAOACAAAAAAAA6AIAAAAAAADwAgAAAAAAAPgCAAAAAAAAAAMAAAAAAAAIAwAAAAAAABADAAAAAAAAGAMAAAAAAAAgAwAAAAAAACgDAAAAAAAAMAMAAAAAAAA4AwAAAAAAAEADAAAAAAAASAMAAAAAAABQAwAAAAAAAFgDAAAAAAAAYAMAAAAAAABoAwAAAAAAAHADAAAAAAAAeAMAAAAAAACAAwAAAAAAAIgDAAAAAAAAkAMAAAAAAACYAwAAAAAAAKADAAAAAAAAqAMAAAAAAACwAwAAAAAAALgDAAAAAAAAwAMAAAAAAADIAwAAAAAAANADAAAAAAAA2AMAAAAAAADgAwAAAAAAAOgDAAAAAAAA8AMAAAAAAAD4AwAAAAAAAAAEAAAAAAAACAQAAAAAAAAQBAAAAAAAABgEAAAAAAAAIAQAAAAAAAAoBAAAAAAAADAEAAAAAAAAOAQAAAAAAABABAAAAAAAAEgEAAAAAAAAUAQAAAAAAABYBAAAAAAAAGAEAAAAAAAAaAQAAAAAAABwBAAAAAAAAHgEAAAAAAAAgAQAAAAAAACIBAAAAAAAAJAEAAAAAAAAmAQAAAAAAACgBAAAAAAAAKgEAAAAAAAAsAQAAAAAAAC4BAAAAAAAAMAEAAAAAAAAyAQAAAAAAADQBAAAAAAAANgEAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAACAAAAEAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAAAAAAAHAAAAEAAAAAAAAAAAAAAACAAAABAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAAAAAAALAAAAEAAAAAAAAAAAAAAADAAAABAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAAAAAAAPAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAEAAAABAAAAEAAAAAAAAAABAAAAAgAAABAAAAAAAAAAAQAAAAMAAAAQAAAAAAAAAAEAAAAGAAAAEAAAAAAAAAABAAAABwAAABAAAAAAAAAAAQAAAAgAAAAQAAAAAAAAAAEAAAAJAAAAEAAAAAAAAAABAAAACwAAABAAAAAAAAAAAQAAAAwAAAAQAAAAAAAAAAEAAAAOAAAAEAAAAAAAAAABAAAADwAAABAAAAAAAAAAAQAAABAAAAAQAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAEAAAAAQAAABAAAAAAAAAABAAAAAIAAAAQAAAAAAAAAAQAAAADAAAAEAAAAAAAAAAEAAAABgAAABAAAAAAAAAABAAAAAcAAAAQAAAAAAAAAAQAAAAIAAAAEAAAAAAAAAAEAAAACQAAABAAAAAAAAAABAAAAAsAAAAQAAAAAAAAAAQAAAAMAAAAEAAAAAAAAAAEAAAADgAAABAAAAAAAAAABAAAAA8AAAAQAAAAAAAAAAQAAAAQAAAAEAAAAAAAAAAHAAAAAAAAABAAAAAAAAAABwAAAAEAAAAQAAAAAAAAAAcAAAACAAAAEAAAAAAAAAAHAAAAAwAAABAAAAAAAAAABwAAAAYAAAAQAAAAAAAAAAcAAAAHAAAAEAAAAAAAAAAHAAAACAAAABAAAAAAAAAABwAAAAkAAAAQAAAAAAAAAAcAAAALAAAAEAAAAAAAAAAHAAAADAAAABAAAAAAAAAABwAAAA4AAAAQAAAAAAAAAAcAAAAPAAAAEAAAAAAAAAAHAAAAEAAAABAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAgAAAABAAAAEAAAAAAAAAAIAAAAAgAAABAAAAAAAAAACAAAAAMAAAAQAAAAAAAAAAgAAAAGAAAAEAAAAAAAAAAIAAAABwAAABAAAAAAAAAACAAAAAgAAAAQAAAAAAAAAAgAAAAJAAAAEAAAAAAAAAAIAAAACwAAABAAAAAAAAAACAAAAAwAAAAQAAAAAAAAAAgAAAAOAAAAEAAAAAAAAAAIAAAADwAAABAAAAAAAAAACAAAABAAAAAQAAAAAAAAAAoAAAAAAAAAEAAAAAAAAAAKAAAAAQAAABAAAAAAAAAACgAAAAIAAAAQAAAAAAAAAAoAAAADAAAAEAAAAAAAAAAKAAAABgAAABAAAAAAAAAACgAAAAcAAAAQAAAAAAAAAAoAAAAIAAAAEAAAAAAAAAAKAAAACQAAABAAAAAAAAAACgAAAAsAAAAQAAAAAAAAAAoAAAAMAAAAEAAAAAAAAAAKAAAADgAAABAAAAAAAAAACgAAAA8AAAAQAAAAAAAAAAoAAAAQAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=1718379636,r,7720872812926232240,3411260169662627524,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --seatbelt-client=38
+zero              5817   3.6  0.8 442277744  64000   ??  S    12:08PM   0:37.42 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU) --type=gpu-process --user-data-dir=/Users/zero/Library/Application Support/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaAcAAAAAAABoBwAAAAAAAHgCAABOAAAAcAIAAAAAAAB4AgAAAAAAAIACAAAAAAAAiAIAAAAAAACQAgAAAAAAAJgCAAAAAAAAoAIAAAAAAACoAgAAAAAAALACAAAAAAAAuAIAAAAAAADAAgAAAAAAAMgCAAAAAAAA0AIAAAAAAADYAgAAAAAAAOACAAAAAAAA6AIAAAAAAADwAgAAAAAAAPgCAAAAAAAAAAMAAAAAAAAIAwAAAAAAABADAAAAAAAAGAMAAAAAAAAgAwAAAAAAACgDAAAAAAAAMAMAAAAAAAA4AwAAAAAAAEADAAAAAAAASAMAAAAAAABQAwAAAAAAAFgDAAAAAAAAYAMAAAAAAABoAwAAAAAAAHADAAAAAAAAeAMAAAAAAACAAwAAAAAAAIgDAAAAAAAAkAMAAAAAAACYAwAAAAAAAKADAAAAAAAAqAMAAAAAAACwAwAAAAAAALgDAAAAAAAAwAMAAAAAAADIAwAAAAAAANADAAAAAAAA2AMAAAAAAADgAwAAAAAAAOgDAAAAAAAA8AMAAAAAAAD4AwAAAAAAAAAEAAAAAAAACAQAAAAAAAAQBAAAAAAAABgEAAAAAAAAIAQAAAAAAAAoBAAAAAAAADAEAAAAAAAAOAQAAAAAAABABAAAAAAAAEgEAAAAAAAAUAQAAAAAAABYBAAAAAAAAGAEAAAAAAAAaAQAAAAAAABwBAAAAAAAAHgEAAAAAAAAgAQAAAAAAACIBAAAAAAAAJAEAAAAAAAAmAQAAAAAAACgBAAAAAAAAKgEAAAAAAAAsAQAAAAAAAC4BAAAAAAAAMAEAAAAAAAAyAQAAAAAAADQBAAAAAAAANgEAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAACAAAAEAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAAAAAAAHAAAAEAAAAAAAAAAAAAAACAAAABAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAAAAAAALAAAAEAAAAAAAAAAAAAAADAAAABAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAAAAAAAPAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAEAAAABAAAAEAAAAAAAAAABAAAAAgAAABAAAAAAAAAAAQAAAAMAAAAQAAAAAAAAAAEAAAAGAAAAEAAAAAAAAAABAAAABwAAABAAAAAAAAAAAQAAAAgAAAAQAAAAAAAAAAEAAAAJAAAAEAAAAAAAAAABAAAACwAAABAAAAAAAAAAAQAAAAwAAAAQAAAAAAAAAAEAAAAOAAAAEAAAAAAAAAABAAAADwAAABAAAAAAAAAAAQAAABAAAAAQAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAEAAAAAQAAABAAAAAAAAAABAAAAAIAAAAQAAAAAAAAAAQAAAADAAAAEAAAAAAAAAAEAAAABgAAABAAAAAAAAAABAAAAAcAAAAQAAAAAAAAAAQAAAAIAAAAEAAAAAAAAAAEAAAACQAAABAAAAAAAAAABAAAAAsAAAAQAAAAAAAAAAQAAAAMAAAAEAAAAAAAAAAEAAAADgAAABAAAAAAAAAABAAAAA8AAAAQAAAAAAAAAAQAAAAQAAAAEAAAAAAAAAAHAAAAAAAAABAAAAAAAAAABwAAAAEAAAAQAAAAAAAAAAcAAAACAAAAEAAAAAAAAAAHAAAAAwAAABAAAAAAAAAABwAAAAYAAAAQAAAAAAAAAAcAAAAHAAAAEAAAAAAAAAAHAAAACAAAABAAAAAAAAAABwAAAAkAAAAQAAAAAAAAAAcAAAALAAAAEAAAAAAAAAAHAAAADAAAABAAAAAAAAAABwAAAA4AAAAQAAAAAAAAAAcAAAAPAAAAEAAAAAAAAAAHAAAAEAAAABAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAgAAAABAAAAEAAAAAAAAAAIAAAAAgAAABAAAAAAAAAACAAAAAMAAAAQAAAAAAAAAAgAAAAGAAAAEAAAAAAAAAAIAAAABwAAABAAAAAAAAAACAAAAAgAAAAQAAAAAAAAAAgAAAAJAAAAEAAAAAAAAAAIAAAACwAAABAAAAAAAAAACAAAAAwAAAAQAAAAAAAAAAgAAAAOAAAAEAAAAAAAAAAIAAAADwAAABAAAAAAAAAACAAAABAAAAAQAAAAAAAAAAoAAAAAAAAAEAAAAAAAAAAKAAAAAQAAABAAAAAAAAAACgAAAAIAAAAQAAAAAAAAAAoAAAADAAAAEAAAAAAAAAAKAAAABgAAABAAAAAAAAAACgAAAAcAAAAQAAAAAAAAAAoAAAAIAAAAEAAAAAAAAAAKAAAACQAAABAAAAAAAAAACgAAAAsAAAAQAAAAAAAAAAoAAAAMAAAAEAAAAAAAAAAKAAAADgAAABAAAAAAAAAACgAAAA8AAAAQAAAAAAAAAAoAAAAQAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=1718379636,r,7720872812926232240,3411260169662627524,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --seatbelt-client=38
 root               438   3.5  0.1 408269008   9664   ??  Ss   11:20AM   0:00.59 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd
 root               469   3.0  0.1 408267888   7264   ??  Ss   11:20AM   0:07.65 /usr/libexec/ApplicationFirewall/socketfilterfw
 _trustd            410   2.5  0.2 408274464  14128   ??  Ss   11:20AM   0:12.43 /usr/libexec/trustd
-zero             12266   2.3  0.3 409244688  27168 s007  S+   12:31PM   0:02.17 /opt/homebrew/Cellar/python@3.11/3.11.6/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python diagnostics.py
+zero             12266   2.3  0.3 409244688  26816 s007  S+   12:31PM   0:02.17 /opt/homebrew/Cellar/python@3.11/3.11.6/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python diagnostics.py
 zero              5937   2.0  0.3 409386096  26464   ??  S    12:08PM   0:07.49 /Users/zero/Library/Application Support/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.28.0/aarch64-apple-darwin/TabNine --no-lsp=true --client=vscode --client-metadata clientVersion=1.83.1 pluginVersion=3.21.1 t9-vscode-AutoImportEnabled=true t9-vscode-TSAutoImportEnabled=true t9-vscode-JSAutoImportEnabled=true vscode-telemetry-enabled=true vscode-remote=false vscode-extension-kind=1 vscode-theme-name=Default Dark Modern vscode-theme-kind=Dark vscode-machine-id=745175c6a2f15e4527013a08850acb467363302418cdb69a7bf33f6d9091753b vscode-is-new-app-install=false vscode-session-id=765e03b9-0612-4643-b29c-3d228038ddc01698250122912 vscode-language=en vscode-app-name=Visual Studio Code vscode-beta-channel-enabled=false vscode-status-customization=unknown vscode-inline-api-enabled=true --tls_config insecure=false ide-restart-counter=0 --no_bootstrap
 root               334   1.8  0.2 408300432  17072   ??  Ss   11:20AM   0:13.43 /usr/libexec/opendirectoryd
-root               294   1.7  0.3 408384928  21952   ??  Ss   11:20AM   0:15.83 /usr/libexec/logd
+root               294   1.7  0.3 408384672  21936   ??  Ss   11:20AM   0:15.82 /usr/libexec/logd
 zero              5855   1.5  1.2 1585110272  97488   ??  S    12:08PM   0:19.83 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --inspect-port=0 --user-data-dir=/Users/zero/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --shared-files --field-trial-handle=1718379636,r,7720872812926232240,3411260169662627524,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
 root               356   1.0  0.0 408233744   2784   ??  Ss   11:20AM   0:05.09 /usr/sbin/notifyd
 zero               570   0.8  0.1 408235856   5248   ??  S    11:20AM   0:05.50 /usr/sbin/cfprefsd agent
 zero              6018   0.7  0.5 1585126560  43456   ??  S    12:08PM   0:04.25 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --user-data-dir=/Users/zero/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --shared-files --field-trial-handle=1718379636,r,7720872812926232240,3411260169662627524,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
 root               363   0.7  0.1 408234784   4960   ??  Ss   11:20AM   0:04.11 /usr/sbin/cfprefsd daemon
-zero             11683   0.3  0.2 408553280  13872 s006  Ss+  12:28PM   0:01.25 zsh (figterm)
+zero             11683   0.3  0.2 408553280  13856 s006  Ss+  12:28PM   0:01.25 zsh (figterm)
 zero              2454   0.3  0.4 408320976  32128   ??  S    11:39AM   0:04.16 /System/Library/CoreServices/Family.app/Contents/MacOS/Family
 zero              2355   0.3  0.1 409271968   9808 s000  S+   11:37AM   0:16.12 zsh (figterm)
 _mdnsresponder     510   0.3  0.2 408274784  13600   ??  Ss   11:20AM   0:05.10 /usr/sbin/mDNSResponder
@@ -537,7 +619,7 @@ zero               606   0.0  0.3 409294416  21232   ??  S    11:20AM   0:00.43 
 zero               593   0.0  0.2 408515408  14128   ??  S    11:20AM   0:17.40 /usr/libexec/secd
 zero               597   0.0  0.1 408276000   9840   ??  S    11:20AM   0:00.75 /usr/libexec/secinitd
 zero               592   0.0  0.2 408387216  18144   ??  S    11:20AM   0:00.20 /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent
-zero               603   0.0  1.8 409980064 149456   ??  S    11:20AM   0:32.85 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+zero               603   0.0  1.8 409980064 149456   ??  S    11:20AM   0:32.84 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
 zero               599   0.0  0.2 408290896  15200   ??  S    11:20AM   0:00.17 /System/Library/CoreServices/talagent
 zero               602   0.0  0.2 409231344  18768   ??  S    11:20AM   0:00.22 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
 zero               601   0.0  0.8 409919392  69104   ??  S    11:20AM   0:10.62 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter
@@ -568,7 +650,7 @@ zero               561   0.0  0.1 408169968   5136   ??  S    11:20AM   0:04.02 
 root               560   0.0  0.1 408100208  10016   ??  Ss   11:20AM   0:00.14 /System/Library/PrivateFrameworks/SiriInference.framework/Support/siriinferenced
 root               559   0.0  0.0 408225936   1872   ??  Ss   11:20AM   0:00.04 /usr/libexec/securityd_service
 root               558   0.0  0.1 408267504  11328   ??  Ss   11:20AM   0:00.26 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
-root               552   0.0  0.9 410437696  71888   ??  Ss   11:20AM   0:30.10 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+root               552   0.0  0.9 410437696  71728   ??  Ss   11:20AM   0:30.09 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
 _softwareupdate    550   0.0  0.0 408168944   2144   ??  S    11:20AM   0:00.11 /usr/sbin/distnoted agent
 root               551   0.0  0.1 408219248   6816   ??  Ss   11:20AM   0:00.04 /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd
 _driverkit         549   0.0  0.0 408501152   1296   ??  Ss   11:20AM   0:00.20 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers com.apple.driverkit.AppleUserHIDDrivers 0x100000be6 com.apple.AppleUserHIDDrivers
@@ -628,7 +710,7 @@ _analyticsd        415   0.0  0.2 408270832  13040   ??  Ss   11:20AM   0:00.97 
 _biome             310   0.0  0.1 408266992  11952   ??  Ss   11:20AM   0:00.58 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/biomed
 root               446   0.0  0.0 408078464   2096   ??  Ss   11:20AM   0:00.01 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
 root               442   0.0  0.1 408276144  12320   ??  Ss   11:20AM   0:00.48 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Resources/backgroundtaskmanagementd -daemon
-root             12329   0.0  0.0 408102544   1824 s007  R+   12:31PM   0:00.00 ps aux
+root             12328   0.0  0.0 408102544   1824 s007  R+   12:31PM   0:00.00 ps aux
 root               437   0.0  0.1 408267024   5360   ??  Ss   11:20AM   0:00.04 /usr/libexec/secinitd
 _locationd         341   0.0  0.3 408289888  24576   ??  Ss   11:20AM   0:17.65 /usr/libexec/locationd
 _coreaudiod        434   0.0  0.0 408168944   2144   ??  S    11:20AM   0:00.12 /usr/sbin/distnoted agent
@@ -672,7 +754,7 @@ root               319   0.0  0.1 408060016   4208   ??  Ss   11:20AM   0:00.17 
 root               339   0.0  0.1 408267840   5408   ??  Ss   11:20AM   0:01.91 /usr/sbin/securityd -i
 root               352   0.0  0.0 408057904   1760   ??  Ss   11:20AM   0:00.01 /usr/sbin/KernelEventAgent
 root               335   0.0  0.2 408275328  15776   ??  Ss   11:20AM   0:05.52 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd
-root               323   0.0  0.4 408601056  32288   ??  Ss   11:20AM   0:38.97 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+root               323   0.0  0.4 408601088  32320   ??  Ss   11:20AM   0:38.97 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
 root               333   0.0  0.1 408229984   4704   ??  Ss   11:20AM   0:02.49 /usr/libexec/thermalmonitord
 root               358   0.0  0.2 408266208  14624   ??  Ss   11:20AM   0:08.82 /usr/libexec/corebrightnessd --launchd
 root               355   0.0  0.3 408335632  25536   ??  Ss   11:20AM   0:19.03 /usr/sbin/bluetoothd
@@ -691,7 +773,7 @@ root               308   0.0  0.1 408268224  12096   ??  Ss   11:20AM   0:04.86 
 root               296   0.0  0.2 408268800  17392   ??  Ss   11:20AM   0:01.28 /usr/libexec/UserEventAgent (System)
 _windowserver      431   0.0  0.0 408168944   2144   ??  S    11:20AM   0:00.11 /usr/sbin/distnoted agent
 zero             12285   0.0  1.8 414865840 147216   ??  S    12:31PM   0:01.15 /Applications/Waterfox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container -childID 8 -isForBrowser -prefsLen 36305 -prefMapSize 246810 -jsInitLen 240916 -sbStartup -sbAppPath /Applications/Waterfox.app -sbLevel 3 -sbAllowFileAccess -parentBuildID 20231010100000 -appDir /Applications/Waterfox.app/Contents/Resources/browser -profile /Users/zero/Library/Application Support/Waterfox/Profiles/7nlzwuvp.default-release {d78dd174-0eff-4c9c-96b9-93fb52276450} 11761 org.mozilla.machname.908757006 tab
-zero             12280   0.0  0.3 408246272  24928   ??  S    12:31PM   0:00.10 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+zero             12280   0.0  0.2 408245728  18608   ??  R    12:31PM   0:00.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
 zero             12279   0.0  0.1 408245712  10768   ??  S    12:31PM   0:00.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
 zero             12275   0.0  0.2 408246368  17616   ??  S    12:31PM   0:00.11 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
 zero             12144   0.0  0.2 408245712  17856   ??  S    12:30PM   0:00.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
@@ -724,11 +806,19 @@ zero              6463   0.0  0.2 408135920  17152   ??  Ss   12:10PM   0:00.03 
 zero              6462   0.0  0.2 408144112  17168   ??  Ss   12:10PM   0:00.04 /Applications/AdBlock Pro.app/Contents/PlugIns/1. Ads.appex/Contents/MacOS/1. Ads -AppleLanguages ("en-US")
 zero              6461   0.0  0.2 412665584  19296   ??  Ss   12:10PM   0:00.15 /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader
 zero              6460   0.0  0.4 408304464  30816   ??  Ss   12:10PM   0:00.13 /Applications/AdBlock Pro.app/Contents/PlugIns/7. Video.appex/Contents/MacOS/7. Video -AppleLanguages ("en-US")
-
-========================================
-Running command: ps -ef | grep -v grep | awk '{print $2}'
-
-PID
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:ps -ef | grep -v grep | awk '{print $2}'</p>
+                    <p>output:PID
 1
 294
 295
@@ -1300,13 +1390,21 @@ PID
 11683
 11695
 12266
-12335
-12337
-
-========================================
-Running command: dscl . -list /Users
-
-_accessoryupdater
+12331
+12333
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:dscl . -list /Users</p>
+                    <p>output:_accessoryupdater
 _amavisd
 _analyticsd
 _appinstalld
@@ -1428,11 +1526,19 @@ daemon
 nobody
 root
 zero
-
-========================================
-Running command: cat /var/log/system.log
-
-Oct 25 00:10:10 zeros-Air syslogd[332]: ASL Sender Statistics
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:cat /var/log/system.log</p>
+                    <p>output:Oct 25 00:10:10 zeros-Air syslogd[332]: ASL Sender Statistics
 Oct 25 00:30:27 zeros-Air syslogd[332]: ASL Sender Statistics
 Oct 25 00:30:27 zeros-Air syslogd[332]: Configuration Notice:
 	ASL Module "com.apple.cdscheduler" claims selected messages.
@@ -1616,22 +1722,38 @@ Oct 25 11:51:42 zeros-Air syslogd[330]: ASL Sender Statistics
 Oct 25 12:05:08 zeros-Air syslogd[330]: ASL Sender Statistics
 Oct 25 12:15:39 zeros-Air syslogd[330]: ASL Sender Statistics
 Oct 25 12:25:53 zeros-Air syslogd[330]: ASL Sender Statistics
-
-========================================
-Running command: nslookup google.com
-
-Server:		192.168.1.1
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:nslookup google.com</p>
+                    <p>output:Server:		192.168.1.1
 Address:	192.168.1.1#53
 
 Non-authoritative answer:
 Name:	google.com
 Address: 142.251.40.206
 
-
-========================================
-Running command: sudo pfctl -sa
-
-No ALTQ support in kernel
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:sudo pfctl -sa</p>
+                    <p>output:No ALTQ support in kernel
 ALTQ related functions disabled
 TRANSLATION RULES:
 nat-anchor "com.apple/*" all
@@ -1649,11 +1771,11 @@ Status: Enabled for 0 days 00:17:27           Debug: Urgent
 
 State Table                          Total             Rate
   current entries                        0               
-  searches                          843443          805.6/s
+  searches                          843440          805.6/s
   inserts                               93            0.1/s
   removals                              93            0.1/s
 Counters
-  match                             772247          737.6/s
+  match                             772246          737.6/s
   bad-offset                             0            0.0/s
   fragment                               0            0.0/s
   short                                  0            0.0/s
@@ -1708,32 +1830,42 @@ table-entries hard limit   200000
 
 OS FINGERPRINTS:
 696 fingerprints loaded
-
-========================================
-Running command: vm_stat
-
-Mach Virtual Memory Statistics: (page size of 16384 bytes)
-Pages free:                                3885.
-Pages active:                            136253.
+</p>
+                </body>
+                </html>
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>diagnostics</title>
+                </head>
+                <body>
+                    <h1>Diagnostics Commands</h1>
+                    <p>command:vm_stat</p>
+                    <p>output:Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                3891.
+Pages active:                            136252.
 Pages inactive:                          135128.
 Pages speculative:                          617.
 Pages throttled:                              0.
 Pages wired down:                         83267.
 Pages purgeable:                           1709.
-"Translation faults":                  24538572.
-Pages copy-on-write:                    1149047.
-Pages zero filled:                      7062586.
+"Translation faults":                  24537834.
+Pages copy-on-write:                    1148847.
+Pages zero filled:                      7062501.
 Pages reactivated:                      2425619.
 Pages purged:                            308026.
 File-backed pages:                        91512.
-Anonymous pages:                         180486.
+Anonymous pages:                         180485.
 Pages stored in compressor:              344557.
 Pages occupied by compressor:            129068.
-Decompressions:                         1476734.
+Decompressions:                         1476730.
 Compressions:                           2240639.
-Pageins:                                1289418.
+Pageins:                                1289413.
 Pageouts:                                410727.
 Swapins:                                    128.
 Swapouts:                                   396.
-
-========================================
+</p>
+                </body>
+                </html>
+                
