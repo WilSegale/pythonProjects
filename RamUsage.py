@@ -34,10 +34,10 @@ if __name__ == "__main__":
     if platform == MACOS:  # Note the change from 'in' to '=='
         if ram_percentage >= 50:
             # Print a warning message if RAM usage is high
-            print("Warning: RAM usage is high!")
+            print(f"{BRIGHT}{RED}[!] Warning: RAM usage is high [!]{RESET}")
         else:
             # Print a normal message if RAM usage is normal
-            print("RAM usage is normal.")
+            print(f"{GREEN}RAM usage is normal.{RESET}")
 
     # Print RAM-related information
     print_ram_info(used_ram, total_ram, ram_percentage)
