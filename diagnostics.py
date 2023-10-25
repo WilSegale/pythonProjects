@@ -25,8 +25,9 @@ try:
         print(f"Running command: {command}\n", file=diagnostic)
         result = run_command(command)
         print(result)
-        print(result, file=diagnostic)
         print("=" * 40)
+
+        print(result, file=diagnostic)
         print("=" * 40, file=diagnostic)  # Separation line
 
     # You can add more commands or remove any you don't need.
