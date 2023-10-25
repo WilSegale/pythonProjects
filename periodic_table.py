@@ -47,7 +47,9 @@ try:
                 print("Element not found.")
         else:
             print("Invalid atomic number.")
+            
 except ValueError:
     print("Invalid input. Please enter a valid atomic number.")
+    
 except KeyboardInterrupt:
     print("\nInterrupted by the user.")
