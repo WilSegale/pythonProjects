@@ -50,8 +50,8 @@ def generate_element_html(element):
             <p>Electron Configuration: {element['electron_configuration']}</p>
             <p>Category: {element['category']}</p>
             <p>Standard State: {element['standard_state']}</p>
-            <p>Boiling Point: {element['boiling_point']} °F</p>
-            <p>Melting Point: {element['melting_point']} °F</p>
+            <p>Boiling Point: {element['boiling_point']} K</p>
+            <p>Melting Point: {element['melting_point']} K</p>
             <p>Density: {element['density']} g/cm³</p>
             <p>Discoverer: {element['discoverer']}</p>
             <p>Year of Discovery: {element['year_of_discovery']}</p>

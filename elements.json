@@ -3,12 +3,18 @@
         "symbol": "H",
         "name": "Hydrogen",
         "atomic_number": 1,
+<<<<<<< HEAD
         "atomic_weight": 1.00794,
         "electron_configuration": "1s\u00b9",
         "category": "Nonmetal",
         "standard_state": "Gas",
         "boiling_point": "-252.87\u00b0C",
         "melting_point": "-259.16\u00b0C"
+=======
+        "atomic_weight": 1.008,
+        "electron_configuration": 1,
+        "category": 1
+>>>>>>> parent of b7a7912 (html)
     },
     {
         "symbol": "He",
