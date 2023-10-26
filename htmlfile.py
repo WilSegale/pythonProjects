@@ -1,18 +1,9 @@
-def generate_element_html(element):
-    # Define default values for missing keys
-    default_values = {
-        '': "N/A",
-        'category': "N/A",
-        'standard_state': "N/A",
-        'boiling_point': "N/A",
-        'melting_point': "N/A",
-        'density': "N/A",
-        'discoverer': "N/A",
-        'year_of_discovery': "N/A",
-    }
+from elements import elements  # Import the elements list from your module
 
+
+def generate_element_html(element):
     # Use default values if the keys are missing in the element dictionary
-    element = {**default_values, **element}
+    element = {**elements[element['atomic_number'] - 1], **element}
 
     return f"""
     <!DOCTYPE html>
@@ -52,9 +43,7 @@ def generate_element_html(element):
             <p>Standard State: {element['standard_state']}</p>
             <p>Boiling Point: {element['boiling_point']} K</p>
             <p>Melting Point: {element['melting_point']} K</p>
-            <p>Density: {element['density']} g/cm³</p>
-            <p>Discoverer: {element['discoverer']}</p>
-            <p>Year of Discovery: {element['year_of_discovery']}</p>
+            <p>electron_configuration: {element['electron_configuration']}</p>
             <p><a href="index.html">Back to Element Selection</a></p>
         </div>
     </body>

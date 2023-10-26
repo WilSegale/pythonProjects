@@ -354,4 +354,115 @@ elements = [
     {"symbol": "Ra", "name": "Radium", "atomic_number": 88, "atomic_weight": 226,
     "electron_configuration": "[Rn] 7s²", "category": "Alkaline Earth Metal", "standard_state": "Solid",
     "boiling_point": "1737°C", "melting_point": "696°C"},
+        
+    {"symbol": "Ac", "name": "Actinium", "atomic_number": 89, "atomic_weight": 227,
+    "electron_configuration": "[Rn] 6d¹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "3503°C", "melting_point": "1050°C"},
+
+    {"symbol": "Th", "name": "Thorium", "atomic_number": 90, "atomic_weight": 232.0,
+    "electron_configuration": "[Rn] 6d² 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "5061°C", "melting_point": "1750°C"},
+
+    {"symbol": "Pa", "name": "Protactinium", "atomic_number": 91, "atomic_weight": 231,
+    "electron_configuration": "[Rn] 5f² 6d¹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "4300°C", "melting_point": "1572°C"},
+
+    {"symbol": "Th", "name": "Thorium", "atomic_number": 90, "atomic_weight": 232.0,
+    "electron_configuration": "[Rn] 6d² 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "5061°C", "melting_point": "1750°C"},
+
+    {"symbol": "U", "name": "Uranium", "atomic_number": 92, "atomic_weight": 238.0,
+    "electron_configuration": "[Rn] 5f³ 6d¹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "4131°C", "melting_point": "1132°C"},
+
+    {"symbol": "Np", "name": "Neptunium", "atomic_number": 93, "atomic_weight": 237,
+    "electron_configuration": "[Rn] 5f⁴ 6d¹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "3902°C", "melting_point": "639°C"},
+
+    {"symbol": "Pu", "name": "Plutonium", "atomic_number": 94, "atomic_weight": 244,
+    "electron_configuration": "[Rn] 5f⁶ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "3228°C", "melting_point": "639.4°C"},
+
+    {"symbol": "Am", "name": "Americium", "atomic_number": 95, "atomic_weight": 243,
+    "electron_configuration": "[Rn] 5f⁷ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "2607°C", "melting_point": "994°C"},
+
+    {"symbol": "Cm", "name": "Curium", "atomic_number": 96, "atomic_weight": 247,
+    "electron_configuration": "[Rn] 5f⁷ 6d¹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "3140°C", "melting_point": "1340°C"},
+
+    {"symbol": "Bk", "name": "Berkelium", "atomic_number": 97, "atomic_weight": 247,
+    "electron_configuration": "[Rn] 5f⁹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "1050°C", "melting_point": "986°C"},
+
+    {"symbol": "Cf", "name": "Californium", "atomic_number": 98, "atomic_weight": 251,
+    "electron_configuration": "[Rn] 5f¹⁰ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "900°C", "melting_point": "900°C"},
+
+    {"symbol": "Es", "name": "Einsteinium", "atomic_number": 99, "atomic_weight": 252,
+    "electron_configuration": "[Rn] 5f¹¹ 7s²", "category": "Actinide", "standard_state": "Solid",
+    "boiling_point": "unknown", "melting_point": "unknown"},
+
+    {"symbol": "Fm", "name": "Fermium", "atomic_number": 100, "atomic_weight": 257,
+    "electron_configuration": "[Rn] 5f¹² 7s²", "category": "Actinide", "standard state": "Solid",
+    "boiling point": "unknown", "melting point": "unknown"},
+
+    {"symbol": "Md", "name": "Mendelevium", "atomic_number": 101, "atomic_weight": 258,
+    "electron configuration": "[Rn] 5f¹³ 7s²", "category": "Actinide", "standard state": "Solid",
+    "boiling point": "unknown", "melting point": "unknown"},
+
+    {"symbol": "No", "name": "Nobelium", "atomic_number": 102, "atomic_weight": 259,
+    "electron configuration": "[Rn] 5f¹⁴ 7s²", "category": "Actinide", "standard state": "Solid",
+    "boiling point": "unknown", "melting point": "unknown"},
+
+    {"symbol": "Lr", "name": "Lawrencium", "atomic_number": 103, "atomic weight": 266,
+    "electron configuration": "[Rn] 5f¹⁴ 7s² 7p¹", "category": "Actinide", "standard state": "Solid",
+    "boiling point": "unknown", "melting point": "unknown"},
+
+    {"symbol": "Rf", "name": "Rutherfordium", "atomic_number": 104, "atomic weight": 267,
+    "electron configuration": "[Rn] 5f¹⁴ 6d² 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Db", "name": "Dubnium", "atomic_number": 105, "atomic weight": 270,
+    "electron configuration": "[Rn] 5f¹⁴ 6d³ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Sg", "name": "Seaborgium", "atomic_number": 106, "atomic weight": 271,
+    "electron configuration": "[Rn] 5f¹⁴ 6d⁴ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Bh", "name": "Bohrium", "atomic_number": 107, "atomic weight": 270,
+    "electron configuration": "[Rn] 5f¹⁴ 6d⁵ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Hs", "name": "Hassium", "atomic_number": 108, "atomic weight": 277,
+    "electron configuration": "[Rn] 5f¹⁴ 6d⁶ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Mt", "name": "Meitnerium", "atomic_number": 109, "atomic weight": 276,
+    "electron configuration": "[Rn] 5f¹⁴ 6d⁷ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Ds", "name": "Darmstadtium", "atomic_number": 110, "atomic weight": 281,
+    "electron configuration": "[Rn] 5f¹⁴ 6d⁸ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Rg", "name": "Roentgenium", "atomic_number": 111, "atomic weight": 280,
+    "electron configuration": "[Rn] 5f¹⁴ 6d⁹ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Cn", "name": "Copernicium", "atomic_number": 112, "atomic weight": 285,
+    "electron configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s²", "category": "Transition Metal", "standard state": "unknown"},
+
+    {"symbol": "Nh", "name": "Nihonium", "atomic_number": 113, "atomic_weight": 284,
+    "electron configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹", "category": "unknown", "standard state": "unknown"},
+
+    {"symbol": "Fl", "name": "Flerovium", "atomic_number": 114, "atomic_weight": 289,
+    "electron configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p²", "category": "unknown", "standard state": "unknown"},
+
+    {"symbol": "Mc", "name": "Moscovium", "atomic_number": 115, "atomic_weight": 288,
+    "electron configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³", "category": "unknown", "standard state": "unknown"},
+
+    {"symbol": "Lv", "name": "Livermorium", "atomic_number": 116, "atomic_weight": 292,
+    "electron configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴", "category": "unknown", "standard state": "unknown"},
+
+    {"symbol": "Ts", "name": "Tennessine", "atomic_number": 117, "atomic_weight": 294,
+    "electron configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵", "category": "unknown", "standard state": "unknown"},
+
+    {"symbol": "Og", "name": "Oganesson", "atomic_number": 118, "atomic_weight": 294,
+    "electron_configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶","melting_point":"unkown","boiling_point":"unkown", "category": "Noble Gas", "standard_state": "unknown"}
+
+    
 ]
