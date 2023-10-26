@@ -44,7 +44,6 @@ def generate_element_html(element):
             <p>Boiling Point: {element['boiling_point']} K</p>
             <p>Melting Point: {element['melting_point']} K</p>
             <p>electron_configuration: {element['electron_configuration']}</p>
-            <p><a href="index.html">Back to Element Selection</a></p>
         </div>
     </body>
     </html>

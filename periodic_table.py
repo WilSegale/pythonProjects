@@ -3,9 +3,6 @@ from elements import elements
 from htmlfile import *
 import json
 
-
-
-
 # Write the data to the JSON file
 file_name = "elements.json"
 with open(file_name, "w") as json_file:
