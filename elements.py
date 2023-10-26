@@ -15,194 +15,129 @@ elements = [
     "electron_configuration": "[He] 2s²", "category": "Alkaline Earth Metal", "standard_state": "Solid",
     "boiling_point": "2970°C", "melting_point": "1287°C"},
 
-    {
-        "symbol": "B", "name": "Boron", "atomic_number": 5, "atomic_weight": 10.806, 
+    {"symbol": "B", "name": "Boron", "atomic_number": 5, "atomic_weight": 10.806, 
         "electron_configuration": "[He] 2s² 2p¹", "category": "Metalloid", "standard_state": "Solid",
         "boiling_point": "3927°C", "melting_point": "2075°C"
     },
     
-    #element Carbon
-    {   
-        "symbol": "C", "name": "Carbon", "atomic_number": 6, "atomic_weight": 12.011, 
+    {"symbol": "C", "name": "Carbon", "atomic_number": 6, "atomic_weight": 12.011, 
         "electron_configuration": "[He] 2s² 2p²", "category": "Nonmetal", "standard_state": "Solid",
         "boiling_point": "3915°C", "melting_point": "3915°C"
     },
 
-    {
-        "symbol": "N", "name": "Nitrogen", "atomic_number": 7, "atomic_weight": 14.007, 
+    {"symbol": "N", "name": "Nitrogen", "atomic_number": 7, "atomic_weight": 14.007, 
         "electron_configuration": "[He] 2s² 2p³", "category": "Nonmetal", "standard_state": "Gas",
         "boiling_point": "-196°C", "melting_point": "-210°C"
     },
 
-    {
-        "symbol": "O", "name": "Oxygen", "atomic_number": 8, "atomic_weight": 15.999, 
+    {"symbol": "O", "name": "Oxygen", "atomic_number": 8, "atomic_weight": 15.999, 
         "electron_configuration": "[He] 2s² 2p⁴", "category": "Nonmetal", "standard_state": "Gas",
         "boiling_point": "-183°C", "melting_point": "-219°C"
     },
 
-    {
-        "symbol": "F", "name": "Fluorine", "atomic_number": 9, "atomic_weight": 18.998403163, 
+    {"symbol": "F", "name": "Fluorine", "atomic_number": 9, "atomic_weight": 18.998403163, 
         "electron_configuration": "[He] 2s² 2p⁵", "category": "Halogen", "standard_state": "Gas",
         "boiling_point": "-188°C", "melting_point": "-220°C"
     },
+    
+    {"symbol": "Ne", "name": "Neon", "atomic_number": 10, "atomic_weight": 20.1797,
+    "electron_configuration": "[He] 2s² 2p⁶", "category": "Noble Gas", "standard_state": "Gas",
+    "boiling_point": "-246°C", "melting_point": "-248.6°C"},
 
-    {"symbol": "Ne", "name": "Neon", "atomic_number": 10, "atomic_weight": 20.1797},
-    
-    {"symbol": "Na", "name": "Sodium", "atomic_number": 11, "atomic_weight": 22.9897},
-    
-    {"symbol": "Mg", "name": "Magnesium", "atomic_number": 12, "atomic_weight": 24.3051},
-    
-    {"symbol": "Al", "name": "Aluminium", "atomic_number": 13, "atomic_weight": 26.9815},
-    
-    {"symbol": "Si", "name": "Silicon", "atomic_number": 14, "atomic_weight": 28.0855},
-    
-    {"symbol": "P",  "name": "Phosphorus", "atomic_number": 15, "atomic_weight": 30.9737},
-    
-    {"symbol": "S",  "name": "Sulfur", "atomic_number": 16, "atomic_weight": 32.063},
-    
-    {"symbol": "Cl", "name": "Chlorine", "atomic_number": 17, "atomic_weight": 35.4533},
-    
-    {"symbol": "Ar", "name": "Argon", "atomic_number": 18, "atomic_weight": 39.9482},
-    
-    {"symbol": "K",  "name": "Potassium", "atomic_number": 19, "atomic_weight": 39.0983},
-    
-    {"symbol": "Ca", "name": "Calcium", "atomic_number": 20, "atomic_weight": 40.0786},
-    
-    {"symbol": "Sc", "name": "Scandium", "atomic_number": 21, "atomic_weight": 44.9559},
-    
-    {"symbol": "Ti", "name": "Titanium", "atomic_number": 22, "atomic_weight": 47.8673},
-    
-    {"symbol": "V",  "name": "Vanadium", "atomic_number": 23, "atomic_weight": 50.9415},
-    
-    {"symbol": "Cr", "name": "Chromium", "atomic_number": 24, "atomic_weight": 51.9961},
-    
-    {"symbol": "Mn", "name": "Mendelevium", "atomic_number": 25, "atomic_weight": 54.9380},
-    
-    {"symbol": "Fe", "name": "Iron", "atomic_number": 26, "atomic_weight": 55.8455},
-    
-    {"symbol": "Co", "name": "Cobalt", "atomic_number": 27, "atomic_weight": 58.9331},
-    
-    {"symbol": "Ni", "name": "Nickel", "atomic_number": 28, "atomic_weight": 58.6934},
-    
-    {"symbol": "Cu", "name": "Copper", "atomic_number": 29, "atomic_weight": 63.5469},
-    
-    {"symbol": "Zn", "name": "Zinc", "atomic_number": 30, "atomic_weight": 65.38},
-    
-    {"symbol": "Ga", "name": "Gallium", "atomic_number": 31, "atomic_weight": 69.9050},
-    
-    {"symbol": "Ge", "name": "Germanium", "atomic_number": 32, "atomic_weight": 72.630},
-    
-    {"symbol": "As", "name": "Arsenic", "atomic_number": 33, "atomic_weight": 78.971},
-    
-    {"symbol": "Se", "name": "Selenium", "atomic_number": 34, "atomic_weight": 78.971},
-    
-    {"symbol": "Br", "name": "Bromine", "atomic_number": 35, "atomic_weight": 83.889},
-    
-    {"symbol": "Kr", "name": "Krypton", "atomic_number": 36, "atomic_weight": 83.798},
-    
-    {"symbol": "Rb", "name": "Rubidium", "atomic_number": 37, "atomic_weight": 85.4678},
-    
-    {"symbol": "Sr", "name": "Strontium", "atomic_number": 38, "atomic_weight": 87.62},
-    
-    {"symbol": "Y",  "name": "Yttrium", "atomic_number": 39, "atomic_weight": 88.905},
-    
-    {"symbol": "Zr", "name": "Zirconium", "atomic_number": 40, "atomic_weight": 91.224},
-    
-    {"symbol": "Nb", "name": "Niobrium", "atomic_number": 41, "atomic_weight":92.906},
-    
-    {"symbol": "Mo", "name": "Molybdenum", "atomic_number": 42, "atomic_weight":95.95},
-    
-    {"symbol": "Tc", "name":"Technetium","atomic_number": 43, "atomic_weight":98.905},
-    
-    {"symbol": "Ru", "name": "Ruthenium", "atomic_number": 44, "atomic_weight":101.07},
-    
-    {"symbol": "Rh", "name": "Rhodium", "atomic_number": 45, "atomic_weight":102.9058},
-    
-    {"symbol": "Pd", "name": "Palladium", "atomic_number": 46, "atomic_weight":106.42},
-    {"symbol": "Ag", "name": "Silver", "atomic_number": 47, "atomic_weight":107.87},
-    {"symbol": "Cd", "name": "Cadmium", "atomic_number": 48, "atomic_weight":112.41},
-    {"symbol": "In", "name": "Indium", "atomic_number": 49, "atomic_weight":114.81},
-    {"symbol": "Sn", "name": "Tin", "atomic_number": 50, "atomic_weight":118.705},
-    {"symbol": "Sb", "name": "Antimony", "atomic_number": 51, "atomic_weight":121.765},
-    {"symbol": "Te", "name": "Tellurium", "atomic_number": 52, "atomic_weight":127.60},
-    {"symbol": "I",  "name": "Iodine", "atomic_number": 53, "atomic_weight":126.90},
-    {"symbol": "Xe", "name": "Xenon", "atomic_number": 54, "atomic_weight":131.29},
-    {"symbol": "Cs", "name": "Caesium", "atomic_number": 55, "atomic_weight":132.91},
-    {"symbol": "Ba", "name": "Barium", "atomic_number": 56, "atomic_weight":137.32},
-    {"symbol": "La", "name": "Lanthanum", "atomic_number": 57,"atomic_weight":138.905},
-    {"symbol": "Ce", "name": "Cerium", "atomic_number": 58, "atomic_weight":140.12},
-    {"symbol": "Pr", "name": "Praseodymium","atomic_number": 59, "atomic_weight":140.905},
-    {"symbol": "Nd", "name": "Neodymium", "atomic_number": 60, "atomic_weight":144.24},
-    {"symbol": "Pm", "name": "Promethium", "atomic_number": 61, "atomic_weight":145.96},
-    {"symbol": "Sm", "name": "Samarium", "atomic_number": 62, "atomic_weight":150.39},
-    {"symbol": "Eu", "name": "Europium", "atomic_number": 63, "atomic_weight":151.96},
-    {"symbol": "Gd", "name": "Gadolinium", "atomic_number": 64, "atomic_weight":157.25},
-    {"symbol": "Tb", "name": "Terbium", "atomic_number":65, "atomic_weight":158.921},
-    {"symbol": "Dy", "name": "Dysprosium", "atomic_number":66, "atomic_weight":162.50},
-    {"symbol": "Ho", "name": "Holmium", "atomic_number":67, "atomic_weight":164.938},
-    {"symbol": "Er", "name": "Erbium", "atomic_number":68, "atomic_weight":167.26},
-    {"symbol": "Tm", "name": "Thulium", "atomic_number":69, "atomic_weight":168.934},
-    {"symbol": "Yb", "name": "Ytterbium", "atomic_number":70, "atomic_weight":173.05},
-    {"symbol": "Lu", "name": "Lutetium", "atomic_number":71, "atomic_weight":174.966},
-    {"symbol": "Hf", "name": "Hafnium", "atomic_number":72, "atomic_weight":178.49},
-    {"symbol": "Ta", "name": "Tantalum", "atomic_number":73, "atomic_weight":180.94},
-    {"symbol": "W",  "name": "Tungsten", "atomic_number":74, "atomic_weight":183.84},
-    {"symbol": "Re", "name": "Rhenium", "atomic_number":75, "atomic_weight":186.204},
-    {"symbol": "Os", "name": "Osmium", "atomic_number":76, "atomic_weight":190.23},
-    {"symbol": "Ir", "name": "Iridium", "atomic_number":77, "atomic_weight":192.21},
-    {"symbol": "Pt", "name": "Protactinium", "atomic_number":78, "atomic_weight":195.084},
-    {"symbol": "Au", "name": "Neptunium", "atomic_number":79, "atomic_weight":196.966},
-    {"symbol": "Hg", "name": "Hydrogen", "atomic_number":80, "atomic_weight":200.59},
-    {"symbol": "Tl", "name": "Thallium", "atomic_number":81, "atomic_weight":204.384},
-    {"symbol": "Pb", "name": "Lead", "atomic_number":82, "atomic_weight":207.2},
-    {"symbol": "Bi", "name": "Bismuth", "atomic_number":83, "atomic_weight":208.98},
-    {"symbol": "Po", "name": "Polonium", "atomic_number":84, "atomic_weight":212.42},
-    {"symbol": "At", "name": "Astatine", "atomic_number":85, "atomic_weight":210.96},
-    {"symbol": "Rn", "name": "Radon", "atomic_number":86, "atomic_weight":222},
-    {"symbol": "Fr", "name": "Francium", "atomic_number":87, "atomic_weight":226.2},
-    {"symbol": "Ra", "name": "Actinium", "atomic_number":88, "atomic_weight":230.2},
-    {"symbol": "Ac", "name": "Astatine", "atomic_number":89, "atomic_weight":231.09},
-    {"symbol": "Th", "name": "Thallium", "atomic_number":90, "atomic_weight":232.08},
-    {"symbol": "Pa", "name": "Platinum", "atomic_number":91, "atomic_weight":238.04},
-    {"symbol": "U", "name": "Uranium", "atomic_number":92, "atomic_weight":239},
-    {"symbol": "Np", "name": "Neptunium", "atomic_number":93, "atomic_weight":240.02},
-    {"symbol": "Pu", "name": "Plutonium", "atomic_number":94, "atomic_weight":244.03},
-    {"symbol": "Am", "name": "Americium", "atomic_number":95, "atomic_weight":243.05},
-    {"symbol": "Cm", "name": "Cermium", "atomic_number":96, "atomic_weight":247.04},
-    {"symbol": "Bk", "name": "Berkelium", "atomic_number":97, "atomic_weight":251.02},
-    {"symbol": "Cf", "name": "Californium", "atomic_number":98, "atomic_weight":252.06},
-    {"symbol": "Es", "name": "Einsteinium", "atomic_number":99, "atomic_weight":252.05},
-    {"symbol": "Fm", "name": "Flerovium", "atomic_number":100, "atomic_weight":257.05},
-    {"symbol": "Md", "name": "Mendelevium", "atomic_number":101, "atomic_weight":258},
-    {"symbol": "No", "name": "Neodymium", "atomic_number":102, "atomic_weight":259},
-    {"symbol": "Lr", "name": "Livermorium", "atomic_number":103, "atomic_weight":266},
-    {"symbol": "Rf", "name": "Roentgenium", "atomic_number":104, "atomic_weight":267},
-    
-    {"symbol": "Db", "name": "Deuteron", "atomic_number":105, "atomic_weight":268},
-    
-    {"symbol": "Sg", "name": "Seaborgium", "atomic_number":106, "atomic_weight":269},
-    
-    {"symbol": "Bh", "name": "Bohrium", "atomic_number":107, "atomic_weight":270},
-    
-    {"symbol": "Hs", "name": "Hassium", "atomic_number":108, "atomic_weight":277},
-    
-    {"symbol": "Mt", "name": "Meitnerium", "atomic_number":109, "atomic_weight":278},
-    
-    {"symbol": "Ds", "name": "Darmstadtium", "atomic_number":110, "atomic_weight":281},
-    
-    {"symbol": "Rg", "name": "Rutherfordium", "atomic_number":111, "atomic_weight":282},
-    
-    {"symbol": "Cn", "name": "Copernicium", "atomic_number":112, "atomic_weight":285},
-    
-    {"symbol": "Nh", "name": "Nihonium", "atomic_number":113, "atomic_weight":286},
-    
-    {"symbol": "Fl", "name": "Flerovium", "atomic_number":114, "atomic_weight":289},
-    
-    {"symbol": "Mc", "name": "Mendelevium", "atomic_number":115, "atomic_weight":290},
-    
-    {"symbol": "Lv", "name": "Livermorium", "atomic_number":116, "atomic_weight":293},
-    
-    {"symbol": "Ts", "name": "Tennessine", "atomic_number":117, "atomic_weight":294},
-    
-    {"symbol": "Og", "name": "Oganesson", "atomic_number":118, "atomic_weight":294}
+    {"symbol": "Na", "name": "Sodium", "atomic_number": 11, "atomic_weight": 22.98976928,
+    "electron_configuration": "[Ne] 3s¹", "category": "Alkali Metal", "standard_state": "Solid",
+    "boiling_point": "883°C", "melting_point": "97.8°C"},
+
+    {"symbol": "Mg", "name": "Magnesium", "atomic_number": 12, "atomic_weight": 24.305,
+    "electron_configuration": "[Ne] 3s²", "category": "Alkaline Earth Metal", "standard_state": "Solid",
+    "boiling_point": "1090°C", "melting_point": "650°C"},
+
+    {"symbol": "Al", "name": "Aluminium", "atomic_number": 13, "atomic_weight": 26.9815385,
+    "electron_configuration": "[Ne] 3s² 3p¹", "category": "Metal", "standard_state": "Solid",
+    "boiling_point": "2519°C", "melting_point": "660.32°C"},
+
+    {"symbol": "Si", "name": "Silicon", "atomic_number": 14, "atomic_weight": 28.085,
+    "electron_configuration": "[Ne] 3s² 3p²", "category": "Metalloid", "standard_state": "Solid",
+    "boiling point": "3265°C", "melting point": "1414°C"},
+
+    {"symbol": "P", "name": "Phosphorus", "atomic_number": 15, "atomic_weight": 30.973762,
+    "electron_configuration": "[Ne] 3s² 3p³", "category": "Nonmetal", "standard_state": "Solid",
+    "boiling_point": "280°C", "melting point": "44.15°C"},
+
+    {"symbol": "S", "name": "Sulfur", "atomic_number": 16, "atomic_weight": 32.06,
+    "electron_configuration": "[Ne] 3s² 3p⁴", "category": "Nonmetal", "standard_state": "Solid",
+    "boiling_point": "444.67°C", "melting point": "115.21°C"},
+
+    {"symbol": "Cl", "name": "Chlorine", "atomic_number": 17, "atomic_weight": 35.453,
+    "electron_configuration": "[Ne] 3s² 3p⁵", "category": "Halogen", "standard_state": "Gas",
+    "boiling_point": "-34.04°C", "melting point": "-101.5°C"},
+
+    {"symbol": "Ar", "name": "Argon", "atomic_number": 18, "atomic_weight": 39.948,
+    "electron_configuration": "[Ne] 3s² 3p⁶", "category": "Noble Gas", "standard_state": "Gas",
+    "boiling point": "-185.87°C", "melting point": "-189.34°C"},
+
+    {"symbol": "K", "name": "Potassium", "atomic_number": 19, "atomic_weight": 39.0983,
+    "electron_configuration": "[Ar] 4s¹", "category": "Alkali Metal", "standard_state": "Solid",
+    "boiling point": "759°C", "melting point": "63.38°C"},
+
+    {"symbol": "Ca", "name": "Calcium", "atomic_number": 20, "atomic_weight": 40.078,
+    "electron_configuration": "[Ar] 4s²", "category": "Alkaline Earth Metal", "standard_state": "Solid",
+    "boiling point": "1484°C", "melting point": "842°C"},
+
+    {"symbol": "Sc", "name": "Scandium", "atomic_number": 21, "atomic_weight": 44.955908,
+    "electron_configuration": "[Ar] 3d¹ 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "2836°C", "melting point": "1541°C"},
+
+    {"symbol": "Ti", "name": "Titanium", "atomic_number": 22, "atomic_weight": 47.867,
+    "electron_configuration": "[Ar] 3d² 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "3287°C", "melting point": "1668°C"},
+
+    {"symbol": "V", "name": "Vanadium", "atomic_number": 23, "atomic_weight": 50.9415,
+    "electron_configuration": "[Ar] 3d³ 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "3407°C", "melting point": "1910°C"},
+
+    {"symbol": "Cr", "name": "Chromium", "atomic_number": 24, "atomic_weight": 51.9961,
+    "electron_configuration": "[Ar] 3d⁴ 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "2671°C", "melting point": "1907°C"},
+
+    {"symbol": "Mn", "name": "Manganese", "atomic_number": 25, "atomic_weight": 54.938044,
+    "electron_configuration": "[Ar] 3d⁵ 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "1962°C", "melting point": "1246°C"},
+
+    {"symbol": "Fe", "name": "Iron", "atomic_number": 26, "atomic_weight": 55.845,
+    "electron_configuration": "[Ar] 3d⁶ 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "2861°C", "melting point": "1538°C"},
+
+    {"symbol": "Co", "name": "Cobalt", "atomic_number": 27, "atomic_weight": 58.933194,
+    "electron_configuration": "[Ar] 3d⁷ 4s²", "category": "Transition Metal", "standard_state": "Solid",
+    "boiling point": "2927°C", "melting point": "1495°C"},
+
+    {"symbol": "U", "name": "Uranium", "atomic_number": 92, "atomic_weight": 238.02891},
+    {"symbol": "Np", "name": "Neptunium", "atomic_number": 93, "atomic_weight": 237},
+    {"symbol": "Pu", "name": "Plutonium", "atomic_number": 94, "atomic_weight": 244},
+    {"symbol": "Am", "name": "Americium", "atomic_number": 95, "atomic_weight": 243},
+    {"symbol": "Cm", "name": "Curium", "atomic_number": 96, "atomic_weight": 247},
+    {"symbol": "Bk", "name": "Berkelium", "atomic_number": 97, "atomic_weight": 247},
+    {"symbol": "Cf", "name": "Californium", "atomic_number": 98, "atomic_weight": 251},
+    {"symbol": "Es", "name": "Einsteinium", "atomic_number": 99, "atomic_weight": 252},
+    {"symbol": "Fm", "name": "Fermium", "atomic_number": 100, "atomic_weight": 257},
+    {"symbol": "Md", "name": "Mendelevium", "atomic_number": 101, "atomic_weight": 258},
+    {"symbol": "No", "name": "Nobelium", "atomic_number": 102, "atomic_weight": 259},
+    {"symbol": "Lr", "name": "Lawrencium", "atomic_number": 103, "atomic_weight": 266},
+    {"symbol": "Rf", "name": "Rutherfordium", "atomic_number": 104, "atomic_weight": 267},
+    {"symbol": "Db", "name": "Dubnium", "atomic_number": 105, "atomic_weight": 270},
+    {"symbol": "Sg", "name": "Seaborgium", "atomic_number": 106, "atomic_weight": 271},
+    {"symbol": "Bh", "name": "Bohrium", "atomic_number": 107, "atomic_weight": 270},
+    {"symbol": "Hs", "name": "Hassium", "atomic_number": 108, "atomic_weight": 277},
+    {"symbol": "Mt", "name": "Meitnerium", "atomic_number": 109, "atomic_weight": 276},
+    {"symbol": "Ds", "name": "Darmstadtium", "atomic_number": 110, "atomic_weight": 281},
+    {"symbol": "Rg", "name": "Roentgenium", "atomic_number": 111, "atomic_weight": 280},
+    {"symbol": "Cn", "name": "Copernicium", "atomic_number": 112, "atomic_weight": 285},
+    {"symbol": "Nh", "name": "Nihonium", "atomic_number": 113, "atomic_weight": 284},
+    {"symbol": "Fl", "name": "Flerovium", "atomic_number": 114, "atomic_weight": 289},
+    {"symbol": "Mc", "name": "Moscovium", "atomic_number": 115, "atomic_weight": 288},
+    {"symbol": "Lv", "name": "Livermorium", "atomic_number": 116, "atomic_weight": 292},
+    {"symbol": "Ts", "name": "Tennessine", "atomic_number": 117, "atomic_weight": 294},
+    {"symbol": "Og", "name": "Oganesson", "atomic_number": 118, "atomic_weight": 294}
+
 ]
