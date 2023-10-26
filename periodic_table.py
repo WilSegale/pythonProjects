@@ -1,8 +1,10 @@
 from DontEdit import *
 from elements import elements
+from htmlfile import *
 import json
 
-# Define the list of elements (You should define the elements list here)
+
+
 
 # Write the data to the JSON file
 file_name = "elements.json"
@@ -16,38 +18,30 @@ try:
     while True:
         ChosenElement = input("Input an atomic number (1-118) to select an element (or type 'exit' to quit): ")
 
+        if ChosenElement.lower() == 'exit':
+            break
+
         ChosenElement = int(ChosenElement)
         if 1 <= ChosenElement <= 118:
             # Try to find the selected element by atomic number
             element = next((el for el in elements if el["atomic_number"] == ChosenElement), None)
             if element:
-                print(f'''\nName: {element['name']}{GREEN}[{element['symbol']}]{RESET}''',
-                      f'''atomic_number{GREEN}[{element["atomic_number"]}]{RESET}''',
-                      f'''atomic_weight{GREEN}[{element["atomic_weight"]}]{RESET}\n''')
+                print(f'\nName: {element["name"]} [{element["symbol"]}]', end=" ")
+                print(f'Atomic Number: {element["atomic_number"]}', end=" ")
+                print(f'Atomic Weight: {element["atomic_weight"]}\n')
+
                 # Generate an HTML file for the selected element
-                html_output = f"""
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Element Details</title>
-                </head>
-                <body>
-                    <h1>Name: {element['name']} ({element['symbol']})</h1>
-                    <p>Atomic Number: {element['atomic_number']}</p>
-                    <p>Atomic Weight: {element['atomic_weight']}</p>
-                </body>
-                </html>
-                """
-                with open("element_details.html", "w") as html_file:
+                html_output = generate_element_html(element)
+                with open(f"element_{element['atomic_number']}.html", "w") as html_file:
                     html_file.write(html_output)
-                print("HTML file 'element_details.html' has been generated.")
+                print(f"HTML file 'element_{element['atomic_number']}.html' has been generated.")
             else:
                 print("Element not found.")
         else:
             print("Invalid atomic number.")
-            
+
 except ValueError:
     print("Invalid input. Please enter a valid atomic number.")
-    
+
 except KeyboardInterrupt:
     print("\nInterrupted by the user.")
