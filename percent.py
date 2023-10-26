@@ -2,14 +2,8 @@ from DontEdit import *
 percentage = open("percentage.txt", "a")
 
 def percent():
-    part = int(float(input('''Enter the part of the % of the number ''')))
-    whole = int(float(input('''Enter the whole number ''')))
-    inputFile = input("would you like to put the number into a file so you can read it later? ")
-    if inputFile in no:
-        print(f"{part/whole*100 :,.2f}% of the number")
-    elif inputFile in yes:
-        print(f"{part/whole*100 :,.2f}% of the number")
-        print(f"{part/whole*100 :,.2f}% of the number",file=percentage)
-
-        
+    part = float(input('''Enter the part of the % of the number '''))
+    whole = float(input('''Enter the whole number '''))
+    print(f"{part/whole*100 :,.2f}% is the number of {part} / {whole} * 100")
+    print(f"{part/whole*100 :,.2f}% is the number of {part} / {whole} * 100",file=percentage)
 percent()

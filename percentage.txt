@@ -1,0 +1,8 @@
+8,333.33% of the number
+1,200.00% of the number of 12 / 1 * 100
+84,358.33% is the number of 10123 / 12 * 100
+11,600.00% is the number of 232 / 2 * 100
+1,150.00% is the number of 23 / 2 * 100
+1,150.00% is the number of 23.0 / 2.0 * 100
+10,100.87% is the number of 2323.2 / 23.0 * 100
+100.87% is the number of 23.2 / 23.0 * 100
