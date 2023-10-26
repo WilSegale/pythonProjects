@@ -19,7 +19,7 @@ try:
             <h2>Command:</h2>
             <pre>{command}</pre>
             <h2>Output:</h2>
-            <pre>{output}</pre>
+            <pre id="output">{output}</pre>
         </div>
         """
 
@@ -32,6 +32,8 @@ try:
         <style>
             body {
                 font-family: Arial, sans-serif;
+            }
+            .output{
                 white-space: pre-line;;
 
             }

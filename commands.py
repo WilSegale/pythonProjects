@@ -21,14 +21,14 @@ MacOs_diagnostic_commands = [
 
 # list of diagnostic commands for windows
 Windows_diagnostic_commands = [
-    "ping google.com -n 3",
-    "ipconfig /all",
-    "tracert google.com",
-    "nslookup google.com",
-    "sfc /scannow",
-    "netstat -ano",
-    "wmic qfe list",
-    "robocopy source destination /E /COPYALL",
-    "schtasks /query",
-    "systeminfo"
+"ping google.com -n 3",
+"ipconfig /all",
+"tracert google.com",
+"nslookup google.com",
+"sfc /scannow",
+"netstat -ano",
+"wmic qfe list",
+"robocopy source destination /E /COPYALL",
+"schtasks /query",
+"systeminfo"
 ]
