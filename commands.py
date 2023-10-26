@@ -1,0 +1,34 @@
+# List of diagnostic commands for mac
+MacOs_diagnostic_commands = [
+"ping google.com -t 3",
+"traceroute google.com",
+"csrutil status",
+"sudo pfctl -s info",
+"system_profiler SPSoftwareDataType",
+"networksetup -listallnetworkservices",
+"networksetup -listallhardwareports",
+"df -h",
+"mount",
+"ps aux",
+"ps -ef | grep -v grep | awk '{print $2}'",
+"dscl . -list /Users",
+"cat /var/log/system.log",
+"nslookup google.com",
+"sudo pfctl -sa",
+"vm_stat"
+]
+
+
+# list of diagnostic commands for windows
+Windows_diagnostic_commands = [
+    "ping google.com -n 3",
+    "ipconfig /all",
+    "tracert google.com",
+    "nslookup google.com",
+    "sfc /scannow",
+    "netstat -ano",
+    "wmic qfe list",
+    "robocopy source destination /E /COPYALL",
+    "schtasks /query",
+    "systeminfo"
+]
