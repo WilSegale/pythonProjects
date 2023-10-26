@@ -22,7 +22,9 @@ colors = ['green',
 quit = ["QUIT",
         "Quit",
         "QUIT()"]
-
+# yes or no array so if the user wants to have something with a yes it output it to something and the opeset for the other one
+no = ["no", "NO", "No", "N", "n"]
+yes = ["yes", "YES", "Yes", "Y", "y"]
 
 RED = "\033[31m"
 GREEN = "\033[32m"
