@@ -29,8 +29,10 @@ def AtomicNumber():
                     with open(f"element_{element['atomic_number']}.html", "w") as html_file:
                         html_file.write(html_output)
                     print(f"HTML file 'element_{element['atomic_number']}.html' has been generated.")
+                
                 else:
                     print("Element not found.")
+            
             else:
                 print(f"{BRIGHT}{RED}[*]{RESET} Invalid Atomic Number.")
     except KeyboardInterrupt:
