@@ -112,7 +112,8 @@ elements = [
     "electron_configuration": "[Ar] 3d⁷ 4s²", "category": "Transition Metal", "standard_state": "Solid",
     "boiling point": "2927°C", "melting point": "1495°C"},
 
-    {"symbol": "U", "name": "Uranium", "atomic_number": 92, "atomic_weight": 238.02891},
+    {"symbol": "U", "name": "Uranium", "atomic_number": 92, "atomic_weight": 238.02891,
+     "electron_configuration": "[Ar] 1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 6d¹⁰ 7s² 5f³ 6d¹ 7p⁶"},
     {"symbol": "Np", "name": "Neptunium", "atomic_number": 93, "atomic_weight": 237},
     {"symbol": "Pu", "name": "Plutonium", "atomic_number": 94, "atomic_weight": 244},
     {"symbol": "Am", "name": "Americium", "atomic_number": 95, "atomic_weight": 243},
