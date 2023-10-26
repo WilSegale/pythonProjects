@@ -1,3 +1,4 @@
+
 # Define the initial amount and final amount
 initial_amount = int(input("input the initial amount: "))
 final_amount = int(input("input the final amount: "))
