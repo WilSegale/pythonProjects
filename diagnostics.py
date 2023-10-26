@@ -1,6 +1,6 @@
 from DontEdit import *
-import subprocess
 from commands import *
+
 diagnostic = open("diagnostics.html", "w")
 
 try:
@@ -68,7 +68,7 @@ try:
     diagnostic.close()
 
     # You can add more commands or remove any you don't need.
-    print(f"{BRIGHT}{GREEN}\nFinished running all commands.{RESET}")
+    print(f"{BRIGHT}{GREEN}\n[+]{RESET} Finished running all commands.")
 
 except KeyboardInterrupt:
     print("\nInterrupted by the user.")
