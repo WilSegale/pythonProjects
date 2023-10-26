@@ -33,10 +33,10 @@ try:
             body {
                 font-family: Arial, sans-serif;
             }
-            .output{
+            #output{
                 white-space: pre-line;;
-
             }
+            
             .command-block {
                 border: 1px solid #ccc;
                 padding: 10px;
