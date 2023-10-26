@@ -1,7 +1,7 @@
 def generate_element_html(element):
     # Define default values for missing keys
     default_values = {
-        'electron_configuration': "N/A",
+        '': "N/A",
         'category': "N/A",
         'standard_state': "N/A",
         'boiling_point': "N/A",

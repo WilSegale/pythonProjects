@@ -3,7 +3,9 @@
         "symbol": "H",
         "name": "Hydrogen",
         "atomic_number": 1,
-        "atomic_weight": 1.008
+        "atomic_weight": 1.008,
+        "electron_configuration": 1,
+        "category": 1
     },
     {
         "symbol": "He",
