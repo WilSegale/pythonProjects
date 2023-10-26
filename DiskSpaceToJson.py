@@ -1,10 +1,8 @@
 from DontEdit import *
 
-
 INDENTNUMBER = 4
 
 try:
-   
     #for Windows computers
     if platform == "win32":
         from ctypes import windll
