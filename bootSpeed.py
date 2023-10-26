@@ -18,5 +18,5 @@ start_time = time.time()
 end_time = time.time()
 boot_speed = end_time - start_time
 
-print(f"\nBoot speed: {boot_speed} seconds")
+print(f"\nBoot speed: {boot_speed :2} seconds")
 
