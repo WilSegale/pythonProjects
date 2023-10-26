@@ -17,7 +17,7 @@ try:
         return f"""
         <div class="command-block">
             <h2>Command:</h2>
-            <pre>{command}</pre>
+            <pre id="command">[{command}]</pre>
             <h2>Output:</h2>
             <pre id="output">{output}</pre>
         </div>
@@ -34,9 +34,13 @@ try:
                 font-family: Arial, sans-serif;
             }
             #output{
-                white-space: pre-line;;
+                white-space: pre-line;
             }
-            
+            #command {
+                font-weight: bold;
+                color:green;
+
+            }
             .command-block {
                 border: 1px solid #ccc;
                 padding: 10px;

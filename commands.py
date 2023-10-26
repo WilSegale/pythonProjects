@@ -16,7 +16,7 @@ MacOs_diagnostic_commands = [
 "nslookup google.com",
 "sudo pfctl -sa",
 "vm_stat",
-'''log show --predicate 'process == "ssh"' --info'''
+'''log show --predicate 'process == "ssh"' --info''',
 '''log show --predicate 'process == "sshd"' --info'''
 ]
 
