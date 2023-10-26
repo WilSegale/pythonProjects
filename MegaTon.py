@@ -13,7 +13,7 @@ def pounds_to_tons(pounds):
 # Function to ask if the user wants to calculate the number of megatons or pounds in a ton
 def main():
     try:
-        choice = int(input("Enter 1 to calculate the number of megatons in a ton or 2 for the amout of pounds in a ton: "))
+        choice = int(input("Enter (1) to calculate the number of megatons in a ton. Or (2) for the amout of pounds in a ton: "))
         
         if choice == 1:
             megatons()
