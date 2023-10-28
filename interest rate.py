@@ -7,4 +7,4 @@ final_amount = int(input("input the final amount: "))
 interest_rate = ((final_amount - initial_amount) / initial_amount) * 100
 
 # Print the result
-print(f"The interest rate is {interest_rate}%")
+print(f"The interest rate is {interest_rate:,.2f}%")
