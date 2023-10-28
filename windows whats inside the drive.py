@@ -1,5 +1,6 @@
 from DontEdit import *
 import os
+import string
 
 try:
     def list_drive_contents(drive_path):
@@ -11,7 +12,7 @@ try:
             return []
 
     def main():
-        drives = ["C:\\", "D:\\", "E:\\"]  # Add the drive letters you want to check
+        drives = [d + ":\\" for d in string.ascii_uppercase if os.path.exists(d + ":\\")] # Add the drive letters you want to check
         print("Available drives:")
         for drive in drives:
             if os.path.exists(drive):
