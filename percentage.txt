@@ -6,3 +6,4 @@
 1,150.00% is the number of 23.0 / 2.0 * 100
 10,100.87% is the number of 2323.2 / 23.0 * 100
 100.87% is the number of 23.2 / 23.0 * 100
+1,200.00% is the number of 12.0 / 1.0 * 100

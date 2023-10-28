@@ -44,18 +44,18 @@ def megatons():
         <!DOCTYPE html>
         <html>
         <head>
-            <title>MegaTon to Ton Calculation Result</title>
+            <title>MegaTon to Ton or LBS to TON Calculation Result</title>
             <style>
-                #xray {{
+                #MegaTon {{
                     color: red;
                     font-weight: bold;
                 }}
             </style>
         </head>
         <body>
-            <h1>X-ray Calculation Result</h1>
-            <p>Number of chest X-rays needed for:</p>
-            <p id="xray">{output_str}</p>
+            <h1>MegaTon to TON Calculation Result</h1>
+            <p>Number of MegaTon is a result of Tons:</p>
+            <p id="MegaTon">{output_str}</p>
         </body>
         </html>
         """
@@ -86,7 +86,7 @@ def pounds():
         <head>
             <title>MegaTon to Ton or LBS to TON Calculation Result</title>
             <style>
-                #xray {{
+                #LBS {{
                     color: red;
                     font-weight: bold;
                 }}
@@ -94,8 +94,8 @@ def pounds():
         </head>
         <body>
             <h1>LBS to TON Calculation Result</h1>
-            <p>Number of chest LBS is a result of Tons:</p>
-            <p id="xray">{output_str}</p>
+            <p>Number of LBS is a result of Tons:</p>
+            <p id="LBS">{output_str}</p>
         </body>
         </html>
         """
