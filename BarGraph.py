@@ -25,7 +25,6 @@ labels = [f'Used {used_gb}GB',
 
 DiskData = [used_gb, free_gb, total_gb]
 
-colors = ['red', 'yellow', 'green']
 
 print(f"\n{RED}Used: {used_gb}") 
 print(f"{YELLOW}Free: {free_gb}") 
