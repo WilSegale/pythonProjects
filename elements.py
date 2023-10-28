@@ -1303,11 +1303,9 @@ elements = [
         "atomic_number": 118,
         "atomic_weight": 294,
         "electron_configuration": "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶",
+        "standard_state": "unknown",
         "melting_point": "unkown",
         "boiling_point": "unkown",
         "category": "Noble Gas",
-        "standard_state": "unknown",
-        "boiling_point": "unknown",
-        "melting_point": "unknown",
     },
 ]
