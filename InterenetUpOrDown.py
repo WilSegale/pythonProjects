@@ -1,7 +1,6 @@
 from DontEdit import *
 
 
-init()  # Initialize colorama
 
 def loadingBar(iterations, delay=0.1, width=40):
     for load in range(iterations + 1):
@@ -28,7 +27,7 @@ def is_connected():
 while True:
     try:
         if is_connected():
-            print(f"\n{Style.BRIGHT}{GREEN}Internet is up and running! {RESET}")
+            print(f"\n{BRIGHT}{GREEN}Internet is up and running!{RESET}")
             break
         else:
             print(f"{RED}Internet seems to be down.{RESET}")
