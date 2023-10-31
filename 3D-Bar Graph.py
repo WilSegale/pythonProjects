@@ -2,7 +2,6 @@
 from DontEdit import *
 
 # The array that contains the name of colors so the graph has some color to it
-colors = ['green', 'red', 'yellow']
 try:
     def get_drives():
         if platform.system() == "Windows":
