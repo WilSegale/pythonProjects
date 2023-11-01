@@ -1,5 +1,4 @@
 from DontEdit import *
-from BarGraphHTML import *
 
 # The array that contains the name of colors so the graph has some color to it
 

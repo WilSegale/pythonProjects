@@ -17,40 +17,58 @@ try:
         return f"""
         <div class="command-block">
             <h2>Command:</h2>
-            <pre id="command">[{command}]</pre>
+            <pre id="command" class="command">{command}</pre>
             <h2>Output:</h2>
-            <pre id="output">{output}</pre>
+            <pre id="output" class="output">{output}</pre>
         </div>
         """
 
-    # Open the HTML file and write the basic structure
+    # Open the HTML file and write the advanced structure
     html_output = """
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Diagnostics</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
-            #output{
-                white-space: pre-line;
-            }
-            #command {
-                font-weight: bold;
-                color:green;
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Diagnostics</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                .command {
+                    font-weight: bold;
+                    color: green;
+                }
+                .output {
+                    white-space: pre-line;
+                }
+                .command-block {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    margin: 10px;
+                }
+                h1 {
+                    font-size: 24px;
+                    margin: 20px 0;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Diagnostics Commands</h1>
+        """
 
-            }
-            .command-block {
-                border: 1px solid #ccc;
-                padding: 10px;
-                margin: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Diagnostics Commands</h1>
+    # You can append more command and output sections as needed, and then close the HTML document.
+    # For example:
+    html_output += generate_command_html("ls -l", "Directory listing goes here")
+    html_output += generate_command_html("cat file.txt", "File content goes here")
+
+    # Finally, close the HTML document
+    html_output += """
+        </body>
+        </html>
     """
+
+# Write the HTML content to a file or use it as needed.
+
 
     diagnostic.write(html_output)
 
