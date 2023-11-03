@@ -7,4 +7,4 @@ try:
         print(f"The year '{old_year}' was '{current_year - old_year}' years ago.")
     year()
 except KeyboardInterrupt:
-    print('error: KeyboardInterrupt')
+    print(f'\nerror: KeyboardInterrupt')
