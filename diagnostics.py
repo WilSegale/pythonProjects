@@ -37,7 +37,7 @@ try:
                 .command {
                     font-weight: bold;
                     color: green;
-                    text-size: 20px;
+                    text-szie
                 }
                 .output {
                     white-space: pre-line;
