@@ -33,5 +33,16 @@ Windows_diagnostic_commands = [
 "robocopy source destination /E /COPYALL",
 "schtasks /query",
 "systeminfo",
-"cleanmgr"
+"cleanmgr",
+"resmon",
+"perfmon",
+"eventvwr.msc",
+"chkdsk",
+"DISM /Online /Cleanup-Image /RestoreHealth",
+"Reliability Monitor",
+"xperf",
+"Test-WsMan",
+"Test-NetConnection",
+"Get-EventLog"
+
 ]
