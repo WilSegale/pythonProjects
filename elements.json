@@ -1303,9 +1303,9 @@
         "atomic_number": 118,
         "atomic_weight": 294,
         "electron_configuration": "[Rn] 5f\u00b9\u2074 6d\u00b9\u2070 7s\u00b2 7p\u2076",
-        "melting_point": "unknown",
-        "boiling_point": "unknown",
-        "category": "Noble Gas",
-        "standard_state": "unknown"
+        "standard_state": "unknown",
+        "melting_point": "unkown",
+        "boiling_point": "unkown",
+        "category": "Noble Gas"
     }
 ]

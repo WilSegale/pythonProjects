@@ -32,5 +32,6 @@ Windows_diagnostic_commands = [
 "wmic qfe list",
 "robocopy source destination /E /COPYALL",
 "schtasks /query",
-"systeminfo"
+"systeminfo",
+"cleanmgr"
 ]
