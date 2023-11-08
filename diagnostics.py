@@ -37,7 +37,7 @@ try:
                 .command {
                     font-weight: bold;
                     color: green;
-                    text-szie
+                    font-size: 24px;                
                 }
                 .output {
                     white-space: pre-line;
@@ -59,8 +59,6 @@ try:
 
     # You can append more command and output sections as needed, and then close the HTML document.
     # For example:
-    html_output += generate_command_html("ls -l", "Directory listing goes here")
-    html_output += generate_command_html("cat file.txt", "File content goes here")
 
     # Finally, close the HTML document
     html_output += """
