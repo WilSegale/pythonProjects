@@ -58,6 +58,16 @@
                ],
                "jinja": true,
                "justMyCode": true
+          },
+          {
+               "type": "java",
+               "name": "Spring Boot-MysqlTestApplication<spring-petclinic>",
+               "request": "launch",
+               "cwd": "${workspaceFolder}",
+               "mainClass": "org.springframework.samples.petclinic.MysqlTestApplication",
+               "projectName": "spring-petclinic",
+               "args": "",
+               "envFile": "${workspaceFolder}/.env"
           }
      ]
 }
