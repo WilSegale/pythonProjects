@@ -1,6 +1,8 @@
 from DontEdit import *
 from elements import *
 from htmlfile import *
+from CSVFILE import *
+
 
 file_name = "elements.json"
 with open(file_name, "w") as json_file:
@@ -66,7 +68,6 @@ def AtomicName():
     except KeyboardInterrupt:
         print("\n[-] Keyboard Interrupt")
 
-
 def symbol():
     try:
         while True:
@@ -94,9 +95,6 @@ def symbol():
                 print(f'{BRIGHT}{RED}[*]{RESET} Symbol not found')
     except KeyboardInterrupt:
         print(f"\n{BRIGHT}{RED}[*]{RESET} Keyboard Interrupt")
-
-# Write the data to the JSON file
-
 
 # Input a number from 1-118 to select an element
 choices = int(input("Do you want to see the atomic number(1), or element name(2). Or symbol (3): "))
