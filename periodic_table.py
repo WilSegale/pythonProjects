@@ -1,7 +1,7 @@
 from DontEdit import *
 from elements import *
 from htmlfile import *
-
+import csv
 
 JSON_FILE = open("element.json", "a")
 
@@ -21,6 +21,19 @@ def AtomicNumber():
                     print(f'\nName: {element["name"]} [{element["symbol"]}]', end=" ")
                     print(f'Atomic Number: {element["atomic_number"]}', end=" ")
                     print(f'Atomic Weight: {element["atomic_weight"]}\n')
+                    
+                    AtomicNumber = [
+                        ['Name', element["name"]],
+                        ['Symbol', element["symbol"]],
+                        ['Atomic Number', element["atomic_number"]],
+                        ['Weight', element["atomic_weight"]]
+                    ]
+
+                    csv_file_path = 'AtomicNumber.csv'
+
+                    with open(csv_file_path, 'w', newline='') as csv_file:
+                        csv_writer = csv.writer(csv_file)
+                        csv_writer.writerows(AtomicNumber)
 
                     # Generate an HTML file for the selected element
                     html_output = generate_element_html(element)  # Make sure you have the 'generate_element_html' function implemented.
@@ -54,6 +67,21 @@ def AtomicName():
                 print(f'Atomic Number: {chosen_element["atomic_number"]}', end=" ")
                 print(f'Atomic Weight: {chosen_element["atomic_weight"]}\n')
 
+
+                AtomicNumber = [
+                    ['Name', element["name"]],
+                    ['Symbol', element["symbol"]],
+                    ['Atomic Number', element["atomic_number"]],
+                    ['Weight', element["atomic_weight"]]
+                ]
+
+                csv_file_path = 'AtomicName.csv'
+                
+                with open(csv_file_path, 'w', newline='') as csv_file:
+                    csv_writer = csv.writer(csv_file)
+                    csv_writer.writerows(AtomicNumber)
+
+
                 # Generate an HTML file for the selected element
                 html_output = generate_element_html(chosen_element)  # Make sure you have the 'generate_element_html' function implemented.
                 with open(f"element_{chosen_element['atomic_number']}.html", "w") as html_file:
@@ -77,10 +105,24 @@ def symbol():
                     chosen_element = element
                     break
 
+
             if chosen_element:
                 print(f'\nName: {chosen_element["name"]} [{element["symbol"]}]', end=" ")
                 print(f'Atomic Number: {chosen_element["atomic_number"]}', end=" ")
                 print(f'Atomic Weight: {chosen_element["atomic_weight"]}\n')
+                
+                AtomicNumber = [
+                    ['Name', element["name"]],
+                    ['Symbol', element["symbol"]],
+                    ['Atomic Number', element["atomic_number"]],
+                    ['Weight', element["atomic_weight"]]
+                ]
+
+                csv_file_path = 'symbol.csv'
+                
+                with open(csv_file_path, 'w', newline='') as csv_file:
+                    csv_writer = csv.writer(csv_file)
+                    csv_writer.writerows(AtomicNumber)
 
                 # Generate an HTML file for the selected element
                 html_output = generate_element_html(chosen_element)  # Make sure you have the 'generate_element_html' function implemented.
