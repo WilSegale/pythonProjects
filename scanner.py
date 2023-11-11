@@ -20,7 +20,7 @@ try:
             scan_host(host)
 
     if __name__ == "__main__":
-        network = "192.168.1.42"
+        network = "192.168.1.1"
         scan_network(network)
 except KeyboardInterrupt:
     print("\nExiting....")
