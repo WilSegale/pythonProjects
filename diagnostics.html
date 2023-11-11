@@ -1,0 +1,50 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Diagnostics</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                .command {
+                    font-weight: bold;
+                    color: green;
+                    font-size: 24px;                
+                }
+                .output {
+                    white-space: pre-line;
+                }
+                .command-block {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    margin: 10px;
+                }
+                h1 {
+                    font-size: 24px;
+                    margin: 20px 0;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Diagnostics Commands</h1>
+        
+        </body>
+        </html>
+    
+        <div class="command-block">
+            <h2>Command:</h2>
+            <pre id="command" class="command">[ping google.com -t 3]</pre>
+            <h2>Output:</h2>
+            <pre id="output" class="output">PING google.com (142.250.191.238): 56 data bytes
+64 bytes from 142.250.191.238: icmp_seq=0 ttl=54 time=55.212 ms
+64 bytes from 142.250.191.238: icmp_seq=1 ttl=54 time=52.613 ms
+64 bytes from 142.250.191.238: icmp_seq=2 ttl=54 time=53.490 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 52.613/53.772/55.212/1.080 ms
+</pre>
+        </div>
+        
