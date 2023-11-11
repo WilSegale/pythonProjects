@@ -1,8 +1,5 @@
+from DontEdit import *
 import datetime
-from colorama import *
-
-GREEN = Fore.GREEN;
-RESET = Fore.RESET;
 
 # Set the date of your last paycheck
 last_paycheck_date = datetime.date(2023, 4, 11)  # Change this to your last paycheck date
