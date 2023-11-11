@@ -1,13 +1,9 @@
 from DontEdit import *
 from elements import *
 from htmlfile import *
-from CSVFILE import *
 
 
-file_name = "elements.json"
-with open(file_name, "w") as json_file:
-    json.dump(elements, json_file, indent=4)
-print(f"Data has been written to {file_name}.")
+JSON_FILE = open("element.json", "a")
 
 # Corrected function name
 def AtomicNumber():
