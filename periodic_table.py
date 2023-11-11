@@ -23,6 +23,7 @@ def AtomicNumber():
                     print(f'Atomic Weight: {element["atomic_weight"]}\n')
                     
                     AtomicNumber = [
+                        ['CHOOSEN FUNCTION', 'AtomicNumber'],
                         ['Name', element["name"]],
                         ['Symbol', element["symbol"]],
                         ['Atomic Number', element["atomic_number"]],
@@ -68,7 +69,8 @@ def AtomicName():
                 print(f'Atomic Weight: {chosen_element["atomic_weight"]}\n')
 
 
-                AtomicNumber = [
+                AtomicName = [
+                    ['CHOOSEN FUNCTION', 'AtomicName'],
                     ['Name', element["name"]],
                     ['Symbol', element["symbol"]],
                     ['Atomic Number', element["atomic_number"]],
@@ -79,7 +81,7 @@ def AtomicName():
                 
                 with open(csv_file_path, 'w', newline='') as csv_file:
                     csv_writer = csv.writer(csv_file)
-                    csv_writer.writerows(AtomicNumber)
+                    csv_writer.writerows(AtomicName)
 
 
                 # Generate an HTML file for the selected element
@@ -111,7 +113,8 @@ def symbol():
                 print(f'Atomic Number: {chosen_element["atomic_number"]}', end=" ")
                 print(f'Atomic Weight: {chosen_element["atomic_weight"]}\n')
                 
-                AtomicNumber = [
+                symbol = [
+                    ['CHOOSEN FUNCTION', 'SYMBOL'],
                     ['Name', element["name"]],
                     ['Symbol', element["symbol"]],
                     ['Atomic Number', element["atomic_number"]],
@@ -122,7 +125,7 @@ def symbol():
                 
                 with open(csv_file_path, 'w', newline='') as csv_file:
                     csv_writer = csv.writer(csv_file)
-                    csv_writer.writerows(AtomicNumber)
+                    csv_writer.writerows(symbol)
 
                 # Generate an HTML file for the selected element
                 html_output = generate_element_html(chosen_element)  # Make sure you have the 'generate_element_html' function implemented.
