@@ -27,6 +27,7 @@ def main():
     print("Top processes by memory usage:")
     print("{:<10} {:<30} {:<15}".format("PID", "Name", "Memory Usage"))
     print("-" * 60)
+    # puts the "PID", "NAME", "Memory Usage" in the file so you can ctorise what is what in the file
     print("{:<10} {:<30} {:<15}".format("PID", "Name", "Memory Usage"),file=RamProgram)
     print("-" * 60, file=RamProgram)
 
@@ -37,9 +38,13 @@ def main():
     for pid, name, memory in processes[:10]:
         print("{:<10} {:<30} {:<15}".format(pid, name, f"{memory / (1024 * 1024):.2f} MB"))
         print("-" * 60)
+        
         # Write the details to the text file
         print("{:<10} {:<30} {:<15}".format(pid, name, f"{memory / (1024 * 1024):.2f} MB"), file=RamProgram)
-        print("-" * 60,file=RamProgram)
+        
+        # puts the dashes in the file. So you can understand what is using the most ram 
+        print("-" * 60, file=RamProgram)
+
 # Execute the main function if the script is run directly
 if __name__ == "__main__":
     main()
