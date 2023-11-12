@@ -50,9 +50,9 @@ def AtomicNumber():
                 else:
                     print("Element not found.")
             else:
-                print(f"{BRIGHT}{RED}[*]{RESET} Invalid Atomic Number.")
+                print(f"{BRIGHT}{ORANGE_Start}[*]{ORANGE_END} Invalid Atomic Number.")
     except KeyboardInterrupt:
-        print("\n[-] Keyboard Interrupt")
+        print(f"\n{BRIGHT}{RED}[-]{RESET} Keyboard Interrupt")
 
 # Function to retrieve an element by name
 def AtomicName():
@@ -97,9 +97,9 @@ def AtomicName():
                     html_file.write(html_output)
                 print(f"HTML file 'element_{chosen_element['atomic_number']}.html' has been generated.")
             else:
-                print(f'{BRIGHT}{RED}[*]{RESET} Atomic Name not found ')
+                print(f'{BRIGHT}{ORANGE_Start}[*]{ORANGE_END} Atomic Name not found ')
     except KeyboardInterrupt:
-        print("\n[-] Keyboard Interrupt")
+        print(f"\n{BRIGHT}{RED}[-]{RESET} Keyboard Interrupt")
 
 # Function to retrieve an element by symbol
 def symbol():
@@ -144,7 +144,7 @@ def symbol():
                     html_file.write(html_output)
                 print(f"HTML file 'element_{chosen_element['atomic_number']}.html' has been generated.")
             else:
-                print(f'{BRIGHT}{RED}[*]{RESET} Symbol not found')
+                print(f'{BRIGHT}{ORANGE_Start}[*]{ORANGE_END} Symbol not found')
     except KeyboardInterrupt:
         print(f"\n{BRIGHT}{RED}[*]{RESET} Keyboard Interrupt")
 
