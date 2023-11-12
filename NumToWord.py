@@ -28,7 +28,7 @@ def number_to_word(number):
         70: "seventy",
         80: "eighty",
         90: "ninety",
-        100: "hundred"
+        100: "hundred",
     }
 
     if 0 <= number <= 100:
