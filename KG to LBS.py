@@ -4,6 +4,6 @@ def kg_to_lbs(kg):
     return lbs
 
 # Example usage
-kg = int(input("Input the KG you want to covert to LBS: "))
+kg = float(input("Input the KG you want to covert to LBS: "))
 lbs = kg_to_lbs(kg)
 print(f"{kg:,.2f} kilograms is equal to {lbs:,.2f} pounds")
