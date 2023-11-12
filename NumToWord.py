@@ -33,7 +33,7 @@ def number_to_word(number):
 
     if 0 <= number <= 100:
         if number <= 20 or number % 10 == 0:
-            return x.get(number, "Number not found in the dictionary")
+            return x.get(f"{number} Number not found in the dictionary")
         else:
             tens = number // 10 * 10
             ones = number % 10
