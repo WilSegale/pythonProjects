@@ -7,9 +7,9 @@ try:
 
     # Data for the CSV chart
     data = {
-            'Total': [total // (2 ** 30)],
-            'Free':  [free // (2 ** 30)],
-            'Used':  [used // (2 ** 30)]
+            'Total GB': [total // (2 ** 30)],
+            'Free GB' :  [free // (2 ** 30)],
+            'Used GB' :  [used // (2 ** 30)]
         }
 
     # Create a DataFrame from the data
