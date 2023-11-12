@@ -153,10 +153,13 @@ choices = float(input("Do you want to see the atomic number(1), or element name(
 
 if choices == 1:
     AtomicNumber()
+
 elif choices == 2:
     AtomicName()
+
 elif choices == 3:
     symbol()
+
 else:
     print("Invalid choice. Please enter 1, 2, or 3.")
     exit(1)
