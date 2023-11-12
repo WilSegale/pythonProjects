@@ -1,0 +1,10 @@
+43191      PID                            TabNine-deep-local
+43045      PID                            Code Helper (Renderer)
+43565      PID                            com.apple.WebKit.WebContent
+43167      PID                            Code Helper (Plugin)
+43039      PID                            Electron       
+43012      PID                            Safari         
+4556       PID                            com.apple.WebKit.WebContent
+43074      PID                            Code Helper (Plugin)
+37576      PID                            AppleSpell     
+43042      PID                            Code Helper (GPU)

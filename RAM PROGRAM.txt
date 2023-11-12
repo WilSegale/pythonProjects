@@ -1,0 +1,10 @@
+43191      TabNine-deep-local             533.09 MB      
+43045      Code Helper (Renderer)         308.92 MB      
+43565      com.apple.WebKit.WebContent    254.38 MB      
+43167      Code Helper (Plugin)           219.67 MB      
+43039      Electron                       176.05 MB      
+43012      Safari                         121.36 MB      
+43074      Code Helper (Plugin)           112.42 MB      
+4556       com.apple.WebKit.WebContent    110.55 MB      
+37576      AppleSpell                     90.83 MB       
+43042      Code Helper (GPU)              81.39 MB       
