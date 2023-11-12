@@ -64,5 +64,4 @@ try:
 
         plt.show()
 except KeyboardInterrupt:
-    print()
-    print("[-] Exiting program")
+    print("\n[-] Exiting program")
