@@ -43,23 +43,28 @@ if __name__ == "__main__":
     # Create an HTML string to display the result
     html_output = f"""
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>X-ray Calculation Result</title>
         <style>
-            #xray 
-            {{
+            body {{
+                font-family: 'Arial', sans-serif;
+                margin: 20px;
+            }}
+            #xray {{
                 color: red;
                 font-weight: bold;
             }}
         </style>
     </head>
-        <body>
-            <h1>X-ray Calculation Result</h1>
-            <p>Number of chest X-rays needed for 
-                <p id="xray">{escape(formatted_exposure_roentgen)}(R) * 1000 / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</p>
-            </p>
-        </body>
+    <body>
+        <h1>X-ray Calculation Result</h1>
+        <p>Number of chest X-rays needed for 
+            <span id="xray">{escape(formatted_exposure_roentgen)}(R) * 1000 / {escape(formatted_exposure_per_xray_mR)}(mR): {escape(formatted_result)}</span>
+        </p>
+    </body>
     </html>
     """
 
