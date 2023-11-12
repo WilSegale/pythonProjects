@@ -149,7 +149,7 @@ def symbol():
         print(f"\n{BRIGHT}{RED}[*]{RESET} Keyboard Interrupt")
 
 # Input a number from 1-118 to select an element
-choices = int(input("Do you want to see the atomic number(1), or element name(2). Or symbol (3): "))
+choices = float(input("Do you want to see the atomic number(1), or element name(2). Or symbol (3): "))
 
 if choices == 1:
     AtomicNumber()
