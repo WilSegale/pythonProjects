@@ -26,4 +26,4 @@ if platform == "win32":
         except IndexError:
             print ("{:<30}|  {:<")
 else:
-    print(f'{RED}WRONG OS{RESET}')
+    print(f'{RED}[-]WRONG OS{RESET}')
