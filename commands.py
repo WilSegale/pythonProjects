@@ -44,5 +44,4 @@ Windows_diagnostic_commands = [
     "Test-WsMan",
     "Test-NetConnection",
     "Get-EventLog"
-
 ]
