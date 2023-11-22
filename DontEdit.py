@@ -20,7 +20,8 @@ colors = ['green',
 
 
 # the quit array that will be used to quit any program that uses it
-quit = ["QUIT", "Quit", "QUIT()"]
+quit = ["QUIT", "Quit", "QUIT()", "quit", "quit()",
+        "Exit", "exit", "EXIT"]
 
 # yes or no array so if the user wants to have something with a yes it output it to something and the opeset for the other one
 no = ["no", "NO", "No", "N", "n"]

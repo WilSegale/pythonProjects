@@ -1,3 +1,4 @@
+from DontEdit import *
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -19,8 +20,8 @@ try:
 
     while True:
         input_path = input(">>> ")
-        if input_path == "quit":
-            print("[-] Exiting program")
+        if input_path in quit:
+            print(f"{BRIGHT}{RED}[-]{RESET} Exiting program")
             break
         # if the user inputs only "/" it only shows the main drive
         if input_path == "/":
