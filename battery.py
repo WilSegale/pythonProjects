@@ -4,7 +4,7 @@ from DontEdit import *
 if platform != "win32":
     def MacOrLinux():
         if os.geteuid() == 0:
-            print(f"{BRIGHT}{RED}WARNING:{RESET} It's recommended not to run this program with sudo.")
+            print(f"{BRIGHT}{ORANGE_Start}WARNING:{ORANGE_END} It's recommended not to run this program with sudo.")
             print(f"Running the program with sudo privileges might have unintended consequences.")
             print(f"Consider running the program without sudo.")
             exit(1)
@@ -39,7 +39,7 @@ else:
                 return False
 
         if is_admin():
-            print(f"WARNING: It's recommended not to run this program with administrative privileges.")
+            print(f"{ORANGE_Start}WARNING:{ORANGE_END} It's recommended not to run this program with administrative privileges.")
             print(f"Running the program with admin privileges might have unintended consequences.")
             print(f"Consider running the program without admin privileges.")
         else:
