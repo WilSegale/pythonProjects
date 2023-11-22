@@ -2,8 +2,6 @@ import matplotlib.pyplot as plt
 from DontEdit import *
 import shutil
 
-
-
 total,used,free = shutil.disk_usage("/")
 
 # Disk space data
@@ -31,8 +29,8 @@ plt.title('Disk Space')
 
 # Legend
 plt.legend(labels, loc='best')
-print(f"FREE: {CYAN}{total // (2 ** 30)}{RESET}")
-print(f"USED: {Gray}{used // (2 ** 30)}{RESET}")
+print(f"FREE: {CYAN_TEXT}{total // (2 ** 30)}{RESET}")
+print(f"USED: {GRAY_TEXT}{used // (2 ** 30)}{RESET}")
 
 # Display the chart
 plt.show()
