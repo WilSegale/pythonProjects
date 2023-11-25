@@ -22,7 +22,7 @@ try:
             elif YearsAgo > int(1):
                 print(f"\nThe year '{old_year}' was '{YearsAgo}' years ago.")
                 print(f"\nThe year '{old_year}' was '{YearsAgo}' years ago.",file=dateTime)
-
     year()
+    
 except KeyboardInterrupt:
     print(f'\nKeyboardInterrupt')
