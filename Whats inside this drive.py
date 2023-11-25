@@ -24,9 +24,10 @@ def main():
     contents = list_drive_contents(external_drive_path)
     print("Contents of the drive:")
     print("+"*22)
+
     
     for item in contents:
         print(f"{item}")
-
+    print("+"*22)
 if __name__ == "__main__":
     main()
