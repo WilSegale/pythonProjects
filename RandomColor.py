@@ -4,5 +4,8 @@ import random
 colors = [GREEN,RED,BLUE]
 
 while True:
-  random_color = random.choice(colors)
-  print(f"{random_color}test")
+  try:
+    random_color = random.choice(colors)
+    print(f"{random_color}test")
+  except KeyboardInterrupt:
+    print("KeyboardInterrupt")
