@@ -20,7 +20,7 @@ with open("YearToYear.txt", "w") as dateTime:
             if YearsAgo == 1:
                 print(f"\nThe year '{old_year}' was '{YearsAgo}' year ago.")
             elif YearsAgo > 1:
-                print(f"\nThe year '{old_year}' was '{YearsAgo}' years ago.")
+                print(f"\nThe year '{old_year}' was '{YearsAgo}' years ago.", file=dateTime)
             else:
                 print(f"\nThe year '{old_year}' was '{YearsAgo}' years ago.", file=dateTime)
 
