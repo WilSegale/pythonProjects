@@ -65,9 +65,7 @@ try:
         </body>
         </html>
     """
-
-# Write the HTML content to a file or use it as needed.
-
+    #Write the HTML content to a file or use it as needed.
 
     diagnostic.write(html_output)
 
@@ -85,7 +83,8 @@ try:
         print("=" * 40)
 
     # Close the HTML file
-    diagnostic.write("</body></html>")
+    diagnostic.write('''</body>
+                     </html>''')
     diagnostic.close()
 
     # You can add more commands or remove any you don't need.
