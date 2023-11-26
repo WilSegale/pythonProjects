@@ -8,6 +8,6 @@ def hardtimes():
     lines = file.readlines()
     random.shuffle(lines)
     for line in lines:
-        print(line)
+        print(f"{line}")
         wait(1)
-hardtimes();
+hardtimes()
