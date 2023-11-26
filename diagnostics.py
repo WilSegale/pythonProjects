@@ -93,7 +93,6 @@ try:
 
         print(f"{'=' * 40} {{{command}}} {'=' * 40}\n")
         print(result)
-        print(f"=" * 40)
 
     # Write the dictionary to the JSON file
     json.dump(diagnostic_results, diagnosticJSON, indent=2)
