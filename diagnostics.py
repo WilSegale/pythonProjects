@@ -1,8 +1,9 @@
 from DontEdit import *
 from commands import *
+import json  # Import the json module
 
-diagnostic = open("diagnostics.html", "w")
-
+diagnosticHTML = open("diagnostics.html", "w")
+diagnosticJSON = open("diagnostics.json", "w")  # Open the JSON file for writing
 try:
     # Define a function to run shell commands and capture their output
     def run_command(command):
@@ -65,27 +66,36 @@ try:
         </body>
         </html>
     """
-    #Write the HTML content to a file or use it as needed.
-
-    diagnostic.write(html_output)
+    # Write the HTML content to a file or use it as needed.
+    diagnosticHTML.write(html_output)
 
     # List of diagnostic commands for Windows and Mac
     diagnostic_commands = Windows_diagnostic_commands if platform.system() == "Windows" else MacOs_diagnostic_commands
+
+    # Create a dictionary to store command outputs
+    diagnostic_results = {}
 
     # Execute each diagnostic command and append the HTML output
     for command in diagnostic_commands:
         result = run_command(command)
         command_html = generate_command_html(command, result)
-        diagnostic.write(command_html)
+        diagnosticHTML.write(command_html)
+
+        # Store the command output in the dictionary
+        diagnostic_results[command] = result
 
         print(f"Running command: {command}\n")
         print(result)
         print(f"=" * 40)
 
-    # Close the HTML file
-    diagnostic.write('''</body>
+    # Write the dictionary to the JSON file
+    json.dump(diagnostic_results, diagnosticJSON, indent=2)
+
+    # Close the HTML and JSON files
+    diagnosticHTML.write('''</body>
                      </html>''')
-    diagnostic.close()
+    diagnosticHTML.close()
+    diagnosticJSON.close()
 
     # You can add more commands or remove any you don't need.
     print(f"{BRIGHT}{GREEN}\n[+]{RESET} Finished running all commands.")
