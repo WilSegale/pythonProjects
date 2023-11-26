@@ -9,7 +9,6 @@ def update_time():
     label.config(text = current_time)
     label.after(1000, update_time)
 
-
 label = tk.Label(root, font = ("calibri", 40, "bold"))
 label.pack()
 
