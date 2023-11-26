@@ -18,14 +18,13 @@ try:
         return f"""
         <div class="command-block">
             <h2>Command:</h2>
-            <div class="separator">
-                <pre class="separator">{'=' * 40} Command {command} {'=' * 40}</pre>
-            </div>
+            <pre id="command" class="command">[{command}]</pre>
             <h2>Output:</h2>
-            
             <pre id="output" class="output">{output}</pre>
         </div>
-
+        <div class="separator">
+            <pre class="separator">{'=' * 40} {{{command}}} {'=' * 40}</pre>
+        </div>
         """
 
     # Open the HTML file and write the advanced structure
@@ -39,7 +38,11 @@ try:
                 body {
                     font-family: Arial, sans-serif;
                 }
-
+                .command {
+                    font-weight: bold;
+                    color: green;
+                    font-size: 24px;                
+                }
                 .output {
                     white-space: pre-line;
                 }
@@ -50,8 +53,7 @@ try:
                 }
                 .separator {
                     font-weight: bold;
-                    color: green;
-                    font-size: 24px;
+                    color: blue;
                 }
                 h1 {
                     font-size: 24px;
@@ -89,8 +91,9 @@ try:
         # Store the command output in the dictionary
         diagnostic_results[command] = result
 
-        print(f"{'=' * 40} {command} {'=' * 40}\n")
+        print(f"{'=' * 40} {{{command}}} {'=' * 40}\n")
         print(result)
+        print(f"=" * 40)
 
     # Write the dictionary to the JSON file
     json.dump(diagnostic_results, diagnosticJSON, indent=2)
@@ -105,4 +108,4 @@ try:
     print(f"{BRIGHT}{GREEN}\n[+]{RESET} Finished running all commands.")
 
 except KeyboardInterrupt:
-    print("\nInterrupted by the user.")
+    print(f"\n{BRIGHT}{RED}[-]{RESET} Interrupted by the user.")
