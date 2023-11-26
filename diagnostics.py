@@ -80,7 +80,7 @@ try:
 
         print(f"Running command: {command}\n")
         print(result)
-        print("=" * 40)
+        print(f"=" * 40)
 
     # Close the HTML file
     diagnostic.write('''</body>
