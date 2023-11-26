@@ -18,4 +18,4 @@ try:
         file.write(random_string)
         
 except KeyboardInterrupt:
-    print("\n[-]Exiting...")
+    print("\n[-] Exiting...")
