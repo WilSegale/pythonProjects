@@ -22,7 +22,7 @@ colors = ['CYAN', 'lightgray']
 plt.pie(sizes, labels=labels, colors=colors, autopct='%1.01f%%', startangle=59, shadow=True)
 
 # Aspect ratio
-plt.axis('on')
+plt.axis(True)
 
 # Title
 plt.title('Disk Space')
