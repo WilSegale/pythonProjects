@@ -13,12 +13,6 @@ import ctypes
 import socket
 import sys
 
-# color for the bar graph
-colors = ['green', 
-          'red', 
-          'yellow']
-
-
 # the quit array that will be used to quit any program that uses it
 quit = ["QUIT", "Quit", "QUIT()", "quit", "quit()",
         "Exit", "exit", "EXIT"]
