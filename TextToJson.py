@@ -40,7 +40,7 @@ with open(filename) as fh:
         dict1[sno] = dict2
         # Increment Loopvar here if needed
 
-# creating json file    
+# creating json file
 out_file = open("output.json", "w")
 json.dump(dict1, out_file, indent=4)
 out_file.close()
