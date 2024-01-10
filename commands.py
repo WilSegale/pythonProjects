@@ -17,7 +17,8 @@ MacOs_diagnostic_commands = [
     "sudo pfctl -sa",
     "vm_stat",
     '''log show --predicate 'process == "ssh"' --info''',
-    '''log show --predicate 'process == "sshd"' --info'''
+    '''log show --predicate 'process == "sshd"' --info''',
+    "last reboot"
 ]
 
 
