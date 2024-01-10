@@ -44,5 +44,7 @@ Windows_diagnostic_commands = [
     "xperf",
     "Test-WsMan",
     "Test-NetConnection",
-    "Get-EventLog"
+    "Get-EventLog",
+    '''systeminfo | find "System Boot Time"''',
+    '''net statistics workstation | find "Statistics since"'''
 ]
