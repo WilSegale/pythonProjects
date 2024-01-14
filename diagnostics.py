@@ -91,8 +91,8 @@ try:
         # Store the command output in the dictionary
         diagnostic_results[command] = result
 
-        print(f"{'=' * 40} {{{command}}} {'=' * 40}\n")
         print(result)
+        print(f"{'=' * 40} {{{command}}} {'=' * 40}\n")
 
     # Write the dictionary to the JSON file
     json.dump(diagnostic_results, diagnosticJSON, indent=2)
