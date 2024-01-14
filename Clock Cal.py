@@ -42,6 +42,7 @@ def main():
                 new_time = subtract_time(clock_time, hours, minutes)
                 print(f"New time: {new_time}")
             elif choice == "4":
+                print("\n[-]exitting program")
                 break
             else:
                 print("Invalid choice. Please select a valid option.")
