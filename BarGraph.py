@@ -32,7 +32,7 @@ print(f"{GREEN}Total: {total_gb}\
         {RESET}")
 
 # Plot the bar chart
-plt.bar(labels, DiskData, color=colors)
+plt.bar(labels, DiskData)
 plt.xlabel('Space')
 plt.ylabel('Size (in GB)')
 plt.title('Disk Space Usage')
