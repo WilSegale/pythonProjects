@@ -1,5 +1,7 @@
-# Prints the IP of the host
-from DontEdit import *
+# Python Program to Get IP Address
+import socket
 hostname = socket.gethostname()
-IP = socket.gethostbyname(hostname)
-print(IP)
+IPAddr = socket.gethostbyname(hostname)
+
+print("Your Computer Name is:" + hostname)
+print("Your Computer IP Address is:" + IPAddr)
