@@ -1,5 +1,5 @@
 # List of diagnostic commands for mac
-MacOs_diagnostic_commands = [
+MacOs_diagnostic_commands = {
     "ping google.com -t 3",
     "traceroute google.com",
     "csrutil status",
@@ -19,7 +19,7 @@ MacOs_diagnostic_commands = [
     '''log show --predicate 'process == "ssh"' --info''',
     '''log show --predicate 'process == "sshd"' --info''',
     "last reboot"
-]
+}
 
 
 # list of diagnostic commands for windows
