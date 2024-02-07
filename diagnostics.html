@@ -39,15 +39,84 @@
     
         <div class="command-block">
             <h2>Command:</h2>
+            <pre id="command" class="command">[networksetup -listallnetworkservices]</pre>
+            <h2>Output:</h2>
+            <pre id="output" class="output">An asterisk (*) denotes that a network service is disabled.
+AX88772 
+Thunderbolt Bridge
+Wi-Fi
+DuckDuckGo VPN
+</pre>
+        </div>
+        <div class="separator">
+            <pre class="separator">======================================== {networksetup -listallnetworkservices} ========================================</pre>
+        </div>
+        
+        <div class="command-block">
+            <h2>Command:</h2>
+            <pre id="command" class="command">[df -h]</pre>
+            <h2>Output:</h2>
+            <pre id="output" class="output">Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s3s1   460Gi    13Gi   334Gi     4%    393k  3.5G    0%   /
+devfs            347Ki   347Ki     0Bi   100%    1.2k     0  100%   /dev
+/dev/disk3s6     460Gi   1.0Gi   334Gi     1%       1  3.5G    0%   /System/Volumes/VM
+/dev/disk3s4     460Gi    11Gi   334Gi     4%    1.5k  3.5G    0%   /System/Volumes/Preboot
+/dev/disk3s2     460Gi   695Mi   334Gi     1%     284  3.5G    0%   /System/Volumes/Update
+/dev/disk1s2     500Mi   6.0Mi   482Mi     2%       3  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1     500Mi   6.1Mi   482Mi     2%      85  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     500Mi   1.5Mi   482Mi     1%      50  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s1     460Gi    98Gi   334Gi    23%    595k  3.5G    0%   /System/Volumes/Data
+map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+/dev/disk3s3     460Gi    13Gi   334Gi     4%    401k  3.5G    0%   /System/Volumes/Update/mnt1
+</pre>
+        </div>
+        <div class="separator">
+            <pre class="separator">======================================== {df -h} ========================================</pre>
+        </div>
+        
+        <div class="command-block">
+            <h2>Command:</h2>
+            <pre id="command" class="command">[networksetup -listallhardwareports]</pre>
+            <h2>Output:</h2>
+            <pre id="output" class="output">
+Hardware Port: Ethernet Adapter (en3)
+Device: en3
+Ethernet Address: f2:4d:aa:26:49:d6
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: f2:4d:aa:26:49:d7
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:29:f2:ed:26:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: 0c:e4:41:ed:83:ad
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:29:f2:ed:26:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:29:f2:ed:26:84
+
+VLAN Configurations
+===================
+</pre>
+        </div>
+        <div class="separator">
+            <pre class="separator">======================================== {networksetup -listallhardwareports} ========================================</pre>
+        </div>
+        
+        <div class="command-block">
+            <h2>Command:</h2>
             <pre id="command" class="command">[ps -ef | grep -v grep | awk '{print $2}']</pre>
             <h2>Output:</h2>
             <pre id="output" class="output">PID
 1
-270
-276
-277
-278
-279
 292
 294
 296
@@ -61,7 +130,6 @@
 310
 312
 317
-320
 321
 322
 323
@@ -105,16 +173,13 @@
 428
 430
 433
-442
 448
 454
-462
 465
 466
 467
 469
 471
-474
 476
 477
 479
@@ -124,7 +189,6 @@
 487
 489
 491
-493
 496
 497
 500
@@ -134,79 +198,36 @@
 512
 514
 519
-521
 522
-523
 524
 525
-527
-529
 530
 531
-532
 534
 535
-536
 537
 538
-539
-540
 542
 546
 554
-565
-566
 575
 576
 579
-582
 596
 602
 603
-609
 611
-616
-624
 626
-633
 642
-643
-645
 648
 653
 685
 701
 711
-712
-715
 716
-717
 718
-719
-720
-721
-722
-723
-724
 725
-726
-727
 728
-729
-730
-731
-732
-733
-734
-735
-736
-737
-738
-739
-740
-742
-743
-744
 761
 791
 901
@@ -223,24 +244,96 @@
 996
 1048
 1119
-1128
-1389
 1420
-1512
-1847
-1877
-1921
-1924
-1932
-1933
-1939
-1940
-1941
-1949
 1953
 2611
 2731
+3526
 4217
+5816
+5891
+5896
+7167
+7168
+7280
+7281
+7316
+7318
+7319
+7321
+7364
+7365
+7366
+7368
+7369
+7370
+7371
+7372
+7373
+7374
+7375
+7376
+7379
+7381
+7382
+7385
+7387
+7388
+7403
+7404
+7405
+7438
+7457
+7459
+7462
+7470
+7484
+7524
+7526
+7603
+7625
+7647
+7648
+7649
+7654
+7697
+8131
+8391
+8392
+8396
+8400
+8402
+8404
+8405
+8406
+8544
+8549
+8550
+8551
+8552
+8579
+8580
+8581
+8595
+8620
+8638
+8640
+8659
+8660
+8671
+8681
+8694
+8695
+9833
+9954
+9958
+9959
+9963
+9975
+9976
+9977
+9978
+9987
 12206
 26647
 26658
@@ -320,15 +413,12 @@
 26812
 26813
 26814
-26815
 26816
 26817
 26819
-26820
 26822
 26823
 26825
-26826
 26827
 26829
 26830
@@ -337,12 +427,10 @@
 26835
 26836
 26838
-26841
 26843
 26848
 26852
 26853
-26854
 26856
 26857
 26864
@@ -377,7 +465,6 @@
 27111
 27136
 27181
-27191
 27203
 27228
 27466
@@ -387,7 +474,6 @@
 27824
 27851
 27855
-27862
 27863
 30256
 30915
@@ -410,8 +496,6 @@
 46856
 46858
 47566
-47728
-47729
 49322
 49323
 49324
@@ -421,135 +505,45 @@
 49540
 49807
 56219
-61739
 63488
 71606
 71616
-71773
 71774
 71781
 71787
 71793
 72060
 72204
-72334
 72371
-72387
-72526
 72577
 73595
 77534
 77547
 77549
-77550
 78256
-78371
 78681
-78927
-79050
-79054
-79055
-79060
-79074
-79075
 79078
 79084
 79129
-79210
-79224
 79225
-80480
-80525
-80540
-80735
-80790
-80815
-80824
-80843
-80850
-80859
-80939
 82833
-83227
-83460
-83480
 85397
-85398
-86689
-86699
 86722
-86749
 86762
-86799
-92885
 92894
-92897
-93845
-95579
-95645
-95804
-95814
 95815
 95821
-95823
-95838
-95840
-95842
-95846
-95847
 95874
 95876
-95879
-95883
 95886
 95915
-96272
-96612
 96614
-96664
 97259
-97629
-97630
-97632
-97633
-97636
-97637
-97638
-97639
-97651
 97695
-97696
-97697
 97717
 97718
-98695
-98704
-98706
-98710
-98729
-98748
-98784
-98785
-98786
-98800
-98801
 98802
-98804
-98805
-98806
-98808
-98809
-98810
-98811
-98844
-98882
-98900
-98901
-98902
-98903
 98904
-99037
-99517
 99580
 99587
 99588
@@ -558,18 +552,13 @@
 99594
 99596
 99601
-99605
 99609
-99775
-99785
-99786
-99787
-99794
-1513
-1521
-2025
-2030
-2032
+7698
+7699
+7706
+9989
+9997
+9999
 </pre>
         </div>
         <div class="separator">
