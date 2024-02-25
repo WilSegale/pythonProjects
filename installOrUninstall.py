@@ -45,21 +45,19 @@ def install_requirements():
                 else:
                     print(f"{package_name} is {GREEN}installed{RESET}")  # Inform user that package is already installed
 
-    # Uninstall requirements
+   # Uninstall requirements
     elif action in Uninstall:
-         with open(file_path, 'r') as file:
-            packages = file.readlines()  # Read package names from requirements filepackages = file.readlines()  # Read package names from requirements file
-            packages = [package.strip() for package in packages]  # Remove leading/trailing whitespace and newline characters
+        with open(file_path, 'r') as file:
             packages = file.readlines()  # Read package names from requirements file
+            packages = [package.strip() for package in packages]  # Remove leading/trailing whitespace and newline characters
             sorted_packages = sorted(packages, key=len)  # Sort by length of package names
 
             for package_name in sorted_packages:
-                if not is_package_installed(package_name):  # Check if package is not installed
+                if is_package_installed(package_name):  # Check if package is installed
+                    print(f"\nUninstalling {package_name}...")  # Inform user about uninstallation process
                     subprocess.run(["pip3", "uninstall", package_name, "-y"])  # Execute pip uninstall command
-                    print(f"\nInstalling {package_name}...")  # Inform user about installation process
                 else:
-                    print(f"{package_name} is {GREEN}uninstalled{RESET}")  # Inform user that package is already uninstalled
-    
+                    print(f"{package_name} is {GREEN}not installed{RESET}")  # Inform user that package is already uninstalled
     # Handle invalid input
     else:
         print(f"\n[-] Invalid input, requirements installation skipped")  # Inform user about invalid input
