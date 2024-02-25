@@ -1,11 +1,10 @@
 import subprocess  # Import subprocess module for running shell commands
-import matplotlib  # Import matplotlib for plotting functionalities
-matplotlib.use('Agg')  # Set matplotlib backend to 'Agg' for non-interactive plotting
 import importlib.metadata
 Install = ["install", "INSTALL", "Install", "i", "I","in","IN"]
 Uninstall = ["uninstall", "UNINSTALL", "Uninstall", "u", "U","un","UN"]
 GREEN = "\033[32m"
 RESET = "\033[0m"
+file_path = "requirements.txt"  # Path to the file containing package names
 
 def is_package_installed(package_name):
     """
@@ -33,7 +32,6 @@ def install_requirements():
 
     # Check if user wants to install requirements
     if install.lower() in Install:  # Check if user input matches any element in Install list
-        file_path = "requirements.txt"  # Path to the file containing package names
         with open(file_path, 'r') as file:
             for line in file:
                 package_name = line.strip()  # Remove leading/trailing whitespace and newline characters
@@ -41,10 +39,18 @@ def install_requirements():
                     print(f"\nInstalling {package_name}...")
                     subprocess.run(["pip3", "install", "-r", file_path])
                 else:
-                    print(f"{package_name} is already installed")
+                    print(f"{package_name} is already {GREEN}installed{RESET}")
     # Check if user wants to uninstall requirements
     elif install.lower() in Uninstall:  # Check if user input matches any element in Uninstall list
         subprocess.run(["pip3", "uninstall", "-r", "requirements.txt", "-y"])
+        with open(file_path, 'r') as file:
+            for line in file:
+                package_name = line.strip()  # Remove leading/trailing whitespace and newline characters
+                if not is_package_installed(package_name):
+                    print(f"\nUninstalling {package_name}...")
+                    subprocess.run(["pip3", "uninstall", file_path, "-y"])
+                else:
+                    print(f"{package_name} is already {GREEN}uninstalled{RESET}")
         print(f"\n[+] Requirements uninstalled")
     # Handle invalid input
     else:
