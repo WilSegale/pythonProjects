@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from DontEdit import *
 import shutil
 
-total,used,free = shutil.disk_usage("/")
+total,used,free = shutil.disk_usage("C://")
 
 # Disk space data
 disk_space = {
