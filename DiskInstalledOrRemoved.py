@@ -9,6 +9,9 @@ try:
             new_disks = current_disks - previous_disks
             removed_disks = previous_disks - current_disks
             
+            if current_disks:
+                print("You do not have a External disk installed")
+                exit(1)
             if new_disks:
                 print("New disk(s) installed:")
                 for disk in new_disks:
