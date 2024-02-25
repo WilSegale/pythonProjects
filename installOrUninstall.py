@@ -1,7 +1,9 @@
-import subprocess  # Import subprocess module for running shell commands
+import subprocess
 import importlib.metadata
-Install = ["install", "INSTALL", "Install", "i", "I","in","IN"]
-Uninstall = ["uninstall", "UNINSTALL", "Uninstall", "u", "U","un","UN"]
+
+# Constants
+Install = ["install", "i", "in"]
+Uninstall = ["uninstall", "u", "un"]
 GREEN = "\033[32m"
 RESET = "\033[0m"
 file_path = "requirements.txt"  # Path to the file containing package names
@@ -22,36 +24,40 @@ def is_package_installed(package_name):
     except importlib.metadata.PackageNotFoundError:
         return False
 
-
 def install_requirements():
     """
     Install or uninstall requirements based on user input.
     """
     # Prompt user to choose between installing or uninstalling requirements
-    install = input("Would you like to install or uninstall the requirements for this folder (Install/Uninstall): ")
+    action = input("Would you like to install or uninstall the requirements for this folder (Install/Uninstall): ").lower()
 
-    # Check if user wants to install requirements
-    if install.lower() in Install:  # Check if user input matches any element in Install list
+    # Install requirements
+    if action in Install:
         with open(file_path, 'r') as file:
-            for line in file:
-                package_name = line.strip()  # Remove leading/trailing whitespace and newline characters
+            packages = file.readlines()
+            packages = [package.strip() for package in packages]  # Remove leading/trailing whitespace and newline characters
+            sorted_packages = sorted(packages, key=len)  # Sort by length of package names
+
+            for package_name in sorted_packages:
                 if not is_package_installed(package_name):
                     print(f"\nInstalling {package_name}...")
-                    subprocess.run(["pip3", "install", "-r", file_path])
+                    subprocess.run(["pip3", "install", package_name])
                 else:
                     print(f"{package_name} is already {GREEN}installed{RESET}")
-    # Check if user wants to uninstall requirements
-    elif install.lower() in Uninstall:  # Check if user input matches any element in Uninstall list
-        subprocess.run(["pip3", "uninstall", "-r", "requirements.txt", "-y"])
-        with open(file_path, 'r') as file:
-            for line in file:
-                package_name = line.strip()  # Remove leading/trailing whitespace and newline characters
+
+    # Uninstall requirements
+    elif action in Uninstall:
+         with open(file_path, 'r') as file:
+            packages = file.readlines()
+            packages = [package.strip() for package in packages]  # Remove leading/trailing whitespace and newline characters
+            sorted_packages = sorted(packages, key=len)  # Sort by length of package names
+
+            for package_name in sorted_packages:
                 if not is_package_installed(package_name):
-                    print(f"\nUninstalling {package_name}...")
-                    subprocess.run(["pip3", "uninstall", file_path, "-y"])
+                    print(f"\nInstalling {package_name}...")
+                    subprocess.run(["pip3", "uninstall", package_name, "-y"])
                 else:
                     print(f"{package_name} is already {GREEN}uninstalled{RESET}")
-        print(f"\n[+] Requirements uninstalled")
     # Handle invalid input
     else:
         print(f"\n[-] Invalid input, requirements installation skipped")
