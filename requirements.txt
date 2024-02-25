@@ -21,4 +21,4 @@ pyautogui
 moviepy
 numpy
 scapy
-werkzeug>=3.0.1
+werkzeug

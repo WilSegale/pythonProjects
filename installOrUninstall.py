@@ -1,8 +1,11 @@
 import subprocess  # Import subprocess module for running shell commands
 import matplotlib  # Import matplotlib for plotting functionalities
-from DontEdit import *  # Import custom module DontEdit, assuming it contains predefined lists Install and Uninstall
 matplotlib.use('Agg')  # Set matplotlib backend to 'Agg' for non-interactive plotting
 import importlib.metadata
+Install = ["install", "INSTALL", "Install", "i", "I","in","IN"]
+Uninstall = ["uninstall", "UNINSTALL", "Uninstall", "u", "U","un","UN"]
+GREEN = "\033[32m"
+RESET = "\033[0m"
 
 def is_package_installed(package_name):
     """
@@ -35,17 +38,17 @@ def install_requirements():
             for line in file:
                 package_name = line.strip()  # Remove leading/trailing whitespace and newline characters
                 if not is_package_installed(package_name):
-                    print(f"Installing {package_name}...")
-                    subprocess.run(["pip3", "install", package_name])
-
+                    print(f"\nInstalling {package_name}...")
+                    subprocess.run(["pip3", "install", "-r", file_path])
+                else:
+                    print(f"{package_name} is already installed")
     # Check if user wants to uninstall requirements
     elif install.lower() in Uninstall:  # Check if user input matches any element in Uninstall list
-        subprocess.run(["pip3", "uninstall", "requirements.txt" , "-y"])  # Run pip to uninstall requirements listed in requirements.txt
-        print(f"{GREEN}[+]{RESET} Requirements uninstallation successful")
-
+        subprocess.run(["pip3", "uninstall", "-r", "requirements.txt", "-y"])
+        print(f"\n[+] Requirements uninstalled")
     # Handle invalid input
     else:
-        print(f"\n{RED}[-]{RESET} Invalid input, requirements installation skipped")
+        print(f"\n[-] Invalid input, requirements installation skipped")
 
 # Call the function to install or uninstall requirements based on user input
 install_requirements()
