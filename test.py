@@ -1,11 +1,19 @@
-from flask import Flask, request
+import os
+import socket
+print("hello world")
 
-app = Flask(__name__)
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('192.168.1.62', 9999))
+file = open("test.txt", "rb")
+file_size = os.path.getsize("test.txt")
 
-@app.route('/webhookcallback', methods=['POST'])
-def hook():
-    print(request.json)
-    return "Hello World!"
+client.send("revicedFile.txt".encode())
+client.send(str(file_size).encode())
 
-if __name__ == '__main__':
-    app.run(debug=True)
+data = file.read()
+client.sendall(data)
+client.send(b"<END>")
+
+file.close()
+client.close()
+server.close()
