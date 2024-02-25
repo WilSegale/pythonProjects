@@ -1,19 +1,40 @@
 import cv2
 
-cv2.namedWindow("preview")
-vc = cv2.VideoCapture(0)
+def main():
+    try:
+        # Open the default camera (usually the first camera connected to the system)
+        cap = cv2.VideoCapture(0)
 
-if vc.isOpened(): # try to get the first frame
-    rval, frame = vc.read()
-else:
-    rval = False
+        # Check if the camera was opened successfully
+        if not cap.isOpened():
+            print("Error: Couldn't open camera.")
+            return
 
-while rval:
-    cv2.imshow("preview", frame)
-    rval, frame = vc.read()
-    key = cv2.waitKey(20)
-    if key == 27: # exit on ESC
-        break
+        # Loop to continuously read frames from the camera
+        while True:
+            # Read a frame from the camera
+            ret, frame = cap.read()
 
-vc.release()
-cv2.destroyWindow("preview")
+            # Check if the frame was read successfully
+            if not ret:
+                print("Error: Couldn't read frame.")
+                break
+
+            # Display the frame
+            cv2.imshow("Camera", frame)
+
+            # Check for key press, if 'q' is pressed, exit the loop
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+
+    except KeyboardInterrupt:
+        # If Ctrl+C is pressed, close the camera and OpenCV windows
+        print("Exiting...")
+    
+    finally:
+        # Release the camera and close all OpenCV windows
+        cap.release()
+        cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    main()
