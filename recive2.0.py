@@ -2,7 +2,7 @@ import socket
 import tqdm
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('192.168.1.38', 9999))
+server.bind(('127.0.0.1', 9999))
 server.listen()
 
 client, addr = server.accept()
@@ -26,4 +26,10 @@ while not done:
         done = True
     else:
         file_bytes += data
-        proggress.update(len(data))
+    proggress.update(len(data))
+
+file.write(file_bytes)
+
+file.close()
+client.close()
+server.close()
