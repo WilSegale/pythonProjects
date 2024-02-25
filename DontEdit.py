@@ -1,5 +1,6 @@
 from sys import *
 from sys import platform
+import pkg_resources
 import subprocess
 import matplotlib.pyplot as plt
 import platform
@@ -11,7 +12,6 @@ import time
 import psutil
 import ctypes
 import socket
-import sys
 
 # the quit array that will be used to quit any program that uses it
 quit = ["QUIT", "Quit", "QUIT()", "quit", "quit()",
@@ -20,8 +20,8 @@ quit = ["QUIT", "Quit", "QUIT()", "quit", "quit()",
 # yes or no array so if the user wants to have something with a yes it output it to something and the opeset for the other one
 no = ["no", "NO", "No", "N", "n"]
 yes = ["yes", "YES", "Yes", "Y", "y"]
-Install = ["install", "INSTALL", "Install", "i", "I"]
-Uninstall = ["uninstall", "UNINSTALL", "Uninstall", "u", "U"]
+Install = ["install", "INSTALL", "Install", "i", "I","in","IN"]
+Uninstall = ["uninstall", "UNINSTALL", "Uninstall", "u", "U","un","UN"]
 colors = ["\033[31m", "\033[32m", "\033[33m", "\033[0m"]
 
 RED = "\033[31m"
