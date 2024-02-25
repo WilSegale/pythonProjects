@@ -19,6 +19,6 @@ def get_desktop_hard_drive_name():
 if __name__ == "__main__":
     desktop_hard_drive_name = get_desktop_hard_drive_name()
     if desktop_hard_drive_name:
-        print("Desktop Hard Drive Name:", desktop_hard_drive_name)
+        print(f"Desktop Hard Drive Name: '{desktop_hard_drive_name}'")
     else:
         print("Failed to retrieve desktop hard drive name.")
