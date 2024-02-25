@@ -9,17 +9,13 @@ try:
             new_disks = current_disks - previous_disks
             removed_disks = previous_disks - current_disks
             
-            if previous_disks:
-                for disk in previous_disks:
-                    print(f"{disk.device}")
-                    exit(1)
+            if current_disks:
+                print("You do not have a External disk installed")
+                exit(1)
             if new_disks:
-                partitions = psutil.disk_partitions(all=True)
-                hard_drive_names = []
-                for partition in partitions:
-                    if partition.device and 'loop' not in partition.device:
-                        hard_drive_names.append(partition.device)
-                return hard_drive_names
+                print("New disk(s) installed:")
+                for disk in new_disks:
+                    print(f"- {disk.device}")
             
             if removed_disks:
                 print("Disk(s) removed:")
