@@ -5,4 +5,5 @@
    "python.formatting.provider": "none",
    "java.compile.nullAnalysis.mode": "automatic",
    "livePreview.defaultPreviewPath": "/diagnostics.html",
+   "python.REPL.enableREPLSmartSend": false,
 }
