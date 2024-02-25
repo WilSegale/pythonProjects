@@ -48,6 +48,7 @@ def install_requirements():
     # Uninstall requirements
     elif action in Uninstall:
          with open(file_path, 'r') as file:
+            packages = file.readlines()  # Read package names from requirements filepackages = file.readlines()  # Read package names from requirements file
             packages = [package.strip() for package in packages]  # Remove leading/trailing whitespace and newline characters
             packages = file.readlines()  # Read package names from requirements file
             sorted_packages = sorted(packages, key=len)  # Sort by length of package names
