@@ -6,7 +6,7 @@ client.connect(('localhost', 9999))
 file = open("test.txt", "rb")
 file_size = os.path.getsize("test.txt")
 
-client.send("revicedFile.txt".encode())
+client.send("new.txt".encode())
 client.send(str(file_size).encode())
 
 data = file.read()
