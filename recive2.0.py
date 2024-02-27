@@ -2,33 +2,26 @@ import socket
 import tqdm
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('127.0.0.1', 9999))
+server.bind(('localhost', 9999))
 server.listen()
 
 client, addr = server.accept()
 
 file_name = client.recv(1024).decode()
 print(file_name)
-file_size = client.accept(10245).decode()
+file_size = int(client.recv(1024).decode())  # Receive file size as an integer
 print(file_size)
 
 file = open(file_name, 'wb')
 
-file_bytes = b""
+proggress = tqdm.tqdm(unit='B', unit_scale=True, unit_divisor=1000, total=file_size)
 
-done = False
-
-proggress = tqdm.tqdm(unit='B', unit_scale=True, unit_divisor=1000, total=int(file_size))
-
-while not done:
+while True:
     data = client.recv(1024)
-    if file_bytes[-5:] == b"<END>":
-        done = True
-    else:
-        file_bytes += data
+    if not data:
+        break
+    file.write(data)
     proggress.update(len(data))
-
-file.write(file_bytes)
 
 file.close()
 client.close()
