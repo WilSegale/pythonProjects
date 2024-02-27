@@ -6,6 +6,6 @@ colors = [GREEN,RED,BLUE]
 while True:
   try:
     random_color = random.choice(colors)
-    print(f"{random_color}test")
+    print(f"{random_color}test{RESET}")
   except KeyboardInterrupt:
     print("KeyboardInterrupt")
