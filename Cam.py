@@ -25,6 +25,8 @@ def main():
 
             # Check for key press, if 'q' is pressed, exit the loop
             if cv2.waitKey(1) & 0xFF == ord('q'):
+                print("Exiting...")
+                
                 break
 
     except KeyboardInterrupt:
