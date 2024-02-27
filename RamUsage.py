@@ -1,3 +1,5 @@
+import psutil
+import sys
 from DontEdit import *
 
 MACOS = "darwin"
