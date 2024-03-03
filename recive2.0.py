@@ -7,21 +7,24 @@ server.listen()
 
 client, addr = server.accept()
 
-file_name = client.recv(1024).decode()
+# Receive file name and size
+file_info = client.recv(1024).decode().split(',')
+file_name = file_info[0]
+file_size = int(file_info[1])
+
 print(file_name)
-file_size = int(client.recv(1024).decode())  # Receive file size as an integer
 print(file_size)
 
 file = open(file_name, 'wb')
 
-proggress = tqdm.tqdm(unit='B', unit_scale=True, unit_divisor=1000, total=file_size)
+progress = tqdm.tqdm(unit='B', unit_scale=True, unit_divisor=1000, total=file_size)
 
 while True:
     data = client.recv(1024)
     if not data:
         break
     file.write(data)
-    proggress.update(len(data))
+    progress.update(len(data))
 
 file.close()
 client.close()
