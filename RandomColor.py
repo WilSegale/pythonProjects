@@ -1,7 +1,7 @@
 from DontEdit import *
 import random
 
-colors = [GREEN,RED,BLUE]
+colors = [GREEN,RED]
 
 while True:
   try:
