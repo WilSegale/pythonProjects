@@ -41,7 +41,7 @@ def install_requirements():
             for package_name in sorted_packages:
                 if not is_package_installed(package_name):  # Check if package is not installed
                     print(f"\nInstalling {package_name}...")  # Inform user about installation process
-                    subprocess.run(["pip3", "install", package_name])  # Execute pip install command
+                    subprocess.run(["pip3", "install", package_name ])  # Execute pip install command
                 else:
                     print(f"{package_name} is {GREEN}installed{RESET}")  # Inform user that package is already installed
 
