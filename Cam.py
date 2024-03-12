@@ -25,14 +25,11 @@ def main():
 
             # Check for key press, if 'q' is pressed, exit the loop
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                print("Exiting...")
-                
+                print("Exiting loop")
                 break
 
     except KeyboardInterrupt:
-        # If Ctrl+C is pressed, close the camera and OpenCV windows
-        print("Exiting...")
-    
+        exit()
     finally:
         # Release the camera and close all OpenCV windows
         cap.release()
