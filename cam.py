@@ -12,7 +12,7 @@ def main():
 
         # Loop to continuously read frames from the camera
         while True:
-            # Read a frame from the camera
+            # Read a frame from the cameras
             ret, frame = cap.read()
 
             # Check if the frame was read successfully
