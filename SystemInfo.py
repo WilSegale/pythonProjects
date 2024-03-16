@@ -19,5 +19,8 @@ print(f"Node Name: {node_name}")
 print(f"Release: {release}")
 print(f"Version: {version}")
 print(f"Machine: {machine}")
-print(f"Processor: {processor}")
+if processor == "":
+    print("Processor: NONE")
+else:
+    print(f"Processor: {processor}")
 
