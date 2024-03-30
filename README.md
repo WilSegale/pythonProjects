@@ -7,9 +7,6 @@ pip3 install -r requirements.txt
 ```
 ## if you get this error message 
 
-
-
-
 <span style="color:red">error</span>: externally-managed-environment
 
 <span style="color:red">×</span> This environment is externally managed
@@ -30,7 +27,7 @@ pip3 install -r requirements.txt
 
 <span style="color:cyan">hint</span>: See PEP 668 for the detailed specification.
 
-# Just tpye | and it will install the packages
+# Just type this and it will install the packages
 
 ```painext
 pip3 install -r requirements.txt --break-system-packages
