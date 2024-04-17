@@ -8,7 +8,7 @@ def get_cpu_frequency():
         return "N/A"
 
 print("CPU Frequency: {} GHz".format(get_cpu_frequency()))
-if get_cpu_frequency() < 3.0:
+if get_cpu_frequency() <= float(3.0):
     print("your computer is slow")
 else:
     print("your ocmputer is fast")
