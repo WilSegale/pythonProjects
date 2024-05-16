@@ -12,6 +12,7 @@ disk_space = {
 
 # Pie chart
 labels = list(disk_space.keys())
+test = "hello world"
 sizes = list(disk_space.values())
 explode = (0.1, 10, 0)  # Explode the first slice
 
@@ -19,7 +20,7 @@ explode = (0.1, 10, 0)  # Explode the first slice
 colors = ['CYAN', 'lightgray']
 
 # Create a pie chart
-plt.pie(sizes, labels=labels, colors=colors, autopct='%1.01f%%', startangle=59, shadow=True)
+plt.pie(sizes,labels=labels, colors=colors, autopct='%1.01f%%', startangle=59, shadow=True)
 
 # Aspect ratio
 plt.axis(True)
