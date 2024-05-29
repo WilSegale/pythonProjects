@@ -1,6 +1,18 @@
 from DontEdit import *
 import subprocess
 import psutil
+from ctypes import windll
+def get_drives():
+    drives = []
+    bitmask = windll.kernel32.GetLogicalDrives()
+    for letter in string.ascii_uppercase:
+        if bitmask & 1:
+            drives.append(letter)
+        bitmask >>= 1
+
+    return drives
+
+print(f"drive: {get_drives()}")   # On my PC, this prints ['A', 'C', 'D', 'F', 'H']
 
 def is_admin():
     try:
