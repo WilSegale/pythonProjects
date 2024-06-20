@@ -2,11 +2,13 @@ prompt_toolkit
 tqdm==4.61.2
 requests
 qrcode
+
 colorama
 pandas
 opencv-python
 plotly
 pytube
+pyttsx3
 packaging
 psutil
 youtube_dl
