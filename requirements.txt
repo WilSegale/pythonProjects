@@ -1,3 +1,4 @@
+prompt_toolkit
 tqdm
 requests
 qrcode
