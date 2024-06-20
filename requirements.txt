@@ -1,5 +1,5 @@
 prompt_toolkit
-tqdm
+tqdm==2.0
 requests
 qrcode
 colorama
