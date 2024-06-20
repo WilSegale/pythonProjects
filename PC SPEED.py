@@ -15,9 +15,9 @@ print(f"Execution time: {execution_time:.6f} seconds")
 
 # Get CPU frequency
 cpu_freq = psutil.cpu_freq()
-print(f"Current CPU frequency: {cpu_freq.current:.2f} MHz")
-print(f"Max CPU frequency: {cpu_freq.max:.2f} MHz")
-print(f"Min CPU frequency: {cpu_freq.min:.2f} MHz")
+print(f"Current CPU frequency: {cpu_freq.current:,.2f} MHz")
+print(f"Max CPU frequency: {cpu_freq.max:,.2f} MHz")
+print(f"Min CPU frequency: {cpu_freq.min:,.2f} MHz")
 
 # Get CPU usage
 cpu_usage = psutil.cpu_percent(interval=1)
