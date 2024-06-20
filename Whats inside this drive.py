@@ -27,7 +27,7 @@ def main():
 
     
     for item in contents:
-        print(f"{item}")
+        print(f"-> {item}")
     print("+"*22)
     
 if __name__ == "__main__":
