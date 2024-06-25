@@ -15,7 +15,6 @@ class PathCompleter(Completer):
 try:
     # Create a PromptSession with the custom completer
     session = PromptSession(completer=PathCompleter())
-
     # Simple REPL loop to demonstrate auto-completion
     while True:
         input_path = session.prompt('Enter file name: ')
