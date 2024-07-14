@@ -4,6 +4,7 @@ def KM():
     It prompts the user to enter a distance in kilometers and then
     prints the equivalent distance in miles.
     """
+    print("Input the KM to conver it to Miles")
     km = input(">>> ")
     km = float(km)  # Convert the input from string to float
     miles = km * 0.621371  # Perform the multiplication to convert km to miles
