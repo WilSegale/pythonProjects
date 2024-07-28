@@ -2,7 +2,6 @@ prompt_toolkit
 tqdm==4.61.2
 requests
 qrcode
-
 colorama
 pandas
 opencv-python
