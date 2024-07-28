@@ -25,8 +25,8 @@ colors = ["\033[31m", "\033[32m", "\033[33m", "\033[0m"]
 
 RED = "\033[31m"
 GREEN = "\033[32m"
-BLUE = "\033[34m"
 YELLOW = "\033[33m"
+BLUE = "\033[34m"
 ORANGE_Start = "\033[38;2;255;165;0m"
 ORANGE_END = "\033[0m"
 BRIGHT = "\033[1m"
