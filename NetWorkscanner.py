@@ -56,8 +56,8 @@ def save_message_to_json(data):
         json.dump(data, json_file, indent=4)  # indent for pretty-printing
 
 # Define the network range and port range
-network = '127.0.0.1'  # Replace with your network range (e.g., 192.168.1.0/24)
-port_range = range(0, 22)  # Ports to scan (20-1024)
+network = '192.168.1.1/24'  # Replace with your network range (e.g., 192.168.1.0/24)
+port_range = range(20, 50)  # Ports to scan (20-1024)
 
 # Run the network scanner
 if __name__ == "__main__":
