@@ -10,7 +10,7 @@ try:
             sock.close()
             if result == 0:  # Port is open if result is 0
                 return True
-            else:
+            else: 
                 return False
         except socket.error:
             return False
@@ -80,6 +80,8 @@ try:
             # Save the results to a file if open ports are found
             if open_ports:
                 data = {
+                    "network": network,
+                    "port_range": port_range_input,
                     "open_ports": open_ports
                 }
                 save_message_to_txt(data)
