@@ -42,8 +42,8 @@ try:
         return open_ports
 
     # Get user input to store in a JSON file
-    def save_message_to_json(data):
-        file_path = 'output.json'
+    def save_message_to_txt(data):
+        file_path = 'output.txt'
         try:
             with open(file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)  # indent for pretty-printing
@@ -79,15 +79,14 @@ try:
 
             # Sample data (text) to write to a JSON file
             data = {
-                "message": open_ports,
-                "author": "WilSegale"
+                "open_ports": open_ports
             }
             
             # If there are open ports, store them along with the user's message
             if open_ports:
 
                 # Save the user's message and open ports to a JSON file
-                save_message_to_json(data)
+                save_message_to_txt(data)
             else:
                 print(f"[ {RED}-{RESET} ] No open ports found.")
 except KeyboardInterrupt:

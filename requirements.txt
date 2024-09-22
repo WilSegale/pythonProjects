@@ -1,3 +1,4 @@
+s
 prompt_toolkit
 tqdm==4.61.2
 requests
