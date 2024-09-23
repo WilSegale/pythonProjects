@@ -12,6 +12,7 @@ import time
 import psutil
 import ctypes
 import socket
+import ipaddress
 
 # the quit array that will be used to quit any program that uses it
 quit = ["QUIT", "Quit", "QUIT()", "quit", "quit()",

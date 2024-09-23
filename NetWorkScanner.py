@@ -1,7 +1,4 @@
-import socket
-import time
-import ipaddress
-
+from DontEdit import *
 # Function to scan a specific port on an IP address
 def scan_port(ip, port):
     try:
