@@ -1,4 +1,0 @@
-Network: 127.0.0.1
-Port Range: 22-80
-Open Ports:
-127.0.0.1:22
