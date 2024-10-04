@@ -28,7 +28,7 @@ def ssh_connect(host, username, password):
 
         with open("credentials_found.txt", "a") as fh:
             print(f"{GREEN}Username - {username} and Password - ******* found.{RESET}")
-            fh.write(f"{GREEN}Username: {username}\nPassword: {password}\n{RESET}Worked on host {host}\n")
+            fh.write(f"Username: {username}\nPassword: {password}\n Worked on host {host}\n")
         
         # Set the stop event to signal all threads to stop
         stop_event.set()
