@@ -1,4 +1,14 @@
 import random
+# Define color codes for console output
+BRIGHT = '\033[1m'
+GREEN = "\033[92m"
+RED = "\033[91m"
+BLUE = "\033[34m"
+YELLOW = "\033[33m"
+ORANGE_Start = "\033[38;2;255;165;0m"
+GRAY_TEXT = "\033[90m"
+CYAN_TEXT = "\033[36m"
+RESET = "\033[0m"
 try:
     # Global variables
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
@@ -90,7 +100,7 @@ try:
                     self.player_hand.adjust_for_ace()
 
                     if self.player_hand.value > 21:
-                        self.end_game("Busted! You lose!")
+                        self.end_game(f"{RED}Busted! You lose!{RESET}")
                         break
                 elif action == 'stand':
                     while self.dealer_hand.value < 17:
