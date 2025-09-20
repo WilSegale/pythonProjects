@@ -13,6 +13,7 @@ processor = system_info.processor
 
 
 # Print the system information
+print("----- System Information -----")
 print("System Information:")
 print(f"System Name: {system_name}")
 print(f"Node Name: {node_name}")
