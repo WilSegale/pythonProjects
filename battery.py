@@ -1,4 +1,5 @@
 from DontEdit import *
+import psutil
 
 
 if platform != "win32":

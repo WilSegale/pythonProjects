@@ -2,14 +2,14 @@ from sys import *
 from sys import platform
 import pkg_resources
 import subprocess
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import platform
 import json
 import shutil
 import string
 import os
 import time
-import psutil
+#import psutil
 import ctypes
 import socket
 import ipaddress
